@@ -1,0 +1,118 @@
+<script setup></script>
+
+<template>
+  <nav class="bg-gray-100">
+    <div class="xl:max-w-full px-3">
+      <div class="flex justify-between">
+        <div class="flex space-x-4">
+          <div>
+            <a href="#" class="flex items-center py-5 px-2 hover:text-yellow-300">
+              <!-- logo image -->
+              <img src="/src/assets/img/MABOLISTA FC.png" alt="Mabolista Fc" class="w-20 h-20" />
+              <span class="font-mabolistafont">Mabolista Fc</span>
+            </a>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-1 font-serif">
+            <RouterLink to="/">Home</RouterLink>
+            <RouterLink to="/about">About</RouterLink>
+            <RouterLink to="/events">Events</RouterLink>
+            <RouterLink to="/contact">Contact</RouterLink>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-1">
+          <div class="pt-2 relative mx-auto text-gray-600">
+            <input
+              class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+              type="search"
+              name="search"
+              placeholder="Search"
+            />
+            <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
+              <svg
+                class="text-gray-600 h-4 w-4 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1"
+                id="Capa_1"
+                x="0px"
+                y="0px"
+                viewBox="0 0 56.966 56.966"
+                style="enable-background: new 0 0 56.966 56.966"
+                xml:space="preserve"
+                width="512px"
+                height="512px"
+              >
+                <path
+                  d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
+                />
+              </svg>
+            </button>
+          </div>
+          <a href="login.html" class="py-5 px-3 font-semibold">Log in</a>
+          <a
+            href="signup.html"
+            class="py-2 px-3 font-semibold bg-yellow-400 hover:bg-yellow-300 text-white rounded transition duration-300"
+            >Signup</a
+          >
+        </div>
+
+        <!-- ---------- BUTTON: MOBILE MENU ----------  -->
+        <div class="md:hidden flex items-center">
+          <button class="mobile-menu-button">
+            <svg
+              class="w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ---------- MOBILE MENU  ----------  -->
+
+    <div class="mobile-menu hidden md:hidden">
+      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-300">HOME</a>
+      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-300">ABOUT</a>
+      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-300">EVENTS</a>
+      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-300">CONTACT</a>
+    </div>
+  </nav>
+
+  <!-- ---------- HEAD CONTENT ----------  -->
+  <div class="w-full relative mt-5 mb-16 sm:mt-24">
+    <div class="flex flex-col items-center sm:flex-row">
+      <div
+        class="flex flex-col w-full pl-5 sm:pl-3 mx-auto lg:w-1/2 space-y-6 sm:mr-5 lg:mr-20 mb-6 sm:mb-0"
+      >
+        <h1 class="font-mabolistafont text-3xl sm:text-5xl font-bold">Welcome Mabolism!</h1>
+        <p class="mt-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus distinctio, obcaecati
+          perferendis deserunt suscipit, architecto est placeat quae ullam ipsam aliquam eaque id
+          iure ea. Repellendus totam ipsa nisi laboriosam!
+        </p>
+        <div class="py-5">
+          <a
+            href="#"
+            class="text-white bg-yellow-500 hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-yellow-600 dark:hover:bg-yellow-700 focus:outline-none dark:focus:ring-yellow-800"
+            >Join Now</a
+          >
+        </div>
+      </div>
+      <div class="lg:w-1/3">
+        <img src="/src/assets/img/MABOLISTA FC.png" alt="" />
+      </div>
+    </div>
+  </div>
+</template>
