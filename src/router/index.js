@@ -3,6 +3,9 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import EventsView from '../views/EventsView.vue'
 import ContactView from '../views/ContactView.vue'
+import LoginPage from '../views/auth/LoginPage.vue'
+import RegisterPage from '../views/auth/RegisterPage.vue'
+import HomeAuthView from '../views/HomeAuthView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +29,21 @@ const router = createRouter({
       path: '/contact',
       name: 'contact',
       component: ContactView
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: LoginPage
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: RegisterPage
+    },
+    {
+      path: '/home',
+      name: 'homeauth',
+      component: HomeAuthView
     }
   ]
 })
