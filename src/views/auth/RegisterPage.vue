@@ -83,6 +83,22 @@
               class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
             />
           </div>
+          <div class="flex flex-col space-y-1">
+            <div class="flex items-center justify-between">
+              <label for="uploadfoto" class="text-sm font-semibold text-gray-500"
+                >Upload Foto</label
+              >
+            </div>
+            <input
+              class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+              id="uploadfoto"
+              name="uploadfoto"
+              type="file"
+            />
+            <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">
+              PNG or JPG (MAX. 2MB).
+            </p>
+          </div>
           <div>
             <button
               type="submit"
