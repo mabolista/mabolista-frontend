@@ -23,13 +23,13 @@
       </div>
       <div class="p-5 bg-white md:flex-1">
         <h3 class="my-4 text-2xl font-semibold text-gray-700">Account Login</h3>
-        <form action="#" class="flex flex-col space-y-5">
+        <form @submit.prevent="submitLoginForm" class="flex flex-col space-y-5">
           <div class="flex flex-col space-y-1">
             <label for="email" class="text-sm font-semibold text-gray-500">Email address</label>
             <input
               type="email"
               id="email"
-              name="email"
+              v-model="email"
               placeholder="Input your email"
               autofocus
               class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
@@ -45,7 +45,7 @@
             <input
               type="password"
               id="password"
-              name="password"
+              v-model="password"
               placeholder="Input your password"
               class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
             />
@@ -101,3 +101,35 @@
     </div>
   </div>
 </template>
+
+<script>
+import axios from 'axios';
+import router from '/src/router';
+
+export default {
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
+  methods: {
+    submitLoginForm() {
+      const formData = {
+        email: this.email,
+        password: this.password,
+      };
+
+      axios
+        .post('http://localhost:8080/login', formData)
+        .then((response) => {
+          console.log('Login successful:', response.data);
+          router.push({ name: 'homeauth' });
+        })
+        .catch((error) => {
+          console.error('Login failed:', error);
+        });
+    },
+  },
+};
+</script>
