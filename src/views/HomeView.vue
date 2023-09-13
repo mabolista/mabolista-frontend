@@ -1,7 +1,7 @@
 <script setup>
-import FooterSection from '../components/layouts/footersection.vue'
+import FooterSection from '../components/layouts/FooterSection.vue'
+import NavbarSection from '../components/layouts/NavbarSection.vue'
 import { ArchiveBoxIcon, CameraIcon, FireIcon, VideoCameraIcon } from '@heroicons/vue/24/outline'
-
 const features = [
   {
     name: 'Fotographer',
@@ -31,123 +31,29 @@ const features = [
 </script>
 
 <template>
-  <nav class="bg-gray-100">
-    <div class="xl:max-w-full px-3">
-      <div class="flex justify-between">
-        <div class="flex space-x-4">
-          <div>
-            <a href="#" class="flex items-center py-5 px-2 hover:text-yellow-300">
-              <!-- logo image -->
-              <img src="/src/assets/img/MABOLISTA FC.png" alt="Mabolista Fc" class="w-20 h-20" />
-              <span class="font-mabolistafont">Mabolista Fc</span>
-            </a>
-          </div>
+<NavbarSection />
 
-          <div class="hidden md:flex items-center gap-3 font-mabolistafont text-2xl">
-            <RouterLink class="hover:text-yellow-300" to="/">Home</RouterLink>
-            <RouterLink class="hover:text-yellow-300" to="/about">About</RouterLink>
-            <RouterLink class="hover:text-yellow-300" to="/events">Events</RouterLink>
-            <RouterLink class="hover:text-yellow-300" to="/contact">Contact</RouterLink>
-          </div>
-        </div>
-
-        <div class="hidden md:flex items-center space-x-1">
-          <div class="pt-2 relative mx-auto text-gray-600">
-            <input
-              class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
-              type="search"
-              name="search"
-              placeholder="Search"
-            />
-            <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
-              <svg
-                class="text-gray-600 h-4 w-4 fill-current"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                version="1.1"
-                id="Capa_1"
-                x="0px"
-                y="0px"
-                viewBox="0 0 56.966 56.966"
-                style="enable-background: new 0 0 56.966 56.966"
-                xml:space="preserve"
-                width="512px"
-                height="512px"
-              >
-                <path
-                  d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
-                />
-              </svg>
-            </button>
-          </div>
-          <a href="/login" class="py-5 px-3 font-semibold">Log in</a>
-          <a
-            href="/signup"
-            class="py-2 px-3 font-semibold bg-yellow-400 hover:bg-yellow-300 text-white rounded transition duration-300"
-            >Signup</a
-          >
-        </div>
-
-        <!-- ---------- BUTTON: MOBILE MENU ----------  -->
-        <div class="md:hidden flex items-center">
-          <button class="mobile-menu-button">
-            <svg
-              class="w-6 h-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
+  <section class="relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3">
+    <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
+        <video class="min-w-full min-h-full absolute object-cover" src="/src/assets/video/homevideo.mp4" type="video/mp4" autoplay muted loop></video>
     </div>
-
-    <!-- ---------- MOBILE MENU  ----------  -->
-
-    <div class="mobile-menu hidden md:hidden font-mabolistafont">
-      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-300">HOME</a>
-      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-300">ABOUT</a>
-      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-300">EVENTS</a>
-      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-300">CONTACT</a>
-    </div>
-  </nav>
-
-  <!-- ---------- HEAD CONTENT ----------  -->
-  <div class="w-full relative mt-5 mb-16 sm:mt-24">
-    <div class="flex flex-col items-center sm:flex-row">
-      <div
-        class="flex flex-col w-full pl-5 sm:pl-3 mx-auto lg:w-1/2 space-y-6 sm:mr-5 lg:mr-20 mb-6 sm:mb-0"
-      >
-        <h1 class="font-mabolistafont text-3xl sm:text-5xl text-black">Welcome Mabolism!</h1>
-        <p class="mt-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus distinctio, obcaecati
-          perferendis deserunt suscipit, architecto est placeat quae ullam ipsam aliquam eaque id
-          iure ea. Repellendus totam ipsa nisi laboriosam!
-        </p>
-        <div class="py-5">
+    <div class="video-content space-y-2">
+      <h1 class="font-mabolistafont text-3xl sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-700">Welcome Mabolism!</h1>
+        <h3 class="mt-3 mx-auto w-96 font-bold">
+            #Makemoreconnections #MabolistaFc
+        </h3>
+        <!-- <div class="py-5">
           <button
             data-modal-target="authentication-modal"
             data-modal-toggle="authentication-modal"
-            class="block text-white bg-yellow-400 hover:bg-yellow-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            class="block mx-auto text-white bg-yellow-400 hover:bg-yellow-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             type="button"
           >
             Join Now
           </button>
-        </div>
-      </div>
-      <div class="lg:w-1/3">
-        <img src="/src/assets/img/MABOLISTA FC.png" alt="" />
-      </div>
+        </div> -->
     </div>
-  </div>
+</section>
 
   <!-- ---------- SPONSOR ----------  -->
   <div class="bg-white py-24 sm:py-32 flex items-center justify-center">
@@ -429,3 +335,25 @@ const features = [
 
   <FooterSection />
 </template>
+
+<style scoped>
+.video-docker video {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.video-docker::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.video-content {
+  z-index: 2;
+}
+</style>

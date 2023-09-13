@@ -61,9 +61,12 @@
           <div>
             <button
               type="submit"
+              id="loadingButton"
               class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-yellow-500 rounded-md shadow hover:bg-yellow-600 focus:outline-none focus:ring-blue-200 focus:ring-4"
+              onclick="showLoading()"
             >
               Log in
+              <span id="loadingSpinner" class="hidden ml-2 animate-spin">&#9696;</span>
             </button>
           </div>
           <div class="flex flex-col space-y-5">
@@ -133,3 +136,18 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+</style>

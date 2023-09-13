@@ -1,15 +1,17 @@
+<script setup>
+import FooterSection from '../components/layouts/FooterSection.vue'
+import NavbarSection from '../components/layouts/NavbarSection.vue'
+</script>
+
 <template>
-  <div class="events">
-    <h1>This is an Events page</h1>
-  </div>
+<NavbarSection />
+
+  <FooterSection />
 </template>
 
+<script>
+</script>
+
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
+
 </style>

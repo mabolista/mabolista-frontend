@@ -20,13 +20,13 @@
                 <a href="#" class="hover:text-white">Home</a>
               </li>
               <li class="mb-4">
-                <a href="#" class="hover:text-white">About</a>
+                <a href="/about" class="hover:text-white">About</a>
               </li>
               <li class="mb-4">
-                <a href="#" class="hover:text-white">Events</a>
+                <a href="/events" class="hover:text-white">Events</a>
               </li>
               <li class="mb-4">
-                <a href="#" class="hover:text-white">Contact</a>
+                <a href="/contact" class="hover:text-white">Contact</a>
               </li>
             </ul>
           </div>
@@ -145,7 +145,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: "FooterSection",
+}
 </script>
 
 <style></style>

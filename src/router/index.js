@@ -59,8 +59,8 @@ const router = createRouter({
       component: DashboardPage
     },
     {
-      path: '/events',
-      name: 'events',
+      path: '/eventslist',
+      name: 'eventslist',
       component: EventsPage
     }
   ]
