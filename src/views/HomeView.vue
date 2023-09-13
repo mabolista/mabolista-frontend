@@ -31,18 +31,29 @@ const features = [
 </script>
 
 <template>
-<NavbarSection />
+  <NavbarSection />
 
-  <section class="relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3">
+  <section
+    class="relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3"
+  >
     <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
-        <video class="min-w-full min-h-full absolute object-cover" src="/src/assets/video/homevideo.mp4" type="video/mp4" autoplay muted loop></video>
+      <video
+        class="min-w-full min-h-full absolute object-cover"
+        src="/src/assets/video/homevideo.mp4"
+        type="video/mp4"
+        autoplay
+        muted
+        loop
+      ></video>
     </div>
     <div class="video-content space-y-2">
-      <h1 class="font-mabolistafont text-3xl sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-700">Welcome Mabolism!</h1>
-        <h3 class="mt-3 mx-auto w-96 font-bold">
-            #Makemoreconnections #MabolistaFc
-        </h3>
-        <!-- <div class="py-5">
+      <h1
+        class="font-mabolistafont text-3xl sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-700"
+      >
+        Welcome Mabolism!
+      </h1>
+      <h3 class="mt-3 mx-auto w-96 font-bold">#Makemoreconnections #MabolistaFc</h3>
+      <!-- <div class="py-5">
           <button
             data-modal-target="authentication-modal"
             data-modal-toggle="authentication-modal"
@@ -53,7 +64,7 @@ const features = [
           </button>
         </div> -->
     </div>
-</section>
+  </section>
 
   <!-- ---------- SPONSOR ----------  -->
   <div class="bg-white py-24 sm:py-32 flex items-center justify-center">
@@ -343,7 +354,7 @@ const features = [
   transform: translate(-50%, -50%);
 }
 .video-docker::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 100%;

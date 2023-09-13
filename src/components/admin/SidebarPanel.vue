@@ -3,20 +3,13 @@
     <div class="flex flex-wrap mt-8">
       <div class="w-1/2">
         <img src="/src/assets/img/azraprofil.jpg" class="mx-auto w-20 h-20 rounded-full" />
-      </div>
-      <div class="w-1/2">
-        <span class="font-semibold text-white">Azra</span>
-        <button
-          class="bg-yellow-500 text-white px-4 py-2 rounded-md border border-black hover:bg-white hover:text-yellow-500"
-        >
-          Admin
-        </button>
+        <span class="font-semibold text-center text-white">Azra</span>
       </div>
     </div>
     <div class="mt-10 mb-4">
       <ul class="ml-4">
         <li
-          class="mb-2 px-4 py-4 text-gray-100 flex flex-row border-gray-300 hover:text-black hover:bg-gray-300 hover:font-bold rounded rounded-lg"
+          class="mb-2 px-4 py-4 text-gray-100 flex flex-row border-gray-300 hover:text-black hover:bg-gray-300 hover:font-bold rounded"
         >
           <span>
             <svg class="fill-current h-5 w-5" viewBox="0 0 24 24">
@@ -32,7 +25,7 @@
           </a>
         </li>
         <li
-          class="mb-2 px-4 py-4 text-gray-100 flex flex-row border-gray-300 hover:text-black hover:bg-gray-300 hover:font-bold rounded rounded-lg"
+          class="mb-2 px-4 py-4 text-gray-100 flex flex-row border-gray-300 hover:text-black hover:bg-gray-300 hover:font-bold rounded"
         >
           <span>
             <svg
@@ -58,7 +51,7 @@
           </a>
         </li>
         <li
-          class="mb-2 px-4 py-4 text-gray-100 flex flex-row border-gray-300 hover:text-black hover:bg-gray-300 hover:font-bold rounded rounded-lg"
+          class="mb-2 px-4 py-4 text-gray-100 flex flex-row border-gray-300 hover:text-black hover:bg-gray-300 hover:font-bold rounded"
         >
           <span>
             <svg class="fill-current h-5 w-5" viewBox="0 0 24 24">
@@ -74,7 +67,7 @@
           </a>
         </li>
         <li
-          class="mb-2 px-4 py-4 text-gray-100 flex flex-row border-gray-300 hover:text-black hover:bg-gray-300 hover:font-bold rounded rounded-lg"
+          class="mb-2 px-4 py-4 text-gray-100 flex flex-row border-gray-300 hover:text-black hover:bg-gray-300 hover:font-bold rounded"
         >
           <span>
             <svg class="fill-current h-5 w-5" viewBox="0 0 24 24">
@@ -90,7 +83,7 @@
           </a>
         </li>
         <li
-          class="mb-2 px-4 py-4 text-gray-100 flex flex-row border-gray-300 hover:text-black hover:bg-gray-300 hover:font-bold rounded rounded-lg"
+          class="mb-2 px-4 py-4 text-gray-100 flex flex-row border-gray-300 hover:text-black hover:bg-gray-300 hover:font-bold rounded"
         >
           <span>
             <svg class="fill-current h-5 w-5" viewBox="0 0 24 24">
@@ -106,7 +99,7 @@
           </a>
         </li>
         <li
-          class="mb-2 px-4 py-4 text-gray-100 flex flex-row border-gray-300 hover:text-black hover:bg-gray-300 hover:font-bold rounded rounded-lg"
+          class="mb-2 px-4 py-4 text-gray-100 flex flex-row border-gray-300 hover:text-black hover:bg-gray-300 hover:font-bold rounded"
         >
           <span>
             <svg
