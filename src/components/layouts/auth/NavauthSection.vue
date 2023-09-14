@@ -52,6 +52,7 @@
 
           <!-- Dropdown menu -->
           <div
+          v-if="isDropdownOpen"
             id="dropdownAvatarName"
             class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
           >
@@ -79,11 +80,12 @@
               </li>
             </ul>
             <div class="py-2">
-              <a
-                href="#"
-                class="block px-4 py-2 text-sm text-red-500 hover:bg-gray-300 dark:hover:bg-gray-600 dark:text-red-200 dark:hover:text-white"
-                >Sign out</a
-              >
+              <button
+          @click="signOut"
+          class="block px-4 py-2 text-sm text-red-500 hover:bg-gray-300 dark:hover:bg-gray-600 dark:text-red-200 dark:hover:text-white"
+        >
+          Sign out
+        </button>
             </div>
           </div>
         </div>
@@ -123,8 +125,22 @@
 
 <script>
 export default {
-  name: 'NavauthSection'
-}
+  name: 'NavauthSection',
+  data() {
+    return {
+      isDropdownOpen: false,
+    };
+  },
+  methods: {
+    toggleDropdown() {
+      this.isDropdownOpen = !this.isDropdownOpen;
+    },
+    signOut() {
+this.signOut();
+      this.$router.push('/login'); // Redirect to the login page
+    },
+  },
+};
 </script>
 
 <style></style>

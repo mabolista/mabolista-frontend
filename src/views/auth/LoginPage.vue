@@ -1,4 +1,10 @@
 <template>
+        <!-- Preloader -->
+        <div v-if="loading" class="preloader">
+        <img class="logo" src="/src/assets/img/MABOLISTA FC.png" alt="Loading Logo">
+        Loading...
+    </div>
+
   <div class="flex items-center min-h-screen p-4 bg-gray-100 lg:justify-center">
     <div
       class="flex flex-col overflow-hidden bg-white rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md"
@@ -60,10 +66,11 @@
           </div>
           <div>
             <button
+            @click="login"
               type="submit"
+              :disabled="loading"
               id="loadingButton"
               class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-yellow-500 rounded-md shadow hover:bg-yellow-600 focus:outline-none focus:ring-blue-200 focus:ring-4"
-              onclick="showLoading()"
             >
               Log in
               <span id="loadingSpinner" class="hidden ml-2 animate-spin">&#9696;</span>
@@ -114,6 +121,7 @@ export default {
     return {
       email: '',
       password: '',
+      loading: false,
     };
   },
   methods: {
@@ -122,6 +130,10 @@ export default {
         email: this.email,
         password: this.password,
       };
+      this.loading = true;
+      setTimeout(() => {
+        this.loading = false;
+      }, 10000);
 
       axios
         .post('http://localhost:8080/login', formData)
@@ -130,7 +142,8 @@ export default {
           router.push({ name: 'homeauth' });
         })
         .catch((error) => {
-          console.error('Login failed:', error);
+          router.push({ name: 'login' }, error);
+          this.$swal('Login gagal!, Periksa email dan password');
         });
     },
   },
@@ -138,16 +151,31 @@ export default {
 </script>
 
 <style scoped>
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+        .preloader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 999;
+        }
 
-.animate-spin {
-  animation: spin 1s linear infinite;
-}
+        .logo {
+            width: 100px; /* Set the size of your logo */
+            height: 100px;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px); /* Adjust the bounce height as needed */
+            }
+        }
 </style>

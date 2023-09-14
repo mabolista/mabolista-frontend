@@ -70,12 +70,11 @@
                 Mabolista fc
               </h3>
               <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
-                <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
                 Keterangan User / Alamat dll
               </div>
             </div>
             <div class="mt-10 py-10 border-t border-blueGray-200 text-center flex justify-center">
-              <form class="w-full max-w-lg">
+              <form class="w-full max-w-lg" @submit.prevent="saveChanges">
                 <div class="flex flex-wrap -mx-3 mb-6">
                   <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <label
@@ -188,3 +187,43 @@
     </section>
   </main>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      formData: {
+        username: '',
+        email: '',
+        password: '',
+        confirm_password: '',
+        phonenumber: '',
+        uploadfoto: null, // For file input
+      },
+    };
+  },
+  mounted() {
+    // Fetch edit data from your API or data source
+    // and populate the formData object with the fetched data
+    this.fetchEditData();
+  },
+  methods: {
+    fetchEditData() {
+      // Simulate fetching edit data
+      // Replace this with your actual data fetching logic
+      const editData = {
+        username: 'exampleUser',
+        email: 'example@example.com',
+        phonenumber: '1234567890',
+        // ...
+      };
+      this.formData = { ...this.formData, ...editData };
+    },
+    saveChanges() {
+
+    },
+  },
+};
+</script>
+
+

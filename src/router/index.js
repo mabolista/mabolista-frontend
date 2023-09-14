@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import LoginPage from '../views/auth/LoginPage.vue'
+import RegisterPage from '../views/auth/RegisterPage.vue'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import EventsView from '../views/EventsView.vue'
 import ContactView from '../views/ContactView.vue'
-import LoginPage from '../views/auth/LoginPage.vue'
-import RegisterPage from '../views/auth/RegisterPage.vue'
+
 import HomeAuthView from '../views/HomeAuthView.vue'
 import ProfilePage from '../views/users/ProfilePage.vue'
 import DashboardPage from '../views/admin/DashboardPage.vue'
@@ -64,6 +65,12 @@ const router = createRouter({
       component: EventsPage
     }
   ]
+})
+
+router.beforeEach((to, from, next) => {
+  const isAuthenticated = JSON.parse(localStorage.getItem('user'));
+  if (to.name !== 'login' && !isAuthenticated) next({ name: 'login' });
+  else next()
 })
 
 export default router
