@@ -42,12 +42,12 @@ const router = createRouter({
     {
       path: '/signup',
       name: 'signup',
-      component: RegisterPage
+      component: RegisterPage,
     },
     {
       path: '/home',
-      name: 'homeauth',
-      component: HomeAuthView
+      name: 'home-auth',
+      component: HomeAuthView,
     },
     {
       path: '/profile',
@@ -65,12 +65,6 @@ const router = createRouter({
       component: EventsPage
     }
   ]
-})
-
-router.beforeEach((to, from, next) => {
-  const isAuthenticated = JSON.parse(localStorage.getItem('user'));
-  if (to.name !== 'login' && !isAuthenticated) next({ name: 'login' });
-  else next()
 })
 
 export default router

@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+
+</script>
 <template>
   <nav class="sticky top-0 w-full transition bg-transparent backdrop-blur-md z-10">
     <div class="xl:max-w-full px-3">
@@ -82,7 +84,7 @@
             <div class="py-2">
               <button
           @click="signOut"
-          class="block px-4 py-2 text-sm text-red-500 hover:bg-gray-300 dark:hover:bg-gray-600 dark:text-red-200 dark:hover:text-white"
+          class="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
         >
           Sign out
         </button>
@@ -124,20 +126,17 @@
 </template>
 
 <script>
+
 export default {
   name: 'NavauthSection',
   data() {
     return {
-      isDropdownOpen: false,
+      isDropdownOpen: true,
     };
   },
   methods: {
     toggleDropdown() {
       this.isDropdownOpen = !this.isDropdownOpen;
-    },
-    signOut() {
-this.signOut();
-      this.$router.push('/login'); // Redirect to the login page
     },
   },
 };

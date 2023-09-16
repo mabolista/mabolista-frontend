@@ -1,9 +1,9 @@
 <template>
       <!-- Preloader -->
-      <div v-if="loading" class="preloader">
+      <!-- <div v-if="loading" class="preloader">
         <img class="logo" src="/src/assets/img/MABOLISTA FC.png" alt="Loading Logo">
         Loading...
-    </div>
+    </div> -->
 
   <div class="flex items-center min-h-screen p-4 bg-gray-100 lg:justify-center">
     <div
@@ -29,7 +29,7 @@
       </div>
       <div class="p-5 bg-white md:flex-1">
         <h3 class="my-4 text-2xl font-semibold text-gray-700">Account Register</h3>
-        <form @submit.prevent="submitFormDatabase" enctype="multipart/form-data" class="flex flex-col space-y-5">
+        <form @submit.prevent="submitFormRegister" enctype="multipart/form-data" class="flex flex-col space-y-5">
   <!-- Username input -->
   <div class="flex flex-col space-y-1">
     <label for="name" class="text-sm font-semibold text-gray-500">Username</label>
@@ -113,7 +113,6 @@
     <button
     @click="showAlert"
       type="submit"
-      :disabled="loading"
       class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-yellow-500 rounded-md shadow hover:bg-yellow-600 focus:outline-none focus:ring-blue-200 focus:ring-4"
     >
       Register
@@ -138,11 +137,10 @@ export default {
       password: '',
       confirmPassword: '',
       image: '',
-      loading: false,
     };
   },
   methods: {
-    submitForm() {
+    submitFormRegister() {
       let formData = new FormData();
       formData.append('name', this.name);
       formData.append('email', this.email);
@@ -155,7 +153,11 @@ export default {
         .post('http://localhost:8080/register', formData)
         .then((response) => {
           console.log(response.data);
+
+          localStorage.setItem('token', response.data.data.token);
+          
           this.$swal('Berhasil Daftar, Silahkan Login!');
+          this.$router.push({ name: 'login' });
         })
         .catch((error) => {
           console.error('FAILURE!!', error);
@@ -164,20 +166,7 @@ export default {
     onFileChange(e) {
       this.image = e.target.files[0];
     },
-    submitFormDatabase() {
-      this.submitForm();
-      this.loading = true;
-      setTimeout(() => {
-        this.loading = false;
-      }, 5000);
-    },
   },
-  mounted() {
-    let user = localStorage.getItem('users');
-    if (user) {
-      this.$router.push({ name: 'login' });
-    }
-  }
 };
 </script>
 
