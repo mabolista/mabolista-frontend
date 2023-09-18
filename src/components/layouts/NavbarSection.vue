@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-  <nav class="sticky top-0 w-full transition bg-transparent backdrop-blur-md">
+  <nav class="sticky top-0 w-full transition bg-transparent backdrop-blur-md z-10">
     <div class="xl:max-w-full px-3">
       <div class="flex justify-between">
         <div class="flex space-x-4">
@@ -19,13 +19,74 @@
           </div>
         </div>
 
-        <div class="hidden md:flex items-center space-x-1">
-          <a href="/login" class="py-5 px-3 font-extrabold">Log in</a>
-          <a
-            href="/signup"
-            class="py-2 px-3 font-extrabold bg-gradient-to-r from-pink-500 to-violet-700 text-white rounded transition duration-300"
-            >Signup</a
+        <div v-if="!isAuthenticated" class="hidden md:flex items-center space-x-1">
+          <router-link to="/login" class="py-5 px-3 font-extrabold">Login</router-link>
+          <router-link to="/signup" class="py-2 px-3 font-extrabold bg-gradient-to-r from-pink-500 to-violet-700 text-white rounded transition duration-300">SignUp</router-link>
+        </div>
+
+        <div v-if="isAuthenticated" class="hidden md:flex items-center space-x-1">
+          <button
+            id="dropdownAvatarNameButton"
+            data-dropdown-toggle="dropdownAvatarName"
+            class="flex items-center text-sm font-medium text-gray-900 rounded-full hover:text-yellow-600 dark:hover:text-yellow-500 md:mr-0 dark:text-white"
+            type="button"
           >
+            <span class="sr-only">Open user menu</span>
+            <img
+              class="w-8 h-8 mr-2 rounded-full"
+              src="/src/assets/img/azraprofil.jpg"
+              alt="user photo"
+            />
+            Syahjuddin Azra
+            <svg
+              class="w-2.5 h-2.5 ml-2.5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"
+              />
+            </svg>
+          </button>
+
+          <!-- Dropdown menu -->
+          <div
+          v-if="isDropdownOpen"
+            id="dropdownAvatarName"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+          >
+            <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+              <div class="font-medium">Admin</div>
+              <div class="truncate">mabolista@gmail.com</div>
+            </div>
+            <ul
+              class="py-2 text-sm text-gray-700 dark:text-gray-200"
+              aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton"
+            >
+              <li>
+                <a
+                  href="/profile"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >View Profile</a
+                >
+              </li>
+            </ul>
+            <div class="py-2">
+              <a
+              href="javascript:void(0)"
+              @click="signOut"
+              class="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+            >
+              Sign out
+             </a>
+            </div>
+          </div>
         </div>
 
         <!-- ---------- BUTTON: MOBILE MENU ----------  -->
@@ -62,9 +123,31 @@
 </template>
 
 <script>
+
 export default {
   name: "NavbarSection",
+  computed: {
+    isAuthenticated() {
+      return !!localStorage.getItem('token');
+    },
+  },
+  data() {
+    return {
+      users: null,
+      isDropdownOpen: true,
+    }
+  },
+  methods: {
+  signOut() {
+    localStorage.removeItem('token');
+    window.location.reload('/');
+  },
+  toggleDropdown() {
+      this.isDropdownOpen = !this.isDropdownOpen;
+    },
+},
 }
+
 </script>
 
 <style></style>

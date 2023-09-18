@@ -1,94 +1,105 @@
-<script setup></script>
+<script setup>
+// import NavbarSection from '../components/layouts/NavbarSection.vue'
+</script>
 
 <template>
-  <main class="profile-page">
-    <section class="relative block h-500-px">
-      <div class="absolute top-0 w-full h-full bg-center bg-cover">
-        <img src="/src/assets/img/background-profile.jpg" alt="" />
-        <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
-      </div>
-      <div
-        class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
-        style="transform: translateZ(0px)"
-      >
-        <svg
-          class="absolute bottom-0 overflow-hidden"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          version="1.1"
-          viewBox="0 0 2560 100"
-          x="0"
-          y="0"
-        >
-          <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
-        </svg>
-      </div>
-    </section>
-    <section class="relative py-16 bg-blueGray-200">
-      <div class="container mx-auto px-4">
-        <div
-          class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64"
-        >
-          <div class="px-6">
-            <div class="flex flex-wrap justify-center">
-              <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
-                <div class="relative">
-                  <img
-                    alt="..."
-                    src="/src/assets/img/azraprofil.jpg"
-                    class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"
-                  />
-                </div>
-              </div>
-              <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
-                <div class="py-6 px-3 mt-32 sm:mt-0">
-                  <button
-                    class="bg-yellow-500 active:bg-yellow-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                  >
-                    Mabolism
-                  </button>
-                </div>
-              </div>
-              <div class="w-full lg:w-4/12 px-4 lg:order-1">
-                <div class="flex justify-center py-4 lg:pt-4 pt-8">
-                  <div class="mr-4 p-3 text-center">
-                    <span class="text-xl font-bold block uppercase tracking-wide text-blueGray-600"
-                      >22</span
-                    ><span class="text-sm text-blueGray-400">Friends</span>
-                  </div>
-                  <div class="mr-4 p-3 text-center">
-                    <span class="text-xl font-bold block uppercase tracking-wide text-blueGray-600"
-                      >10</span
-                    ><span class="text-sm text-blueGray-400">Photos</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="text-center mt-12">
-              <h3 class="text-4xl font-semibold leading-normal mb-2 text-blueGray-700">
-                Mabolista fc
-              </h3>
-              <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
-                Keterangan User / Alamat dll
-              </div>
-            </div>
-            <div class="mt-10 py-10 border-t border-blueGray-200 text-center flex justify-center">
-              <form class="w-full max-w-lg" @submit.prevent="saveChanges">
+  <div class="max-w-lg mx-auto my-10 bg-white rounded-lg shadow-md p-5">
+    <img class="w-32 h-32 rounded-full mx-auto" src="https://picsum.photos/200" alt="Profile picture">
+    <h2 v-if="users" class="text-center text-2xl font-semibold mt-3">Hi, {{users.name}}</h2>
+    <p class="text-center text-gray-600 mt-1">Mabolism</p>
+    <div class="flex justify-center mt-5">
+      <a href="#" data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="text-blue-500 hover:text-blue-700 mx-3">Edit Profile</a>
+    </div>
+    <div class="mt-5">
+      <h3 class="text-xl font-semibold">Bio</h3>
+      <p v-if="users" class="text-gray-600 mt-2">My name {{ users.name }} im mabolista member</p>
+    </div>
+    <div class="mt-10 py-10 border-t border-blueGray-200 text-center flex justify-center">
+              <form class="w-full max-w-lg" v-if="users">
                 <div class="flex flex-wrap -mx-3 mb-6">
-                  <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                  <div class="w-full px-3">
                     <label
                       class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                      for="username"
+                      for="name"
                     >
                       Username
                     </label>
                     <input
                       class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      id="username"
-                      name="username"
+                      id="name"
+                      v-model="users.name"
+                      name="name"
                       type="text"
-                      placeholder="Input Username"
+                      placeholder="Input name"
+                    />
+                  </div>
+                  <div class="w-full px-3 mt-6">
+                    <label
+                      class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                      for="email"
+                    >
+                      Email
+                    </label>
+                    <input
+                      class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="email"
+                      v-model="email"
+                      type="email"
+                      name="email"
+                      placeholder="Input Email"
+                    />{{ users.email }}
+                  </div>
+                </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full px-3">
+                    <label
+                      class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                      for="phoneNumber"
+                    >
+                      Phone Number
+                    </label>
+                    <input
+                      class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="phoneNumber"
+                      v-model="phoneNumber"
+                      name="phoneNumber"
+                      type="text"
+                      placeholder="Input Phone Number"
+                    />{{ users.phoneNumber }}
+                  </div>
+                </div>
+              </form>
+        </div>
+  </div>
+
+<!-- Edit profile -->
+<div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-2xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Edit Profile
+                </h3>
+            </div>
+            <!-- Modal body -->
+            <div class="p-6 space-y-6">
+              <form class="w-full max-w-lg" @submit.prevent="saveChanges">
+                <div class="flex flex-wrap -mx-3 mb-6">
+                  <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label
+                      class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                      for="name"
+                    >
+                      Username
+                    </label>
+                    <input
+                      class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="Input name"
                     />
                   </div>
                   <div class="w-full md:w-1/2 px-3">
@@ -143,14 +154,14 @@
                   <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                     <label
                       class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                      for="phonenumber"
+                      for="phoneNumber"
                     >
                       Phone Number
                     </label>
                     <input
                       class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      id="phonenumber"
-                      name="phonenumber"
+                      id="phoneNumber"
+                      name="phoneNumber"
                       type="text"
                       placeholder="Input Phone Number"
                     />
@@ -173,57 +184,57 @@
                     </p>
                   </div>
                 </div>
-                <button
-                  class="bg-yellow-500 active:bg-yellow-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
-                  type="button"
-                >
-                  Save Changes
-                </button>
+                    <!-- Modal footer -->
+                  <div class="flex items-center pt-5 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                      <button data-modal-hide="defaultModal" type="button" class="text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800">Save Changes</button>
+                      <button data-modal-hide="defaultModal" type="button" class="text-white bg-red-500 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-white focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">Cancel</button>
+                  </div>
               </form>
             </div>
-          </div>
         </div>
-      </div>
-    </section>
-  </main>
+    </div>
+</div>
+
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
-      formData: {
-        username: '',
-        email: '',
-        password: '',
-        confirm_password: '',
-        phonenumber: '',
-        uploadfoto: null, // For file input
-      },
+      users: null,
+      name: '',
+      email: '',
+      phoneNumber: ''
     };
   },
   mounted() {
-    // Fetch edit data from your API or data source
-    // and populate the formData object with the fetched data
-    this.fetchEditData();
+    // Make an API request to fetch user data
+    this.fetchUserData();
   },
   methods: {
-    fetchEditData() {
-      // Simulate fetching edit data
-      // Replace this with your actual data fetching logic
-      const editData = {
-        username: 'exampleUser',
-        email: 'example@example.com',
-        phonenumber: '1234567890',
-        // ...
-      };
-      this.formData = { ...this.formData, ...editData };
-    },
-    saveChanges() {
-
+    fetchUserData() {
+      axios
+        .get('http://localhost:8080/users/43', {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem('token')}`, // Replace with your authentication method
+          },
+        })
+        .then((response) => {
+          this.users = response.data;
+        })
+        .catch((error) => {
+          console.error('Error fetching user data:', error);
+        });
     },
   },
 };
 </script>
+
+
+
+
+
 
 

@@ -6,17 +6,14 @@ import AboutView from '../views/AboutView.vue'
 import EventsView from '../views/EventsView.vue'
 import ContactView from '../views/ContactView.vue'
 
-import HomeAuthView from '../views/HomeAuthView.vue'
 import ProfilePage from '../views/users/ProfilePage.vue'
-import DashboardPage from '../views/admin/DashboardPage.vue'
-import EventsPage from '../views/admin/EventsPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'HomePage',
       component: HomeView
     },
     {
@@ -45,25 +42,18 @@ const router = createRouter({
       component: RegisterPage,
     },
     {
-      path: '/home',
-      name: 'home-auth',
-      component: HomeAuthView,
-    },
-    {
       path: '/profile',
       name: 'profile',
-      component: ProfilePage
+      component: ProfilePage,
+      beforeEnter: (to, from, next) => {
+        const isAuthenticated = localStorage.getItem('token');
+        if (isAuthenticated) {
+          next();
+        } else {
+          next('/login');
+        }
+      },
     },
-    {
-      path: '/dashboard',
-      name: 'dashboard',
-      component: DashboardPage
-    },
-    {
-      path: '/eventslist',
-      name: 'eventslist',
-      component: EventsPage
-    }
   ]
 })
 

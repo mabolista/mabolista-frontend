@@ -3,14 +3,13 @@
 </script>
 
 <template>
-  <!-- <header>
-    <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/events">Events</RouterLink>
-      <RouterLink to="/contact">Contact</RouterLink>
-    </nav>
-  </header> -->
 
   <RouterView />
 </template>
+
+<script>
+
+export default {
+    name: 'App',
+}
+</script>
