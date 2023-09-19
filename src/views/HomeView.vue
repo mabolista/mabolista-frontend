@@ -48,7 +48,7 @@ const features = [
     </div>
     <div class="video-content space-y-2">
       <h1
-        class="font-mabolistafont text-3xl sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-700"
+        class="animate__fadeInUp font-mabolistafont text-3xl sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-700"
       >
         Welcome Mabolism!
       </h1>
