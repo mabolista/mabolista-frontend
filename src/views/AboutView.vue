@@ -1,42 +1,38 @@
 <script setup>
 import FooterSection from '../components/layouts/FooterSection.vue'
 import NavbarSection from '../components/layouts/NavbarSection.vue'
+import 'animate.css';
 </script>
 <template>
   <NavbarSection />
 
-  <section class="text-gray-700 body-font">
-    <div class="bg-cover bg-center h-screen" style="background-image: url('/src/assets/img/background-profile.jpg');">
+<section>
 
-    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-      <div
-        class="text-white lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
-      >
-        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium">
-          About Mabolista Fc
-        </h1>
-        <p class="mb-8 leading-relaxed">
-          Komunitas sepakbola yang terbuka untuk umum, Siapapun bisa main dan fun bareng bareng.
-          Silaturahmi dan jalin persaudaraan lewat olahraga!
-        </p>
-        <div class="flex justify-center">
-          <button
-            class="inline-flex text-white bg-slate-500 border-0 py-2 px-6 focus:outline-none hover:bg-slate-600 rounded text-lg"
-          >
-            Contact us
+  <div class="relative overflow-hidden bg-cover bg-no-repeat" style="
+        background-position: 50%;
+        background-image: url('/src/assets/img/NYTC-about.jpg');
+        height: 500px;
+      ">
+    <div
+      class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed">
+      <div class="flex h-full items-center justify-center">
+        <div class="px-6 text-center text-white md:px-12">
+          <h1 class="animate__fadeInUp mt-2 mb-16 text-5xl font-mabolistafont sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-700 md:text-6xl xl:text-7xl">
+            everything about us is here
+          </h1>
+          <button type="button"
+            class="rounded border-2 border-neutral-50 px-[46px] pt-[14px] pb-[12px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-100 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200"
+            data-te-ripple-init data-te-ripple-color="light">
+            Learn More
+            
           </button>
         </div>
       </div>
-      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-        <img
-          class="object-cover object-center rounded"
-          alt="hero"
-          src="/src/assets/img/MABOLISTA FC.png"
-        />
-      </div>
     </div>
   </div>
-  </section>
+</section>
+
+<!-- Section: Design Block -->
   <section class="text-gray-700 body-font border-t border-gray-200">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
@@ -153,7 +149,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
       </div>
     </div>
   </section>
-  <section class="text-gray-700 body-font border-t border-gray-200">
+  <section id="aboutmabolista" class="text-gray-700 body-font border-t border-gray-200">
     <div class="container px-5 py-24 mx-auto flex flex-wrap">
       <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
         <img
@@ -171,7 +167,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             <p class="leading-relaxed text-base">
               Nama Mabolista sendiri diambil dari kata mabol yang sering digunakan orang-orang dalam
               mengajak “main bola”,sedangkan Ista adalah diambil dari istilah liga sepak bola di
-              spanyol yangarti nya pecinta sepak bola. Jadi Mabolista jika diartikan keseluruhan
+              spanyol yang artinya pecinta sepak bola. Jadi Mabolista jika diartikan keseluruhan
               bertujuan mengajak pecintasepak bola (wadah) untuk bermain bersama,mempererat tali
               silahturahmi antar pecinta sepak bola
             </p>
@@ -488,24 +484,14 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 
   <FooterSection />
   <a
-    href="https://github.com/mertJF/tailblocks"
+    href="https://api.whatsapp.com/send?phone=6287773622095"
     class="rounded-full w-12 h-12 bg-gray-100 fixed bottom-0 right-0 flex items-center justify-center text-gray-800 mr-8 mb-8 shadow-sm border-gray-300 border"
     target="_blank"
-    ><svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path
-        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-      ></path></svg
-  ></a>
+    ><i class="fa-brands fa-whatsapp fa-2xl" style="color: #05ff37;"></i></a>
 </template>
 
-<style scoped></style>
+<script>
+</script>
+<style scoped>
+
+</style>

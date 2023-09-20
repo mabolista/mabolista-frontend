@@ -68,6 +68,11 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
   </section>
 
   <FooterSection />
+  <a
+    href="https://api.whatsapp.com/send?phone=6287773622095"
+    class="rounded-full w-12 h-12 bg-gray-100 fixed bottom-0 right-0 flex items-center justify-center text-gray-800 mr-8 mb-8 shadow-sm border-gray-300 border"
+    target="_blank"
+    ><i class="fa-brands fa-whatsapp fa-2xl" style="color: #05ff37;"></i></a>
 </template>
 
 <style></style>
