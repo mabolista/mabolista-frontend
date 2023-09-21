@@ -1,6 +1,7 @@
 <script setup>
 import FooterSection from '../components/layouts/FooterSection.vue'
 import NavbarSection from '../components/layouts/NavbarSection.vue'
+import ModalForm from '../components/ModalForm.vue'
 </script>
 
 <template>
@@ -55,9 +56,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
             <a href="#" class="hover:underline">Sabtu, 30 September 2023 | NYTC Sawangan Depok</a>
           </h3>
-          <a href=""><button class="bg-transparent hover:bg-yellow-500 text-black font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded">
-            Join List
-            </button></a>
+            <ModalForm />
         </div>
 
         <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">

@@ -114,10 +114,10 @@
     <!-- ---------- MOBILE MENU  ----------  -->
 
     <div class="mobile-menu hidden md:hidden font-mabolistafont">
-      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-300">HOME</a>
-      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-300">ABOUT</a>
-      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-300">EVENTS</a>
-      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-300">CONTACT</a>
+      <a href="/" class="block py-2 px-4 text-sm hover:bg-gray-300">HOME</a>
+      <a href="/about" class="block py-2 px-4 text-sm hover:bg-gray-300">ABOUT</a>
+      <a href="/events" class="block py-2 px-4 text-sm hover:bg-gray-300">EVENTS</a>
+      <a href="/contact" class="block py-2 px-4 text-sm hover:bg-gray-300">CONTACT</a>
     </div>
   </nav>
 </template>

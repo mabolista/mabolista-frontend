@@ -17,7 +17,7 @@
             <h2 class="mb-6 font-mabolistafont text-lg uppercase text-white">Resources</h2>
             <ul class="text-gray-500 font-mabolistafont">
               <li class="mb-4">
-                <a href="#" class="hover:text-white">Home</a>
+                <a href="/" class="hover:text-white">Home</a>
               </li>
               <li class="mb-4">
                 <a href="/about" class="hover:text-white">About</a>
@@ -34,10 +34,10 @@
             <h2 class="mb-6 font-mabolistafont text-lg text-white uppercase">Follow us</h2>
             <ul class="text-gray-500 dark:text-gray-400 font-mabolistafont">
               <li class="mb-4">
-                <a href="#" class="hover:text-white">Instagram</a>
+                <a href="https://www.instagram.com/mabolista_fc/" target="blank" class="hover:text-white">Instagram</a>
               </li>
               <li>
-                <a href="#" class="hover:text-white">Tiktok</a>
+                <a href="https://www.tiktok.com/@mabolistafc?is_from_webapp=1&sender_device=pc" target="blank" class="hover:text-white">Tiktok</a>
               </li>
             </ul>
           </div>
