@@ -2,7 +2,6 @@
 </script>
 
 <template>
-  <NavbarSection />
   <div class="max-w-lg mx-auto my-10 bg-white rounded-lg shadow-md p-5">
     <img class="w-32 h-32 rounded-full mx-auto" src="https://picsum.photos/200" alt="Profile picture">
     <h2 class="text-center text-2xl font-semibold mt-3">Hi,</h2>
@@ -15,7 +14,7 @@
       <p class="text-gray-600 mt-2">My name admin im mabolista member</p>
     </div>
     <div v-if="users">
-    <div v-for="item in users" :key="item.id" class="mt-10 py-10 border-t border-blueGray-200 text-center flex justify-center">
+    <div v-for="user in users" :key="user.id" class="mt-10 py-10 border-t border-blueGray-200 text-center flex justify-center">
               <form class="w-full max-w-lg">
                 <div class="flex flex-wrap -mx-3 mb-6">
                   <div class="w-full px-3">
@@ -28,7 +27,7 @@
                     <input
                       class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       id="name"
-                      v-model="item.name"
+                      v-model="user.name"
                       name="name"
                       type="text"
                       placeholder="Input name"
@@ -44,7 +43,7 @@
                     <input
                       class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       id="email"
-                      v-model="item.email"
+                      v-model="user.email"
                       type="email"
                       name="email"
                       placeholder="Input Email"
@@ -62,7 +61,7 @@
                     <input
                       class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       id="phoneNumber"
-                      v-model="item.phoneNumber"
+                      v-model="user.phoneNumber"
                       name="phoneNumber"
                       type="text"
                       placeholder="Input Phone Number"
@@ -73,7 +72,6 @@
         </div>
       </div>
       <div v-else>
-        <!-- Display a loading message or handle the null state gracefully -->
         <p>Loading user data...</p>
       </div>
   </div>
@@ -204,33 +202,28 @@
 </template>
 
 <script>
-import axios from 'axios';
+import { ref, onMounted } from "vue";
+import axios from "axios";
 
 export default {
-  name: 'ProfilPage',
-  data() {
+  setup() {
+    const users = ref([]);
+
+    onMounted(() => {
+      axios
+        .get("http://localhost:8080/users/67")
+        .then((response) => {
+          users.value = response.data.data;
+        })
+        .catch((error) => {
+          console.error("Error fetching users data:", error);
+        });
+    });
+
     return {
-      users: {},
+      users,
     };
-  },
-  methods: {
-    async getUser() {
-      try {
-        const response = await axios.get('http://localhost:8080/users/67');
-        this.users = response.data.data.users; 
-      } catch (error) {
-        console.error('Error fetching user details:', error);
-      }
-    },
-  },
-  created() {
-    this.getUser();
   },
 };
 </script>
-
-
-
-
-
 

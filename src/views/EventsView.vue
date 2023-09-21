@@ -1,7 +1,6 @@
 <script setup>
 import FooterSection from '../components/layouts/FooterSection.vue'
 import NavbarSection from '../components/layouts/NavbarSection.vue'
-import ModalForm from '../components/ModalForm.vue'
 </script>
 
 <template>
@@ -34,16 +33,7 @@ import ModalForm from '../components/ModalForm.vue'
       </h2>
 
       <div class="mt-4">
-        <a href="#" title=""
-          class="inline-flex items-center text-lg font-medium text-primary-600 hover:underline dark:text-primary-500">
-          Pelajari Lebih Lanjut
-          <svg aria-hidden="true" class="w-5 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
-            fill="currentColor">
-            <path fill-rule="evenodd"
-              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-              clip-rule="evenodd" />
-          </svg>
-        </a>
+        <p>Info Jadwal Events Mabolista Fc dan Join List</p>
       </div>
     </div>
 
@@ -54,9 +44,18 @@ import ModalForm from '../components/ModalForm.vue'
             15.30 - 18.00
           </p>
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-            <a href="#" class="hover:underline">Sabtu, 30 September 2023 | NYTC Sawangan Depok</a>
+            <p>Sabtu, 30 September 2023 | NYTC Sawangan Depok</p>
           </h3>
-            <ModalForm />
+          <a href="/NytcSawangan" title=""
+          class="inline-flex items-center text-lg font-medium text-primary-600 hover:underline dark:text-primary-500">
+          Join List
+          <svg aria-hidden="true" class="w-5 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+            fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+              clip-rule="evenodd" />
+          </svg>
+        </a>
         </div>
 
         <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">

@@ -1,5 +1,5 @@
 <script setup>
-import ModalForm from '../components/ModalForm.vue'
+
 </script>
 
 <template>
@@ -77,7 +77,9 @@ import ModalForm from '../components/ModalForm.vue'
                     💧 : Mineral Water<br />
                     👕 : Jersey Inventaris<br />
             </p>
-            <ModalForm />
+            <button data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="block mt-2 ml-1 bg-transparent hover:bg-yellow-500 text-black font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded" type="button">
+            Join List
+            </button>
           </div>
         </div>
       </div>
@@ -91,12 +93,45 @@ import ModalForm from '../components/ModalForm.vue'
             <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8" href="#">
 			Note
 		    </a>
-            <p class="mt-2 mb-8">JIKA ADA YG MERASA KURANG SEHAT MENJELANG MAIN ATAU ADA HALANGAN LAIN MAU CANCEL TOLONG KABARIN DI GRUP H-3 BUAT CANCEL SUPAYA GAMPANG CARI ORANG PENGGANTINYA, JIKA SUDAH LIST DAN TIDAK DATANG, WAJIB TF JIKA ENGGAK ADA PENGGANTINYA..DAN TETAP JAGA PROKES</p>
+            <p class="mt-2 mb-8">JIKA ADA YG MERASA KURANG SEHAT MENJELANG MAIN ATAU ADA HALANGAN LAIN MAU CANCEL TOLONG KABARIN DI GRUP H-3 BUAT CANCEL SUPAYA GAMPANG CARI ORANG PENGGANTINYA, JIKA SUDAH LIST DAN TIDAK DATANG, WAJIB TF JIKA ENGGAK ADA PENGGANTINYA..DAN TETAP JAGA PROKES</p>
 
         </div>
 
     </section>
-
+<!-- Main modal -->
+<div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative w-full max-w-2xl max-h-full">
+        <!-- Modal content -->
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <!-- Modal header -->
+            <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                    Keterangan List
+                </h3>
+                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                    </svg>
+                    <span class="sr-only">Close modal</span>
+                </button>
+            </div>
+            <!-- Modal body -->
+            <div class="p-6 space-y-6">
+                <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option selected>Pemain / Kiper</option>
+                <option value="Pemain">Pemain</option>
+                <option value="Kiper">Kiper</option>
+                </select>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
+                <button data-modal-hide="defaultModal" type="button" class="bg-transparent hover:bg-yellow-500 text-black font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded">Join List</button>
+                <button data-modal-hide="defaultModal" type="button" class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">Cancel List</button>
+                <button data-modal-hide="defaultModal" type="button" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Waiting List</button>
+            </div>
+        </div>
+    </div>
+</div>
 </template>
 
 <script>
