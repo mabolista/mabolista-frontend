@@ -9,6 +9,9 @@ module.exports = {
       height: {
         heroabout: '40rem',
       },
+      width: {
+        homebasesecond: '30rem',
+      },
     }
   },
   plugins: []

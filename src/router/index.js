@@ -8,6 +8,7 @@ import ContactView from '../views/ContactView.vue'
 
 import ProfilePage from '../views/users/ProfilePage.vue'
 import NytcSawangan from '../views/events/NytcSawangan.vue'
+import HomeBase from '../views/HomeBase.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -56,9 +57,14 @@ const router = createRouter({
       },
     },
     {
-      path: '/NYTCSawangan',
+      path: '/nytcsawangan',
       name: 'NytcSawangan',
       component: NytcSawangan,
+    },
+    {
+      path: '/homebase',
+      name: 'homebase',
+      component: HomeBase,
     },
   ]
 })

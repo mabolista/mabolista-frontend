@@ -53,7 +53,7 @@
     </div>
 
     <section id="aboutmabolista" class="text-gray-700 body-font border-t border-gray-200">
-    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+    <div class="container px-5 py-20 mx-auto flex flex-wrap">
       <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
         <img
           alt="feature"
@@ -67,7 +67,7 @@
         <div class="flex flex-col mb-10">
           <div class="flex-grow">
             <h2 class="text-3xl font-mabolistafont leading-8 text-gray-900">Keterangan</h2>
-            <p class="leading-relaxed text-base">
+            <p class="leading-relaxed text-left">
                 📆 : Sabtu, 19 Agustus 2023<br />
                     ⏰ : 15.30 - 18.00 WIB<br />
                     🏟 : BIG HAM DEPOK<br />
@@ -86,15 +86,47 @@
     </div>
   </section>
 
-    <section class="bg-white py-8">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-3 grid-rows-1 gap-4">
+      <ul class="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400">
+        <li class="font-bold">
+            List Pemain
+            <ol class="pl-5 mt-2 space-y-1 list-decimal list-inside">
+                <li>Reza</li>
+                <li>Azra</li>
+                <li>test</li>
+            </ol>
+        </li>
+        </ul>
+        <ul class="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400">
+        <li class="font-bold">
+            List Kiper
+            <ol class="pl-5 mt-2 space-y-1 list-decimal list-inside">
+                <li>Reza</li>
+                <li>Azra</li>
+                <li>test</li>
+            </ol>
+        </li>
+        </ul>
+        <ul class="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400">
+        <li class="font-bold">
+            Waiting List
+            <ol class="pl-5 mt-2 space-y-1 list-decimal list-inside">
+                <li>Reza</li>
+                <li>Azra</li>
+                <li>test</li>
+            </ol>
+        </li>
+        </ul>
+    </div>
+  </div>
 
+    <section class="bg-white py-4">
         <div class="container py-8 px-6 mx-auto">
-
             <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8" href="#">
 			Note
 		    </a>
             <p class="mt-2 mb-8">JIKA ADA YG MERASA KURANG SEHAT MENJELANG MAIN ATAU ADA HALANGAN LAIN MAU CANCEL TOLONG KABARIN DI GRUP H-3 BUAT CANCEL SUPAYA GAMPANG CARI ORANG PENGGANTINYA, JIKA SUDAH LIST DAN TIDAK DATANG, WAJIB TF JIKA ENGGAK ADA PENGGANTINYA..DAN TETAP JAGA PROKES</p>
-
         </div>
 
     </section>
@@ -108,6 +140,7 @@
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
                     Keterangan List
                 </h3>
+
                 <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="defaultModal">
                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
