@@ -102,7 +102,7 @@ export default {
       localStorage.setItem('token', response.data.data.token); 
       this.$router.push({ name: 'HomePage' });
   },catch (error) {
-    alert('Email atau Password Salah!!', error);
+    this.$swal('Email atau Password Salah', error);
     },
     loginpreloader() {
       this.loading = true;

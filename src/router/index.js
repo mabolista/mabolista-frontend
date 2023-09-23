@@ -5,9 +5,8 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import EventsView from '../views/EventsView.vue'
 import ContactView from '../views/ContactView.vue'
-
-import ProfilePage from '../views/users/ProfilePage.vue'
-import NytcSawangan from '../views/events/NytcSawangan.vue'
+import ProfilePage from '../views/ProfilePage.vue'
+import NytcSawangan from '../views/NytcSawangan.vue'
 import HomeBase from '../views/HomeBase.vue'
 
 const router = createRouter({
@@ -57,7 +56,7 @@ const router = createRouter({
       },
     },
     {
-      path: '/nytcsawangan',
+      path: '/events/nytcsawangan',
       name: 'NytcSawangan',
       component: NytcSawangan,
     },

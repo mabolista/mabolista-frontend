@@ -1,7 +1,9 @@
 <script setup>
+import NavbarSection from '../components/layouts/NavbarSection.vue'
 </script>
 
 <template>
+  <NavbarSection />
   <div class="max-w-lg mx-auto my-10 bg-white rounded-lg shadow-md p-5">
     <img class="w-32 h-32 rounded-full mx-auto" src="https://picsum.photos/200" alt="Profile picture">
     <h2 class="text-center text-2xl font-semibold mt-3">Hi,</h2>

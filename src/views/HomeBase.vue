@@ -175,6 +175,43 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 </div>
 </div>
 
+  <!-- ---------- Row 1 Futsal ----------  -->
+  <div style='background-color:rgba(0, 0, 0, 0)'>
+<div class="container max-w-7xl mx-auto px-4 mt-20" style="cursor: auto;">
+    <div class="flex justify-between mb-4 px-8">
+          <p class="font-bold text-xl">Homebase <span class="text-yellow-600 font-bold text-xl">Futsal</span></p>
+        </div>
+    <div class="flex flex-wrap">
+    <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+      <div class="px-6">
+        <img alt="My Futsal" src="/src/assets/img/futsal/myfutsal.jpg" class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined">
+        <div class="pt-6 text-center">
+          <h1 class="text-xl font-bold leading-normal mt-0 mb-2">My Futsal</h1>
+          <p class="text-base leading-relaxed mt-0 mb-4">Jl. Komp. Hankam Cidodol No.17B, RT.10/RW.11, Grogol Sel., Kec. Kby. Lama, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12220</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4" style="cursor: auto;">
+      <div class="px-6" style="cursor: auto;">
+        <img alt="Vini Vidi Vici (V3)" src="/src/assets/img/futsal/V3.jpg" class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined">
+        <div class="pt-6 text-center">
+          <h1 class="text-xl font-bold leading-normal mt-0 mb-2">Vini Vidi Vici (V3)</h1>
+          <p class="text-base leading-relaxed mt-0 mb-4">Jl. Raden Saleh No.9, RT.002/RW.014, Karang Tengah, Kec. Karang Tengah, Kota Tangerang, Banten 15157</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4" style="cursor: auto;">
+      <div class="px-6" style="cursor: auto;">
+        <img alt="Citos Futsal" src="/src/assets/img/futsal/citosfutsal.jpg" class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined">
+        <div class="pt-6 text-center">
+          <h1 class="text-xl font-bold leading-normal mt-0 mb-2">Citos Futsal</h1>
+          <p class="text-base leading-relaxed mt-0 mb-4">Jl. Karang Tengah Raya No.9, RT.1/RW.3, Kelurahaan, Lb. Bulus, Kec. Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12440</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
 <FooterSection />
 <a
     href="https://api.whatsapp.com/send?phone=6287773622095"

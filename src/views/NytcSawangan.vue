@@ -1,9 +1,9 @@
 <script setup>
-
+import NavbarSection from '../components/layouts/NavbarSection.vue'
 </script>
 
 <template>
-
+<NavbarSection />
     <div class="carousel relative container mx-auto" style="max-width:1600px;">
         <div class="carousel-inner relative overflow-hidden w-full">
             <!--Slide 1-->
@@ -159,8 +159,8 @@
             <!-- Modal footer -->
             <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
                 <button data-modal-hide="defaultModal" type="button" class="bg-transparent hover:bg-yellow-500 text-black font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded">Join List</button>
-                <button data-modal-hide="defaultModal" type="button" class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">Cancel List</button>
                 <button data-modal-hide="defaultModal" type="button" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Waiting List</button>
+                <button data-modal-hide="defaultModal" type="button" class="bg-red-500 hover:bg-red-700 text-white py-2 px-4 border border-red-500 hover:border-transparent rounded">Cancel List</button>
             </div>
         </div>
     </div>

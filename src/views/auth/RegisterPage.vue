@@ -2,7 +2,6 @@
       <!-- Preloader -->
       <div v-if="loading" class="preloader">
         <img class="logo" src="/src/assets/img/MABOLISTA FC.png" alt="Loading Logo">
-        Loading...
     </div>
 
   <div class="flex items-center min-h-screen p-4 bg-gray-100 lg:justify-center">
@@ -111,7 +110,7 @@
   <!-- Register button -->
   <div>
     <button
-    @click="showAlert"
+    @click="registerpreloader"
       type="submit"
       class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-yellow-500 rounded-md shadow hover:bg-yellow-600 focus:outline-none focus:ring-blue-200 focus:ring-4"
     >
@@ -153,20 +152,20 @@ export default {
       axios
         .post('http://localhost:8080/register', formData)
         .then((response) => {
-          console.log(response.data);
-
-          localStorage.setItem('token', response.data.data.token);
-          
+          console.log(response.data);      
           this.$swal('Berhasil Daftar, Silahkan Login!');
           this.$router.push({ name: 'login' });
         })
         .catch((error) => {
-          console.error('FAILURE!!', error);
+          this.$swal('Gagal Daftar, Periksa Kembali', error);
         });
     },
     onFileChange(e) {
       this.image = e.target.files[0];
     },
+    registerpreloader() {
+      this.loading = true;
+    }
   },
 };
 </script>
