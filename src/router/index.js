@@ -40,41 +40,40 @@ const router = createRouter({
     {
       path: '/signup',
       name: 'signup',
-      component: RegisterPage,
+      component: RegisterPage
     },
     {
       path: '/profile',
       name: 'profile',
       component: ProfilePage,
       beforeEnter: (to, from, next) => {
-        const isAuthenticated = localStorage.getItem('token');
+        const isAuthenticated = localStorage.getItem('token')
         if (isAuthenticated) {
-          next();
+          next()
         } else {
-          next('/login');
+          next('/login')
         }
-      },
+      }
     },
     {
       path: '/events/nytcsawangan',
       name: 'NytcSawangan',
-      component: NytcSawangan,
+      component: NytcSawangan
     },
     {
       path: '/homebase',
       name: 'homebase',
-      component: HomeBase,
-    },
+      component: HomeBase
+    }
   ]
 })
 
 router.beforeEach((to, from, next) => {
-  const isLoggedIn = localStorage.getItem('token');
+  const isLoggedIn = localStorage.getItem('token')
   if (to.name === 'login' && isLoggedIn) {
-    next({ name: 'HomePage' });
+    next({ name: 'HomePage' })
   } else {
-    next();
+    next()
   }
-});
-
+})
 export default router
