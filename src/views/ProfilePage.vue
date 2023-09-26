@@ -4,96 +4,98 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 
 <template>
   <NavbarSection />
-  <div class="max-w-lg mx-auto my-10 bg-white rounded-lg shadow-md p-5">
-    <img
-      class="w-32 h-32 rounded-full mx-auto"
-      src="https://picsum.photos/200"
-      alt="Profile picture"
-    />
-    <h2 class="text-center text-2xl font-semibold mt-3">Hi,</h2>
-    <p class="text-center text-gray-600 mt-1">Mabolism</p>
-    <div class="flex justify-center mt-5">
-      <a
-        href="#"
-        data-modal-target="defaultModal"
-        data-modal-toggle="defaultModal"
-        class="text-blue-500 hover:text-blue-700 mx-3"
-        >Edit Profile</a
-      >
-    </div>
-    <div class="mt-5">
-      <h3 class="text-xl font-semibold">Bio</h3>
-      <p class="text-gray-600 mt-2">My name admin im mabolista member</p>
-    </div>
-    <div v-if="users">
-      <div
-        v-for="(user, index) in this.users"
-        :key="index"
-        class="mt-10 py-10 border-t border-blueGray-200 text-center flex justify-center"
-      >
-        <form class="w-full max-w-lg">
-          <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full px-3">
-              <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="name"
-              >
-                Username
-              </label>
-              <input
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="name"
-                v-model="user.name"
-                name="name"
-                type="text"
-                placeholder="Input name"
-              />
-            </div>
-            <div class="w-full px-3 mt-6">
-              <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="email"
-              >
-                Email
-              </label>
-              <input
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="email"
-                v-model="user.email"
-                type="email"
-                name="email"
-                placeholder="Input Email"
-              />
-            </div>
-          </div>
-          <div class="flex flex-wrap -mx-3 mb-6">
-            <div class="w-full px-3">
-              <label
-                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                for="phoneNumber"
-              >
-                Phone Number
-              </label>
-              <input
-                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                id="phoneNumber"
-                v-model="user.phoneNumber"
-                name="phoneNumber"
-                type="text"
-                placeholder="Input Phone Number"
-              />
-            </div>
-          </div>
-        </form>
+  <div v-if="users">
+    <div
+      v-for="user in users"
+      :key="user.id"
+      class="max-w-lg mx-auto my-10 bg-white rounded-lg shadow-md p-5"
+    >
+      <img
+        class="w-32 h-32 rounded-full mx-auto"
+        src="https://picsum.photos/200"
+        alt="Profile picture"
+      />
+      <h2 class="text-center text-2xl font-semibold mt-3">Hi, {{ user.name }}</h2>
+      <p class="text-center text-gray-600 mt-1">Mabolism</p>
+      <div class="flex justify-center mt-5">
+        <a
+          href="#"
+          data-modal-target="defaultModal"
+          data-modal-toggle="defaultModal"
+          class="text-blue-500 hover:text-blue-700 mx-3"
+          >Edit Profile</a
+        >
       </div>
-    </div>
-    <div v-else>
-      <p>Loading user data...</p>
+      <div class="mt-5">
+        <h3 class="text-xl font-semibold">Bio</h3>
+        <p class="text-gray-600 mt-2">My name {{ user.name }} im mabolista member</p>
+      </div>
+      <div>
+        <div class="mt-10 py-10 border-t border-blueGray-200 text-center flex justify-center">
+          <form class="w-full max-w-lg">
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="name"
+                >
+                  Username
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="name"
+                  v-model="user.name"
+                  name="name"
+                  type="text"
+                  placeholder="Input name"
+                  readonly
+                />
+              </div>
+              <div class="w-full px-3 mt-6">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="email"
+                >
+                  Email
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="email"
+                  v-model="user.email"
+                  type="email"
+                  name="email"
+                  placeholder="Input Email"
+                  readonly
+                />
+              </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6">
+              <div class="w-full px-3">
+                <label
+                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                  for="phoneNumber"
+                >
+                  Phone Number
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="phoneNumber"
+                  v-model="user.phoneNumber"
+                  name="phoneNumber"
+                  type="text"
+                  placeholder="Input Phone Number"
+                  readonly
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- Edit profile -->
-  <div
+  <!-- <div
     id="defaultModal"
     tabindex="-1"
     aria-hidden="true"
@@ -228,7 +230,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
@@ -242,14 +244,19 @@ export default {
     }
   },
   mounted() {
-    this.getUsers()
+    this.getUsers(this.$route.params.id)
   },
   methods: {
     getUsers() {
-      axios.get('http://localhost:8080/users?page=0&pageSize=10').then((res) => {
-        this.users = res.data.data.users
-        console.log(this.users)
-      })
+      axios
+        .get('http://localhost:8080/users?&page=0&pageSize=10')
+        .then((res) => {
+          this.users = res.data.data.users
+          console.log(this.users)
+        })
+        .catch((error) => {
+          console.error('Error:', error)
+        })
     }
   }
 }
