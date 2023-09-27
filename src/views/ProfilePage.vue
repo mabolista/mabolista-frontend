@@ -20,8 +20,8 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
       <div class="flex justify-center mt-5">
         <a
           href="#"
-          data-modal-target="defaultModal"
-          data-modal-toggle="defaultModal"
+          data-modal-target="medium-modal"
+          data-modal-toggle="medium-modal"
           class="text-blue-500 hover:text-blue-700 mx-3"
           >Edit Profile</a
         >
@@ -42,7 +42,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                   Username
                 </label>
                 <input
-                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight"
                   id="name"
                   v-model="user.name"
                   name="name"
@@ -59,7 +59,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                   Email
                 </label>
                 <input
-                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight"
                   id="email"
                   v-model="user.email"
                   type="email"
@@ -78,7 +78,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                   Phone Number
                 </label>
                 <input
-                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight"
                   id="phoneNumber"
                   v-model="user.phoneNumber"
                   name="phoneNumber"
@@ -93,12 +93,14 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
       </div>
     </div>
   </div>
+  <div v-else>
+    <h1>loading...</h1>
+  </div>
 
   <!-- Edit profile -->
   <!-- <div
-    id="defaultModal"
+    id="medium-modal"
     tabindex="-1"
-    aria-hidden="true"
     class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
   >
     <div class="relative w-full max-w-2xl max-h-full">
@@ -120,6 +122,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="name"
+                  v-model="name"
                   name="name"
                   type="text"
                   placeholder="Input name"
@@ -135,6 +138,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="email"
+                  v-model="email"
                   type="email"
                   name="email"
                   placeholder="Input Email"
@@ -152,6 +156,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="password"
+                  v-model="password"
                   name="password"
                   type="password"
                   placeholder="Input Password"
@@ -160,14 +165,15 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
               <div class="w-full px-3">
                 <label
                   class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="confirm_password"
+                  for="confirmPassword"
                 >
                   Confirm Password
                 </label>
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="confirm_password"
-                  name="confirm_password"
+                  id="confirmPassword"
+                  v-model="confirmPassword"
+                  name="confirmPassword"
                   type="password"
                   placeholder="Input Password Again"
                 />
@@ -184,6 +190,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="phoneNumber"
+                  v-model="phoneNumber"
                   name="phoneNumber"
                   type="text"
                   placeholder="Input Phone Number"
@@ -192,14 +199,15 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
               <div class="w-full md:w-1/2 px-3">
                 <label
                   class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="uploadfoto"
+                  for="image"
                 >
                   Upload Foto
                 </label>
                 <input
                   class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                  id="uploadfoto"
-                  name="uploadfoto"
+                  id="image"
+                  v-on:change="onFileChange"
+                  name="image"
                   type="file"
                 />
                 <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">
@@ -212,14 +220,14 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
               class="flex items-center pt-5 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
             >
               <button
-                data-modal-hide="defaultModal"
+                data-modal-hide="medium-modal"
                 type="button"
                 class="text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800"
               >
                 Save Changes
               </button>
               <button
-                data-modal-hide="defaultModal"
+                data-modal-hide="medium-modal"
                 type="button"
                 class="text-white bg-red-500 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-white focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
               >
@@ -244,12 +252,12 @@ export default {
     }
   },
   mounted() {
-    this.getUsers(this.$route.params.id)
+    this.getUsers()
   },
   methods: {
     getUsers() {
       axios
-        .get('http://localhost:8080/users?&page=0&pageSize=10')
+        .get('http://localhost:8080/users?page=0&pageSize=10')
         .then((res) => {
           this.users = res.data.data.users
           console.log(this.users)

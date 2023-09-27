@@ -21,7 +21,11 @@
 
         <div v-if="!isAuthenticated" class="hidden md:flex items-center space-x-1">
           <router-link to="/login" class="py-5 px-3 font-extrabold">Login</router-link>
-          <router-link to="/signup" class="py-2 px-3 font-extrabold bg-gradient-to-r from-pink-500 to-violet-700 text-white rounded transition duration-300">SignUp</router-link>
+          <router-link
+            to="/signup"
+            class="py-2 px-3 font-extrabold bg-gradient-to-r from-pink-500 to-violet-700 text-white rounded transition duration-300"
+            >SignUp</router-link
+          >
         </div>
 
         <div v-if="isAuthenticated" class="hidden md:flex items-center space-x-1">
@@ -57,7 +61,7 @@
 
           <!-- Dropdown menu -->
           <div
-          v-if="isDropdownOpen"
+            v-if="isDropdownOpen"
             id="dropdownAvatarName"
             class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
           >
@@ -79,12 +83,12 @@
             </ul>
             <div class="py-2">
               <a
-              href="javascript:void(0)"
-              @click="signOut"
-              class="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-            >
-              Sign out
-             </a>
+                href="javascript:void(0)"
+                @click="signOut"
+                class="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              >
+                Sign out
+              </a>
             </div>
           </div>
         </div>
@@ -123,31 +127,29 @@
 </template>
 
 <script>
-
 export default {
-  name: "NavbarSection",
+  name: 'NavbarSection',
   computed: {
     isAuthenticated() {
-      return !!localStorage.getItem('token');
-    },
+      return !!localStorage.getItem('token')
+    }
   },
   data() {
     return {
       users: null,
-      isDropdownOpen: true,
+      isDropdownOpen: true
     }
   },
   methods: {
-  signOut() {
-    localStorage.removeItem('token');
-    window.location.reload('/');
-  },
-  toggleDropdown() {
-      this.isDropdownOpen = !this.isDropdownOpen;
+    signOut() {
+      localStorage.removeItem('token')
+      window.location.reload('/')
     },
-},
+    toggleDropdown() {
+      this.isDropdownOpen = !this.isDropdownOpen
+    }
+  }
 }
-
 </script>
 
 <style></style>
