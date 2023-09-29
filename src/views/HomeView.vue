@@ -255,6 +255,165 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     </div>
   </div>
 
+  <!-- ---------- Events ----------  -->
+  <div class="container px-6 py-8 mx-auto">
+    <div class="mb-4 flex items-center justify-between">
+      <h1 class="font-mabolistafont text-4xl">Events Terdekat</h1>
+      <a href="#" class="text-2 text-yellow-400 hover:underline"> Selengkapnya</a>
+    </div>
+
+    <div class="flex gap-4">
+      <div
+        class="max-w-sm bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <a href="#">
+          <img class="rounded-t-lg" src="/src/assets/img/internalevents.png" alt="" />
+        </a>
+        <div class="p-5">
+          <a href="#">
+            <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              INTERNAL FUN MATCH
+            </h5>
+          </a>
+          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">Lokasi: NYTC Sawangan</p>
+          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+            <i class="fa-regular fa-calendar"></i> Sabtu, 07 Oktober 2023
+          </p>
+          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+            <i class="fa-regular fa-clock"></i> 15.30 - 18.00 WIB
+          </p>
+
+          <div class="flex gap-4 mb-3">
+            <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+              <i class="fa-regular fa-circle-check"></i> Benefits
+            </p>
+            <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+              <i class="fa-regular fa-money-bill-1"></i> Pemain 115 K / Kiper 95K
+            </p>
+          </div>
+
+          <a
+            href="/events/nytcsawangan"
+            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          >
+            Join Events
+          </a>
+        </div>
+      </div>
+      <div
+        class="max-w-sm bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <a href="#">
+          <img class="rounded-t-lg" src="/src/assets/img/internalevents.png" alt="" />
+        </a>
+        <div class="p-5">
+          <a href="#">
+            <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              INTERNAL FUN MATCH
+            </h5>
+          </a>
+          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">Lokasi: NYTC Sawangan</p>
+          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+            <i class="fa-regular fa-calendar"></i> Sabtu, 07 Oktober 2023
+          </p>
+          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+            <i class="fa-regular fa-clock"></i> 15.30 - 18.00 WIB
+          </p>
+
+          <div class="flex gap-4 mb-3">
+            <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+              <i class="fa-regular fa-circle-check"></i> Benefits
+            </p>
+            <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+              <i class="fa-regular fa-money-bill-1"></i> Pemain 115 K / Kiper 95K
+            </p>
+          </div>
+
+          <a
+            href="/events/nytcsawangan"
+            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          >
+            Join Events
+          </a>
+        </div>
+      </div>
+      <div
+        class="max-w-sm bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <a href="#">
+          <img class="rounded-t-lg" src="/src/assets/img/internalevents.png" alt="" />
+        </a>
+        <div class="p-5">
+          <a href="#">
+            <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              INTERNAL FUN MATCH
+            </h5>
+          </a>
+          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">Lokasi: NYTC Sawangan</p>
+          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+            <i class="fa-regular fa-calendar"></i> Sabtu, 07 Oktober 2023
+          </p>
+          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+            <i class="fa-regular fa-clock"></i> 15.30 - 18.00 WIB
+          </p>
+
+          <div class="flex gap-4 mb-3">
+            <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+              <i class="fa-regular fa-circle-check"></i> Benefits
+            </p>
+            <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+              <i class="fa-regular fa-money-bill-1"></i> Pemain 115 K / Kiper 95K
+            </p>
+          </div>
+
+          <a
+            href="/events/nytcsawangan"
+            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          >
+            Join Events
+          </a>
+        </div>
+      </div>
+      <div
+        class="max-w-sm bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
+        <a href="#">
+          <img class="rounded-t-lg" src="/src/assets/img/internalevents.png" alt="" />
+        </a>
+        <div class="p-5">
+          <a href="#">
+            <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              INTERNAL FUN MATCH
+            </h5>
+          </a>
+          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">Lokasi: NYTC Sawangan</p>
+          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+            <i class="fa-regular fa-calendar"></i> Sabtu, 07 Oktober 2023
+          </p>
+          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+            <i class="fa-regular fa-clock"></i> 15.30 - 18.00 WIB
+          </p>
+
+          <div class="flex gap-4 mb-3">
+            <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+              <i class="fa-regular fa-circle-check"></i> Benefits
+            </p>
+            <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
+              <i class="fa-regular fa-money-bill-1"></i> Pemain 115 K / Kiper 95K
+            </p>
+          </div>
+
+          <a
+            href="/events/nytcsawangan"
+            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+          >
+            Join Events
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ---------- Benefits ----------  -->
   <section class="text-gray-700 body-font border-t border-gray-200">
     <div class="container px-5 py-24 mx-auto">

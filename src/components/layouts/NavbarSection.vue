@@ -1,4 +1,3 @@
-<script setup></script>
 <template>
   <nav class="sticky top-0 w-full transition bg-transparent backdrop-blur-md z-10">
     <div class="xl:max-w-full px-3">
@@ -137,12 +136,17 @@ export default {
   data() {
     return {
       users: null,
-      isDropdownOpen: true
+      isDropdownOpen: true,
+      authenticated: false,
+      userData: {}
     }
   },
   methods: {
     signOut() {
       localStorage.removeItem('token')
+      localStorage.removeItem('user')
+      this.authenticated = false
+      this.userData = {}
       window.location.reload('/')
     },
     toggleDropdown() {

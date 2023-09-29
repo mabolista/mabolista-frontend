@@ -21,6 +21,7 @@
     "sweetalert2": "^11.7.27",
     "vee-validate": "^4.11.6",
     "vue": "^3.3.4",
+    "vue-jwt-decode": "^0.1.0",
     "vue-router": "^4.0.13",
     "vue-sweetalert2": "^5.0.5",
     "vuex": "^4.0.2",
