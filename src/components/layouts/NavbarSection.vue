@@ -73,10 +73,15 @@
               aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton"
             >
               <li>
-                <a
+                <!-- <a
                   href="/profile"
                   class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                   >View Profile</a
+                > -->
+                <router-link
+                  :to="{ name: 'profile', params: { id: 4 } }"
+                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >test</router-link
                 >
               </li>
             </ul>
@@ -135,7 +140,7 @@ export default {
   },
   data() {
     return {
-      users: null,
+      users: [],
       isDropdownOpen: true,
       authenticated: false,
       userData: {}

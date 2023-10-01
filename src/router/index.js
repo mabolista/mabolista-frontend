@@ -43,11 +43,11 @@ const router = createRouter({
       component: RegisterPage
     },
     {
-      path: '/profile',
+      path: '/profile/:id',
       name: 'profile',
       component: ProfilePage,
       beforeEnter: (to, from, next) => {
-        const isAuthenticated = localStorage.getItem('token')
+        const isAuthenticated = localStorage.getItem('user')
         if (isAuthenticated) {
           next()
         } else {

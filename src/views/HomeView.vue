@@ -256,22 +256,24 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
   </div>
 
   <!-- ---------- Events ----------  -->
-  <div class="container px-6 py-8 mx-auto">
-    <div class="mb-4 flex items-center justify-between">
-      <h1 class="font-mabolistafont text-4xl">Events Terdekat</h1>
-      <a href="#" class="text-2 text-yellow-400 hover:underline"> Selengkapnya</a>
+  <div class="container px-2 sm:px-6 py-4 sm:py-8 lg:px-8 mx-auto">
+    <div class="mb-4 flex flex-col sm:flex-row items-center justify-between">
+      <h1 class="font-mabolistafont text-2xl sm:text-4xl mb-2 sm:mb-0">Events Terdekat</h1>
+      <a href="#" class="text-2 text-yellow-400 hover:underline">Selengkapnya</a>
     </div>
 
-    <div class="flex gap-4">
+    <div class="flex flex-col sm:flex-row gap-4">
       <div
         class="max-w-sm bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <a href="#">
           <img class="rounded-t-lg" src="/src/assets/img/internalevents.png" alt="" />
         </a>
-        <div class="p-5">
+        <div class="p-4 sm:p-5">
           <a href="#">
-            <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5
+              class="mb-1 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
               INTERNAL FUN MATCH
             </h5>
           </a>
@@ -294,21 +296,24 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 
           <a
             href="/events/nytcsawangan"
-            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-4 py-2 text-center"
           >
             Join Events
           </a>
         </div>
       </div>
+
       <div
         class="max-w-sm bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <a href="#">
           <img class="rounded-t-lg" src="/src/assets/img/internalevents.png" alt="" />
         </a>
-        <div class="p-5">
+        <div class="p-4 sm:p-5">
           <a href="#">
-            <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5
+              class="mb-1 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
               INTERNAL FUN MATCH
             </h5>
           </a>
@@ -331,21 +336,24 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 
           <a
             href="/events/nytcsawangan"
-            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-4 py-2 text-center"
           >
             Join Events
           </a>
         </div>
       </div>
+
       <div
         class="max-w-sm bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <a href="#">
           <img class="rounded-t-lg" src="/src/assets/img/internalevents.png" alt="" />
         </a>
-        <div class="p-5">
+        <div class="p-4 sm:p-5">
           <a href="#">
-            <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5
+              class="mb-1 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
               INTERNAL FUN MATCH
             </h5>
           </a>
@@ -368,21 +376,24 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 
           <a
             href="/events/nytcsawangan"
-            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-4 py-2 text-center"
           >
             Join Events
           </a>
         </div>
       </div>
+
       <div
         class="max-w-sm bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <a href="#">
           <img class="rounded-t-lg" src="/src/assets/img/internalevents.png" alt="" />
         </a>
-        <div class="p-5">
+        <div class="p-4 sm:p-5">
           <a href="#">
-            <h5 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            <h5
+              class="mb-1 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            >
               INTERNAL FUN MATCH
             </h5>
           </a>
@@ -405,7 +416,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 
           <a
             href="/events/nytcsawangan"
-            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-4 py-2 text-center"
           >
             Join Events
           </a>
