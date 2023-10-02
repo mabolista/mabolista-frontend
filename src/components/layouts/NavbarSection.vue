@@ -60,31 +60,36 @@
 
           <!-- Dropdown menu -->
           <div
-            v-if="isDropdownOpen"
             id="dropdownAvatarName"
             class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
           >
-            <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+            <div
+              v-for="user in users"
+              :key="user.id"
+              class="px-4 py-3 text-sm text-gray-900 dark:text-white"
+            >
               <div class="font-medium">Admin</div>
               <div class="truncate">mabolista@gmail.com</div>
+              <router-link
+                :to="`/profile/${user.id}`"
+                class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                >test</router-link
+              >
             </div>
-            <ul
-              class="py-2 text-sm text-gray-700 dark:text-gray-200"
-              aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton"
-            >
-              <li>
-                <!-- <a
-                  href="/profile"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >View Profile</a
-                > -->
-                <router-link
-                  :to="{ name: 'profile', params: { id: 4 } }"
-                  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >test</router-link
-                >
-              </li>
-            </ul>
+            <div>
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton"
+              >
+                <li>
+                  <!-- <a
+                    href="/profile"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >View Profile</a
+                  > -->
+                </li>
+              </ul>
+            </div>
             <div class="py-2">
               <a
                 href="javascript:void(0)"
@@ -132,18 +137,15 @@
 
 <script>
 export default {
-  name: 'NavbarSection',
+  data() {
+    return {
+      users: {},
+      authenticated: false
+    }
+  },
   computed: {
     isAuthenticated() {
       return !!localStorage.getItem('token')
-    }
-  },
-  data() {
-    return {
-      users: [],
-      isDropdownOpen: true,
-      authenticated: false,
-      userData: {}
     }
   },
   methods: {
@@ -151,11 +153,8 @@ export default {
       localStorage.removeItem('token')
       localStorage.removeItem('user')
       this.authenticated = false
-      this.userData = {}
+      this.users = {}
       window.location.reload('/')
-    },
-    toggleDropdown() {
-      this.isDropdownOpen = !this.isDropdownOpen
     }
   }
 }

@@ -5,11 +5,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 <template>
   <NavbarSection />
   <div v-if="users">
-    <div
-      v-for="(user, index) in users"
-      :key="user.id"
-      class="max-w-lg mx-auto my-10 bg-white rounded-lg shadow-md p-5"
-    >
+    <div class="max-w-lg mx-auto my-10 bg-white rounded-lg shadow-md p-5">
       <img
         class="w-32 h-32 rounded-full mx-auto"
         src="https://picsum.photos/200"
@@ -262,32 +258,20 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 </template>
 
 <script>
-import axios from 'axios'
 export default {
+  name: 'ProfilePage',
   data() {
     return {
-      users: null
+      users: ''
     }
   },
   created() {
-    this.fetchUserData()
-  },
-  methods: {
-    fetchUserData() {
-      const id = this.$route.params.id // Ambil ID pengguna dari parameter dinamis
-
-      // Lakukan permintaan Axios ke API untuk mendapatkan detail pengguna berdasarkan id
-      // Gantilah 'your-api-endpoint' dengan endpoint API yang sesuai
-      axios
-        .get(`http://localhost:8080/users/${id}`)
-        .then((response) => {
-          this.users = response.data.data
-          console.log(this.users)
-        })
-        .catch((error) => {
-          console.error('Error fetching user data:', error)
-        })
-    }
+    console.log(this.$route.params)
   }
 }
 </script>
+// mounted() { // // Mengambil ID pengguna dari dynamic route // const userId =
+this.$route.params.id // // Menggunakan Axios untuk mengambil data pengguna dari API // axios //
+.get(`http://localhost:8080/users/${userId}`) // .then((response) => { // this.user =
+response.data.data // console.log(this.user) // }) // .catch((error) => { // console.error(error) //
+}) // } // }
