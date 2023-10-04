@@ -6,11 +6,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
   <NavbarSection />
   <div>
     <div v-if="users" class="max-w-lg mx-auto my-10 bg-white rounded-lg shadow-md p-5">
-      <img
-        class="w-32 h-32 rounded-full mx-auto"
-        src="https://picsum.photos/200"
-        alt="Profile picture"
-      />
+      <img class="w-32 h-32 rounded-full mx-auto" src="{{users.image}}" alt="Profile picture" />
       <h2 class="text-center text-2xl font-semibold mt-3">Hi, {{ users.name }}</h2>
       <p class="text-center text-gray-600 mt-1">Mabolism</p>
       <div class="flex justify-center mt-5">
@@ -111,7 +107,8 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
   </div>
 
   <!-- Edit profile -->
-  <!-- <div
+  <div
+    v-if="users"
     id="medium-modal"
     tabindex="-1"
     class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
@@ -123,7 +120,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         </div>
 
         <div class="p-6 space-y-6">
-          <form class="w-full max-w-lg" @submit.prevent="saveChanges">
+          <form class="w-full max-w-lg" @submit.prevent="updateUser">
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
@@ -135,7 +132,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="name"
-                  v-model="name"
+                  v-model="users.name"
                   name="name"
                   type="text"
                   placeholder="Input name"
@@ -151,7 +148,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="email"
-                  v-model="email"
+                  v-model="users.email"
                   type="email"
                   name="email"
                   placeholder="Input Email"
@@ -169,7 +166,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="password"
-                  v-model="password"
+                  v-model="users.password"
                   name="password"
                   type="password"
                   placeholder="Input Password"
@@ -185,7 +182,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="confirmPassword"
-                  v-model="confirmPassword"
+                  v-model="users.confirmPassword"
                   name="confirmPassword"
                   type="password"
                   placeholder="Input Password Again"
@@ -203,7 +200,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="phoneNumber"
-                  v-model="phoneNumber"
+                  v-model="users.phoneNumber"
                   name="phoneNumber"
                   type="text"
                   placeholder="Input Phone Number"
@@ -234,7 +231,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             >
               <button
                 data-modal-hide="medium-modal"
-                type="button"
+                type="submit"
                 class="text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800"
               >
                 Save Changes
@@ -251,7 +248,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 </template>
 
 <script>
@@ -260,7 +257,14 @@ import axios from 'axios'
 export default {
   data() {
     return {
-      users: null,
+      users: {
+        name: '',
+        email: '',
+        phoneNumber: '',
+        password: '',
+        confirmPassword: '',
+        image: ''
+      },
       id: this.$route.params.id
     }
   },
@@ -274,6 +278,17 @@ export default {
         })
         .catch((error) => {
           console.error('Error fetching data:', error)
+        })
+    },
+    updateUser() {
+      axios
+        .put(`http://localhost:8080/users/${this.id}`, this.users)
+        .then((response) => {
+          // Handle successful update, e.g., show a success message
+          console.log('User updated successfully:', response.data.data)
+        })
+        .catch((error) => {
+          console.error('Error updating user:', error)
         })
     }
   },

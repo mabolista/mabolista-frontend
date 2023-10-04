@@ -4,85 +4,117 @@
     <img class="logo" src="/src/assets/img/MABOLISTA FC.png" alt="Loading Logo" />
   </div>
 
-  <div class="flex items-center min-h-screen p-4 bg-gray-100 lg:justify-center">
-    <div
-      class="flex flex-col overflow-hidden bg-white rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md"
-    >
-      <div
-        class="p-4 py-6 text-white bg-purple-700 md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly"
-      >
-        <div class="my-3 text-4xl font-bold tracking-wider text-center">
-          <img src="/src/assets/img/MABOLISTA FC.png" alt="" />
-        </div>
-        <p class="mt-6 font-normal text-center text-gray-300 md:mt-0">
-          Mabolista Fc is a football community that is open to the public and has many homebases
-        </p>
-        <p class="flex flex-col items-center justify-center mt-10 text-center">
-          <span>Don't have an account?</span>
-          <a href="/signup" class="underline">Sign Up</a>
-        </p>
-        <p class="mt-6 text-sm text-center text-gray-300">
-          Read our <a href="#" class="underline">terms</a> and
-          <a href="#" class="underline">conditions</a>
+  <section class="relative flex flex-wrap lg:h-screen lg:items-center">
+    <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
+      <div class="mx-auto max-w-lg text-center">
+        <h1 class="text-2xl font-bold sm:text-3xl">Ayoo jadi bagian dari kita!</h1>
+
+        <p class="mt-4 text-gray-500">
+          Mabolista Fc merupakan komunitas sepak bola yang terbuka untuk umum dan memiliki banyak
+          benefits unik
         </p>
       </div>
-      <div class="p-5 bg-white md:flex-1">
-        <h3 class="my-4 text-2xl font-semibold text-gray-700">Account Login</h3>
-        <form
-          @submit.prevent="submitLoginForm"
-          enctype="multipart/form-data"
-          class="flex flex-col space-y-5"
-        >
-          <div class="flex flex-col space-y-1">
-            <label for="email" class="text-sm font-semibold text-gray-500">Email address</label>
+
+      <form
+        @submit.prevent="submitLoginForm"
+        enctype="multipart/form-data"
+        class="mx-auto mb-0 mt-8 max-w-md space-y-4"
+      >
+        <div>
+          <label for="email" class="sr-only">Email</label>
+
+          <div class="relative">
             <input
               type="email"
               id="email"
               v-model="email"
-              placeholder="Input your email"
-              autofocus
+              class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm focus:ring-black"
+              placeholder="Enter email"
               required
-              class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
             />
-          </div>
-          <div class="flex flex-col space-y-1">
-            <div class="flex items-center justify-between">
-              <label for="password" class="text-sm font-semibold text-gray-500">Password</label>
-              <a href="#" class="text-sm text-blue-600 hover:underline focus:text-blue-800"
-                >Forgot Password?</a
+
+            <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-            </div>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div>
+          <label for="password" class="sr-only">Password</label>
+
+          <div class="relative">
             <input
               type="password"
               id="password"
               v-model="password"
-              placeholder="Input your password"
+              class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm focus:ring-black"
+              placeholder="Enter password"
               required
-              class="px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200"
             />
+
+            <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
+              </svg>
+            </span>
           </div>
-          <div class="flex items-center space-x-2">
-            <input
-              type="checkbox"
-              id="remember"
-              class="w-4 h-4 transition duration-300 rounded focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-blue-200"
-            />
-            <label for="remember" class="text-sm font-semibold text-gray-500">Remember me</label>
-          </div>
-          <div>
-            <button
-              @click="loginpreloader"
-              type="submit"
-              id="loadingButton"
-              class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-yellow-500 rounded-md shadow hover:bg-yellow-600 focus:outline-none focus:ring-blue-200 focus:ring-4"
-            >
-              Log in
-            </button>
-          </div>
-        </form>
-      </div>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <p class="text-sm text-gray-500">
+            No account?
+            <a class="underline" href="/signup">Sign up</a>
+          </p>
+
+          <button
+            @click="loginpreloader"
+            type="submit"
+            class="inline-block rounded-lg bg-yellow-500 px-5 py-3 text-sm font-medium text-white"
+          >
+            Login
+          </button>
+        </div>
+      </form>
     </div>
-  </div>
+
+    <div class="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
+      <img
+        alt="Welcome"
+        src="src/assets/img/azraprofil.jpg"
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+    </div>
+  </section>
 </template>
 
 <script>

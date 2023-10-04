@@ -32,7 +32,7 @@
                 src="/src/assets/img/azraprofil.jpg"
                 alt="user photo"
               />
-              {{ users.name }}
+              Syahjuddin Azra
               <svg
                 class="w-2.5 h-2.5 ml-2.5"
                 aria-hidden="true"
@@ -52,17 +52,16 @@
 
             <!-- Dropdown menu -->
             <div
+              v-if="users"
               id="dropdownAvatarName"
               class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
             >
-              <div v-if="users" class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+              <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
                 <div class="font-medium">{{ users.name }}</div>
                 <div class="truncate">mabolista@gmail.com</div>
               </div>
-              <div>
+              <div v-for="user in users" :key="user.id">
                 <ul
-                  v-for="user in users"
-                  :key="user.id"
                   class="py-2 text-sm text-gray-700 dark:text-gray-200"
                   aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton"
                 >
@@ -135,8 +134,7 @@ export default {
   name: 'NavbarSection',
   data() {
     return {
-      users: [],
-      authenticated: false
+      users: []
     }
   },
   computed: {
@@ -144,26 +142,26 @@ export default {
       return !!localStorage.getItem('token')
     }
   },
-  methods: {
-    getUsers(userData) {
-      for (let key in userData) {
-        this.users.push({ ...userData[key], id: key })
-      }
-    },
-    signOut() {
-      localStorage.removeItem('token')
-      localStorage.removeItem('user')
-      this.authenticated = false
-      this.users = {}
-      window.location.reload('/')
-    }
-  },
   mounted() {
-    axios.get(`http://localhost:8080/users?page=0&pageSize=10`).then((response) => {
-      this.getUsers(response.data.data.users)
-    })
+    // Get the 'id' parameter from the URL
+    const id = this.$route.params.id
+
+    // Fetch data using Axios
+    axios
+      .get(`http://localhost:8080/users/${id}`)
+      .then((response) => {
+        this.users = response.data.data
+      })
+      .catch((error) => {
+        console.error(error)
+      })
+  },
+  signOut() {
+    localStorage.removeItem('token')
+    localStorage.removeItem('user')
+
+    window.location.reload('/')
   }
 }
 </script>
-
 <style></style>
