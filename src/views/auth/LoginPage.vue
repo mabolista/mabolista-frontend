@@ -138,14 +138,11 @@ export default {
           password: this.password
         })
         .then((response) => {
-          // Assuming the API returns a token and user data
           const { token, user } = response.data.data
 
-          // Store the token and user data in local storage
           localStorage.setItem('token', token)
           localStorage.setItem('user', JSON.stringify(user))
 
-          // Set the authenticated state and user data
           this.authenticated = true
           this.userData = user
 

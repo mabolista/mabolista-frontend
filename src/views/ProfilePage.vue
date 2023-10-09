@@ -6,7 +6,11 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
   <NavbarSection />
   <div>
     <div v-if="users" class="max-w-lg mx-auto my-10 bg-white rounded-lg shadow-md p-5">
-      <img class="w-32 h-32 rounded-full mx-auto" src="{{users.image}}" alt="Profile picture" />
+      <img
+        class="w-32 h-32 rounded-full mx-auto"
+        src="/src/assets/img/azraprofil.JPG"
+        alt="Profile picture"
+      />
       <h2 class="text-center text-2xl font-semibold mt-3">Hi, {{ users.name }}</h2>
       <p class="text-center text-gray-600 mt-1">Mabolism</p>
       <div class="flex justify-center mt-5">
@@ -35,7 +39,6 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 </label>
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight"
-                  id="name"
                   v-model="users.name"
                   name="name"
                   type="text"
@@ -51,7 +54,6 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 </label>
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight"
-                  id="email"
                   v-model="users.email"
                   type="email"
                   name="email"
@@ -69,10 +71,9 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 </label>
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight"
-                  id="phoneNumber"
                   v-model="users.phoneNumber"
                   name="phoneNumber"
-                  type="text"
+                  type="tel"
                   readonly
                 />
               </div>
@@ -131,7 +132,6 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 </label>
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="name"
                   v-model="users.name"
                   name="name"
                   type="text"
@@ -147,7 +147,6 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 </label>
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="email"
                   v-model="users.email"
                   type="email"
                   name="email"
@@ -165,7 +164,6 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 </label>
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="password"
                   v-model="users.password"
                   name="password"
                   type="password"
@@ -181,7 +179,6 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 </label>
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="confirmPassword"
                   v-model="users.confirmPassword"
                   name="confirmPassword"
                   type="password"
@@ -199,10 +196,9 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 </label>
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="phoneNumber"
                   v-model="users.phoneNumber"
                   name="phoneNumber"
-                  type="text"
+                  type="tel"
                   placeholder="Input Phone Number"
                 />
               </div>
@@ -215,8 +211,8 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 </label>
                 <input
                   class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                  id="image"
                   v-on:change="onFileChange"
+                  ref="file"
                   name="image"
                   type="file"
                 />
@@ -271,7 +267,7 @@ export default {
   methods: {
     getUser() {
       axios
-        .get(`http://localhost:8080/users/${this.id}`) // Replace with your API endpoint
+        .get(`http://localhost:8080/users/${this.id}`)
         .then((response) => {
           this.users = response.data.data
           console.log(this.users)
@@ -281,15 +277,25 @@ export default {
         })
     },
     updateUser() {
+      const token = localStorage.getItem('token')
+      const config = {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      }
+
       axios
-        .put(`http://localhost:8080/users/${this.id}`, this.users)
+        .put(`http://localhost:8080/users/${this.id}`, this.users, config)
         .then((response) => {
-          // Handle successful update, e.g., show a success message
-          console.log('User updated successfully:', response.data.data)
+          this.users = response.data.data
+          console.log(this.users)
         })
         .catch((error) => {
           console.error('Error updating user:', error)
         })
+    },
+    onFileChange(e) {
+      this.image = e.target.files[0]
     }
   },
   mounted() {

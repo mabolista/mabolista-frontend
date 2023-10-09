@@ -52,25 +52,25 @@
 
             <!-- Dropdown menu -->
             <div
-              v-if="users"
               id="dropdownAvatarName"
               class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
             >
               <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                <div class="font-medium">{{ users.name }}</div>
+                <div class="font-medium">Mabolista</div>
                 <div class="truncate">mabolista@gmail.com</div>
               </div>
               <div v-for="user in users" :key="user.id">
                 <ul
                   class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                  aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton"
+                  aria-labelledby="dropdownAvatarNameButton"
                 >
                   <li>
                     <router-link
-                      :to="{ name: 'profile', params: { id: user.id } }"
+                      :to="{ path: `/profile/${user.id}` }"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >View Profile</router-link
                     >
+                      {{ user.id }}
+                    </router-link>
                   </li>
                 </ul>
               </div>
@@ -90,8 +90,9 @@
             <router-link
               to="/signup"
               class="py-2 px-3 font-extrabold bg-gradient-to-r from-pink-500 to-violet-700 text-white rounded transition duration-300"
-              >SignUp</router-link
             >
+              SignUp
+            </router-link>
           </div>
         </div>
 
@@ -134,7 +135,8 @@ export default {
   name: 'NavbarSection',
   data() {
     return {
-      users: []
+      users: [],
+      authenticated: false
     }
   },
   computed: {
@@ -143,24 +145,32 @@ export default {
     }
   },
   mounted() {
-    // Get the 'id' parameter from the URL
-    const id = this.$route.params.id
-
-    // Fetch data using Axios
-    axios
-      .get(`http://localhost:8080/users/${id}`)
-      .then((response) => {
-        this.users = response.data.data
-      })
-      .catch((error) => {
-        console.error(error)
-      })
+    this.fetchData()
   },
-  signOut() {
-    localStorage.removeItem('token')
-    localStorage.removeItem('user')
-
-    window.location.reload('/')
+  methods: {
+    fetchData() {
+      const userId = this.$route.params.id
+      axios
+        .get(`http://localhost:8080/users/${userId}`)
+        .then((response) => {
+          this.users = response.data.data
+        })
+        .catch((error) => {
+          console.error(error)
+        })
+    },
+    getUsers(userData) {
+      for (let key in userData) {
+        this.users.push({ ...userData[key], id: key })
+      }
+    },
+    signOut() {
+      localStorage.removeItem('token')
+      localStorage.removeItem('user')
+      this.authenticated = false
+      this.users = {}
+      window.location.reload('/')
+    }
   }
 }
 </script>
