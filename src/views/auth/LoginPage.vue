@@ -133,7 +133,7 @@ export default {
   methods: {
     submitLoginForm() {
       axios
-        .post('http://localhost:8080/login', {
+        .post('login', {
           email: this.email,
           password: this.password
         })

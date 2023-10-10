@@ -1,32 +1,37 @@
 <script setup>
 import FooterSection from '../components/layouts/FooterSection.vue'
 import NavbarSection from '../components/layouts/NavbarSection.vue'
-import 'animate.css';
+import 'animate.css'
 </script>
 <template>
   <NavbarSection />
 
-<section>
-
-  <div class="relative overflow-hidden bg-cover bg-no-repeat" style="
+  <section>
+    <div
+      class="relative overflow-hidden bg-cover bg-no-repeat"
+      style="
         background-position: 50%;
         background-image: url('/src/assets/img/NYTC-about.jpg');
         height: 500px;
-      ">
-    <div
-      class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed">
-      <div class="flex h-full items-center justify-center">
-        <div class="px-6 text-center text-white md:px-12">
-          <h1 class="animate__fadeInUp mt-2 mb-16 text-5xl font-mabolistafont sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-700 md:text-6xl xl:text-7xl">
-            everything about us is here
-          </h1>
+      "
+    >
+      <div
+        class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed"
+      >
+        <div class="flex h-full items-center justify-center">
+          <div class="px-6 text-center text-white md:px-12">
+            <h1
+              class="animate__fadeInUp mt-2 mb-16 text-5xl font-mabolistafont sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-700 md:text-6xl xl:text-7xl"
+            >
+              everything about us is here
+            </h1>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Section: Design Block -->
+  <!-- Section: Design Block -->
   <section class="text-gray-700 body-font border-t border-gray-200">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
@@ -152,9 +157,7 @@ import 'animate.css';
           src="/src/assets/img/aboutus.jpg"
         />
       </div>
-      <div
-        class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left"
-      >
+      <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left">
         <div class="flex flex-col mb-10">
           <div class="flex-grow">
             <h2 class="text-3xl font-mabolistafont leading-8 text-gray-900">About Us</h2>
@@ -186,20 +189,33 @@ import 'animate.css';
   </section>
 
   <section class="bg-white dark:bg-gray-900">
-    <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
-        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-          <h2 class="text-3xl font-mabolistafont leading-8 text-gray-900">Visi & Mission</h2>
-            <p class="mb-4">We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need. Small enough to be simple and quick, but big enough to deliver the scope you want at the pace you need.</p>
-            <p>We are strategists, designers and developers. Innovators and problem solvers. Small enough to be simple and quick.</p>
-        </div>
-        <div class="grid grid-cols-2 gap-4 mt-8">
-            <img class="w-full rounded-lg" src="/src/assets/img/visimisi1.jpg" alt="office content 1">
-            <img class="mt-4 w-full lg:mt-10 rounded-lg" src="/src/assets/img/visimisi2.jpg" alt="office content 2">
-            <img class="w-full rounded-lg" src="/src/assets/img/visimisi3.jpg" alt="office content 1">
-            <img class="mt-4 w-full lg:mt-10 rounded-lg" src="/src/assets/img/visimisi4.jpg" alt="office content 2">
-        </div>
+    <div
+      class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+    >
+      <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+        <h2 class="text-3xl font-mabolistafont leading-8 text-gray-900">Visi & Mission</h2>
+        <p class="mb-4">
+          "Menjadi pusat pertemuan yang menginspirasi, menyatukan, dan mempromosikan gaya hidup
+          sehat melalui permainan sepak bola yang menyenangkan untuk semua kalangan, dengan tujuan
+          menciptakan komunitas yang kuat dan berkelanjutan."
+        </p>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mt-8">
+        <img class="w-full rounded-lg" src="/src/assets/img/visimisi1.jpg" alt="office content 1" />
+        <img
+          class="mt-4 w-full lg:mt-10 rounded-lg"
+          src="/src/assets/img/visimisi2.jpg"
+          alt="office content 2"
+        />
+        <img class="w-full rounded-lg" src="/src/assets/img/visimisi3.jpg" alt="office content 1" />
+        <img
+          class="mt-4 w-full lg:mt-10 rounded-lg"
+          src="/src/assets/img/visimisi4.jpg"
+          alt="office content 2"
+        />
+      </div>
     </div>
-</section>
+  </section>
 
   <section class="text-gray-700 body-font border-t border-gray-200">
     <div class="container px-5 py-24 mx-auto">
@@ -320,11 +336,9 @@ import 'animate.css';
     href="https://api.whatsapp.com/send?phone=6287773622095"
     class="rounded-full w-12 h-12 bg-gray-100 fixed bottom-0 right-0 flex items-center justify-center text-gray-800 mr-8 mb-8 shadow-sm border-gray-300 border"
     target="_blank"
-    ><i class="fa-brands fa-whatsapp fa-2xl" style="color: #05ff37;"></i></a>
+    ><i class="fa-brands fa-whatsapp fa-2xl" style="color: #05ff37"></i
+  ></a>
 </template>
 
-<script>
-</script>
-<style scoped>
-
-</style>
+<script></script>
+<style scoped></style>

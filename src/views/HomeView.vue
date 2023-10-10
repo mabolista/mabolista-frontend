@@ -426,7 +426,10 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
   </div>
 
   <!-- ---------- Benefits ----------  -->
-  <section class="text-gray-700 body-font border-t border-gray-200">
+  <section
+    class="text-gray-700 body-font border-t border-gray-200"
+    style="background-image: url('src/assets/img/background-benefits.svg')"
+  >
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
         <h2 class="text-center text-3xl font-mabolistafont leading-8 text-gray-900">benefits</h2>

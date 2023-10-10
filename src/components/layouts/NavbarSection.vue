@@ -32,7 +32,7 @@
                 src="/src/assets/img/azraprofil.jpg"
                 alt="user photo"
               />
-              Syahjuddin Azra
+              {{ users.name }}
               <svg
                 class="w-2.5 h-2.5 ml-2.5"
                 aria-hidden="true"
@@ -56,24 +56,26 @@
               class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
             >
               <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                <div class="font-medium">Mabolista</div>
+                <div class="font-medium">
+                  <span>{{ users.name }}</span>
+                </div>
                 <div class="truncate">mabolista@gmail.com</div>
               </div>
-              <div v-for="user in users" :key="user.id">
+              <!-- <div v-for="user in users" :key="user.id">
                 <ul
                   class="py-2 text-sm text-gray-700 dark:text-gray-200"
                   aria-labelledby="dropdownAvatarNameButton"
                 >
                   <li>
                     <router-link
-                      :to="{ path: `/profile/${user.id}` }"
+                      :to="'/profile/' + user.id"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      {{ user.id }}
+                      ({{ user.id }}) {{ user.name }}
                     </router-link>
                   </li>
                 </ul>
-              </div>
+              </div> -->
               <div class="py-2">
                 <a
                   href="javascript:void(0)"
@@ -131,12 +133,14 @@
 
 <script>
 import axios from 'axios'
+
 export default {
   name: 'NavbarSection',
   data() {
     return {
       users: [],
-      authenticated: false
+      authenticated: false,
+      id: this.$route.params.id
     }
   },
   computed: {
@@ -145,24 +149,24 @@ export default {
     }
   },
   mounted() {
-    this.fetchData()
+    this.linkUser()
   },
   methods: {
-    fetchData() {
-      const userId = this.$route.params.id
+    // getUsers(usersData) {
+    //   for (let key in usersData) {
+    //     this.users.push({ ...usersData[key], id: key })
+    //   }
+    // },
+    linkUser() {
       axios
-        .get(`http://localhost:8080/users/${userId}`)
+        .get(`users?page=0&pageSize=10`)
         .then((response) => {
           this.users = response.data.data
+          console.log(this.users)
         })
         .catch((error) => {
-          console.error(error)
+          console.error('Error fetching data:', error)
         })
-    },
-    getUsers(userData) {
-      for (let key in userData) {
-        this.users.push({ ...userData[key], id: key })
-      }
     },
     signOut() {
       localStorage.removeItem('token')

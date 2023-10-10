@@ -121,7 +121,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         </div>
 
         <div class="p-6 space-y-6">
-          <form class="w-full max-w-lg" @submit.prevent="updateUser">
+          <form class="w-full max-w-lg" @submit.prevent="updateUser" enctype="multipart/form-data">
             <div class="flex flex-wrap -mx-3 mb-6">
               <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
@@ -259,7 +259,7 @@ export default {
         phoneNumber: '',
         password: '',
         confirmPassword: '',
-        image: ''
+        image: null
       },
       id: this.$route.params.id
     }
@@ -267,7 +267,7 @@ export default {
   methods: {
     getUser() {
       axios
-        .get(`http://localhost:8080/users/${this.id}`)
+        .get(`users/${this.id}`)
         .then((response) => {
           this.users = response.data.data
           console.log(this.users)
@@ -276,26 +276,29 @@ export default {
           console.error('Error fetching data:', error)
         })
     },
+    onFileChange(event) {
+      this.image = event.target.files[0]
+    },
     updateUser() {
-      const token = localStorage.getItem('token')
-      const config = {
-        headers: {
-          Authorization: `Bearer ${token}`
-        }
-      }
+      const formData = new FormData()
+      formData.append('name', this.name)
+      formData.append('email', this.email)
+      formData.append('phoneNumber', this.phoneNumber)
+      formData.append('password', this.password)
+      formData.append('confirmPassword', this.confirmPassword)
+      formData.append('image', this.image)
 
+      // You should replace 'your_api_url' with the actual URL of your API endpoint for updating user data.
       axios
-        .put(`http://localhost:8080/users/${this.id}`, this.users, config)
+        .put(`users/${this.id}`, formData)
         .then((response) => {
-          this.users = response.data.data
-          console.log(this.users)
+          console.log('User updated successfully', response.data)
+          // Handle success, e.g., show a success message or redirect to a different page.
         })
         .catch((error) => {
-          console.error('Error updating user:', error)
+          console.error('Error updating user', error)
+          // Handle error, e.g., show an error message to the user.
         })
-    },
-    onFileChange(e) {
-      this.image = e.target.files[0]
     }
   },
   mounted() {

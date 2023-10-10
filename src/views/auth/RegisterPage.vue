@@ -229,7 +229,7 @@ export default {
       formData.append('image', this.image)
 
       axios
-        .post('http://localhost:8080/register', formData)
+        .post('register', formData)
         .then((response) => {
           console.log(response.data)
           this.$swal('Berhasil Daftar, Silahkan Login!')
