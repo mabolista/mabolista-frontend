@@ -1,7 +1,6 @@
 <script setup>
 import FooterSection from '../components/layouts/FooterSection.vue'
 import NavbarSection from '../components/layouts/NavbarSection.vue'
-import 'animate.css'
 </script>
 <template>
   <NavbarSection />

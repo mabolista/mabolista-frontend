@@ -151,6 +151,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                   type="email"
                   name="email"
                   placeholder="Input Email"
+                  required
                 />
               </div>
             </div>
@@ -211,10 +212,10 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 </label>
                 <input
                   class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
-                  v-on:change="onFileChange"
                   ref="file"
                   name="image"
                   type="file"
+                  @change="handleFileChange"
                 />
                 <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="file_input_help">
                   PNG or JPG (MAX. 2MB).
@@ -276,29 +277,39 @@ export default {
           console.error('Error fetching data:', error)
         })
     },
-    onFileChange(event) {
-      this.image = event.target.files[0]
+    handleFileChange(event) {
+      this.users.image = event.target.files[0]
     },
     updateUser() {
       const formData = new FormData()
-      formData.append('name', this.name)
-      formData.append('email', this.email)
-      formData.append('phoneNumber', this.phoneNumber)
-      formData.append('password', this.password)
-      formData.append('confirmPassword', this.confirmPassword)
-      formData.append('image', this.image)
+      formData.append('name', this.users.name)
+      formData.append('email', this.users.email)
+      formData.append('phoneNumber', this.users.phoneNumber)
+      formData.append('password', this.users.password)
+      formData.append('image', this.users.image)
 
       // You should replace 'your_api_url' with the actual URL of your API endpoint for updating user data.
       axios
         .put(`users/${this.id}`, formData)
         .then((response) => {
-          console.log('User updated successfully', response.data)
+          console.log('User updated successfully', response.data.data)
           // Handle success, e.g., show a success message or redirect to a different page.
         })
         .catch((error) => {
           console.error('Error updating user', error)
+          console.log('Response Data:', error.response.data)
+          console.log('Response Status:', error.response.status)
           // Handle error, e.g., show an error message to the user.
         })
+    },
+    validateForm() {
+      if (this.users.password !== this.users.confirmPassword) {
+        // Display an error message or prevent form submission.
+        alert('Passwords do not match.')
+      } else {
+        // Proceed with the form submission.
+        this.updateUser()
+      }
     }
   },
   mounted() {

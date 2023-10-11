@@ -32,22 +32,6 @@
                 src="/src/assets/img/azraprofil.jpg"
                 alt="user photo"
               />
-              {{ users.name }}
-              <svg
-                class="w-2.5 h-2.5 ml-2.5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 4 4 4-4"
-                />
-              </svg>
             </button>
 
             <!-- Dropdown menu -->
@@ -57,25 +41,25 @@
             >
               <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
                 <div class="font-medium">
-                  <span>{{ users.name }}</span>
+                  <span>Admin</span>
                 </div>
                 <div class="truncate">mabolista@gmail.com</div>
               </div>
-              <!-- <div v-for="user in users" :key="user.id">
+              <div>
                 <ul
                   class="py-2 text-sm text-gray-700 dark:text-gray-200"
                   aria-labelledby="dropdownAvatarNameButton"
                 >
-                  <li>
+                  <li v-for="user in users" :key="user.id">
                     <router-link
                       :to="'/profile/' + user.id"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      ({{ user.id }}) {{ user.name }}
+                      {{ user.id }}
                     </router-link>
                   </li>
                 </ul>
-              </div> -->
+              </div>
               <div class="py-2">
                 <a
                   href="javascript:void(0)"
@@ -133,14 +117,12 @@
 
 <script>
 import axios from 'axios'
-
 export default {
   name: 'NavbarSection',
   data() {
     return {
       users: [],
-      authenticated: false,
-      id: this.$route.params.id
+      authenticated: false
     }
   },
   computed: {
@@ -149,25 +131,16 @@ export default {
     }
   },
   mounted() {
-    this.linkUser()
+    axios
+      .get(`users?page=0&pageSize=10`)
+      .then((response) => {
+        this.users = response.data.data.users
+      })
+      .catch((error) => {
+        console.error(error)
+      })
   },
   methods: {
-    // getUsers(usersData) {
-    //   for (let key in usersData) {
-    //     this.users.push({ ...usersData[key], id: key })
-    //   }
-    // },
-    linkUser() {
-      axios
-        .get(`users?page=0&pageSize=10`)
-        .then((response) => {
-          this.users = response.data.data
-          console.log(this.users)
-        })
-        .catch((error) => {
-          console.error('Error fetching data:', error)
-        })
-    },
     signOut() {
       localStorage.removeItem('token')
       localStorage.removeItem('user')
