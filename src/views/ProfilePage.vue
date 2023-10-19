@@ -288,26 +288,21 @@ export default {
       formData.append('password', this.users.password)
       formData.append('image', this.users.image)
 
-      // You should replace 'your_api_url' with the actual URL of your API endpoint for updating user data.
       axios
         .put(`users/${this.id}`, formData)
         .then((response) => {
           console.log('User updated successfully', response.data.data)
-          // Handle success, e.g., show a success message or redirect to a different page.
         })
         .catch((error) => {
           console.error('Error updating user', error)
           console.log('Response Data:', error.response.data)
           console.log('Response Status:', error.response.status)
-          // Handle error, e.g., show an error message to the user.
         })
     },
     validateForm() {
       if (this.users.password !== this.users.confirmPassword) {
-        // Display an error message or prevent form submission.
         alert('Passwords do not match.')
       } else {
-        // Proceed with the form submission.
         this.updateUser()
       }
     }

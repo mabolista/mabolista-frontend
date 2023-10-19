@@ -319,6 +319,22 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             </div>
           </div>
         </div>
+        <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4" style="cursor: auto">
+          <div class="px-6" style="cursor: auto">
+            <img
+              alt="Champions Futsal Binus"
+              src="/src/assets/img/futsal/championsfutsal.png"
+              class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
+            />
+            <div class="pt-6 text-center">
+              <h1 class="text-xl font-bold leading-normal mt-0 mb-2">Champions Futsal Binus</h1>
+              <p class="text-base leading-relaxed mt-0 mb-4">
+                Jl. Rw. Belong No.13, RT.1/RW.9, Kb. Jeruk, Kec. Kb. Jeruk, Kota Jakarta Barat,
+                Daerah Khusus Ibukota Jakarta 11530
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
