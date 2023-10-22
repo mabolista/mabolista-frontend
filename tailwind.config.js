@@ -7,11 +7,15 @@ module.exports = {
         mabolistafont: ['regensburg']
       },
       height: {
-        heroabout: '40rem',
+        heroabout: '40rem'
       },
       width: {
-        homebasesecond: '30rem',
+        homebasesecond: '30rem'
       },
+      colors: {
+        primary: '2C2C2C',
+        secondary: 'F5167E'
+      }
     }
   },
   plugins: []
