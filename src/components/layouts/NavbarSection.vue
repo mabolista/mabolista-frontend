@@ -20,7 +20,7 @@
 
         <div class="hidden md:flex items-center space-x-1">
           <div v-if="isAuthenticated">
-            <div v-for="user in users" :key="user.id">
+            <div>
               <button
                 id="dropdownAvatarNameButton"
                 data-dropdown-toggle="dropdownAvatarName"
@@ -53,7 +53,7 @@
                   >
                     <li>
                       <router-link
-                        :to="{ path: `profile/${user.id}` }"
+                        :to="{ path: `profile/${users.id}` }"
                         class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >
                         View Profile

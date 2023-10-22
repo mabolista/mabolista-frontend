@@ -6,28 +6,32 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 <template>
   <NavbarSection />
 
-  <section
-    class="relative h-screen flex flex-col items-center justify-center text-center text-white py-0 px-3"
+  <div
+    class="h-heroabout grid grid-cols-2 grid-rows-1 gap-4 items-center px-48"
+    style="background-image: linear-gradient(to bottom right, #ed4690, #5522cc)"
   >
-    <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
-      <video
-        class="min-w-full min-h-full absolute object-cover"
-        src="/src/assets/video/homevideo.mp4"
-        type="video/mp4"
-        autoplay
-        muted
-        loop
-      ></video>
+    <div class="imagehero">
+      <img src="/src/assets/img/MABOLISTA FC.png" alt="" />
     </div>
-    <div class="video-content space-y-2">
-      <h1
-        class="animate__fadeInUp font-mabolistafont text-3xl sm:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-700"
-      >
-        Welcome Mabolism!
-      </h1>
-      <h3 class="mt-3 mx-auto w-96 font-bold">#Makemoreconnections #MabolistaFc</h3>
+    <div>
+      <h1 class="font-xl text-white text-2xl mb-4">Welcome, Mabolism</h1>
+      <p class="text-white">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+        galley of type and scrambled it to make a type specimen book.
+      </p>
+      <div class="flex gap-4 mt-4">
+        <button class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full">
+          Our instagram
+        </button>
+        <button
+          class="bg-transparent hover:bg-white-500 text-white font-xl hover:text-black py-2 px-4 border border-white-500 hover:bg-white rounded-full"
+        >
+          Learn More
+        </button>
+      </div>
     </div>
-  </section>
+  </div>
 
   <!-- ---------- SPONSOR ----------  -->
   <div class="bg-white py-24 sm:py-32 flex items-center justify-center">
