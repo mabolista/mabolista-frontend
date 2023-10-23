@@ -8,10 +8,14 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 
   <div
     class="h-heroabout grid grid-cols-2 grid-rows-1 gap-4 items-center px-48"
-    style="background-image: linear-gradient(to bottom right, #ed4690, #5522cc)"
+    style="
+      background-image: url('/src/assets/img/head-bg.jpg');
+      background-size: cover;
+      background-position: center;
+    "
   >
     <div class="imagehero">
-      <img src="/src/assets/img/MABOLISTA FC.png" alt="" />
+      <img src="/src/assets/img/head-img.png" alt="" />
     </div>
     <div>
       <h1 class="font-xl text-white text-2xl mb-4">Welcome, Mabolism</h1>
