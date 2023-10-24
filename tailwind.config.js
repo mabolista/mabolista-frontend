@@ -10,7 +10,8 @@ module.exports = {
         heroabout: '40rem'
       },
       width: {
-        homebasesecond: '30rem'
+        homebasesecond: '30rem',
+        headwidth: '27rem'
       },
       colors: {
         primary: '2C2C2C',

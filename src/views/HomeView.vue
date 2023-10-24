@@ -5,269 +5,88 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 
 <template>
   <NavbarSection />
+  <div class="relative">
+    <img src="/src/assets/img/head-bg.jpg" alt="Your Image" class="bg-cover w-full h-screen" />
 
-  <div
-    class="h-heroabout grid grid-cols-2 grid-rows-1 gap-4 items-center px-48"
-    style="
-      background-image: url('/src/assets/img/head-bg.jpg');
-      background-size: cover;
-      background-position: center;
-    "
-  >
-    <div class="imagehero">
-      <img src="/src/assets/img/head-img.png" alt="" />
-    </div>
-    <div>
-      <h1 class="font-xl text-white text-2xl mb-4">Welcome, Mabolism</h1>
-      <p class="text-white">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-        been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-        galley of type and scrambled it to make a type specimen book.
-      </p>
-      <div class="flex gap-4 mt-4">
-        <button class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full">
-          Our instagram
-        </button>
-        <button
-          class="bg-transparent hover:bg-white-500 text-white font-xl hover:text-black py-2 px-4 border border-white-500 hover:bg-white rounded-full"
-        >
-          Learn More
-        </button>
+    <div
+      class="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 opacity-90"
+    >
+      <div class="lg:container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="h-screen grid sm:grid-cols-1 md:grid-cols-2 grid-rows-1 gap-4 items-center">
+          <div class="imagehero">
+            <img src="/src/assets/img/head-img.png" alt="" />
+          </div>
+
+          <div class="text-center md:text-left lg:w-headwidth">
+            <h1 class="font-bold text-white text-4xl mb-4">Welcome, Mabolism</h1>
+            <p class="text-white font-medium">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+              has been the industry's standard dummy text ever since the 1500s, when an unknown
+              printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 mt-4">
+              <button
+                class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full mb-2 sm:mb-0"
+              >
+                Our Instagram
+              </button>
+              <button
+                class="bg-transparent hover:bg-white-500 text-white font-xl hover:text-black py-2 px-4 border border-white-500 hover:bg-white rounded-full"
+              >
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- ---------- SPONSOR ----------  -->
-  <div class="bg-white py-24 sm:py-32 flex items-center justify-center">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <h2 class="text-center text-3xl font-mabolistafont leading-8 text-gray-900">Sponsorship</h2>
-      <div
-        class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-4"
-      >
-        <img
-          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-          src="/src/assets/img/logochavi.png"
-          alt="Transistor"
-          width="158"
-          height="48"
-        />
-        <img
-          class="col-span-2 object-contain h-20 w-32 lg:col-span-1 justify-self-center"
-          src="/src/assets/img/logokratingdaeng.png"
-          alt="Reform"
-          width="158"
-          height="48"
-        />
-        <img
-          class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-          src="/src/assets/img/logokahf.png"
-          alt="Tuple"
-          width="158"
-          height="48"
-        />
-        <img
-          class="col-span-2 object-contain h-24 w-32 mt-4 sm:col-start-2 lg:col-span-1 justify-self-center"
-          src="/src/assets/img/logopanguripan.png"
-          alt="SavvyCal"
-          width="158"
-          height="48"
-        />
-      </div>
-    </div>
-  </div>
-
-  <!-- ---------- Home Base ----------  -->
-  <div class="flex flex-wrap w-full mb-5 flex-col items-center text-center">
-    <h2 class="text-center text-3xl font-mabolistafont leading-8 text-gray-900">Home Base</h2>
-    <p class="lg:w-1/2 w-full leading-relaxed text-base">
-      Home Base Mabolista Fc Untuk Area Jakarta, Bogor, Depok Tangerang dan Bekasi
-    </p>
-  </div>
   <div
-    id="app"
-    class="max-w-screen-lg mx-auto px-4 md:px-8 py-12 transition-all duration-500 ease-linear"
+    class="bg-zinc-800 relative mb-20 mx-auto max-w-7xl px-6 lg:px-8 rounded-lg"
+    style="margin-top: -6rem"
   >
-    <div class="flex justify-between mb-2">
-      <p class="font-bold text-xl">
-        Homebase <span class="text-yellow-600 font-bold text-xl">SepakBola</span>
-      </p>
-      <a href="/homebase" class="text-yellow-500 hover:underline">Selengkapnya</a>
-    </div>
-    <div class="relative">
-      <div
-        class="slides-container h-72 flex snap-x snap-mandatory overflow-hidden overflow-x-auto space-x-2 rounded scroll-smooth before:w-[45vw] before:shrink-0 after:w-[45vw] after:shrink-0 md:before:w-0 md:after:w-0"
-      >
-        <div
-          class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden border border-slate-700"
-        >
-          <div class="max-w-sm rounded overflow-hidden shadow-lg">
-            <img
-              class="w-full"
-              src="/src/assets/img/NYTC sawangan.jpg"
-              alt="Lapangan NYTC Sawangan"
-            />
-            <div class="px-6 py-4">
-              <div class="font-bold text-xl mb-2">NYTC Sawangan (Depok)</div>
-              <p class="text-gray-700 text-base">
-                Jl. Gg. Rotan Pelita Jaya Blok Masjid Nurul Iman No.61, RT.3/RW.6, Bojongsari Baru,
-                Kec. Bojongsari, Kota Depok, Jawa Barat 16516
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
-          <div
-            class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden border border-slate-700"
-          >
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-              <img class="w-full" src="/src/assets/img/big ham.jpg" alt="Lapangan BIG Ham" />
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">BIG Ham Stadium (Depok)</div>
-                <p class="text-gray-700 text-base">
-                  Jl. Yayasan No.RT.006/01, Grogol, Kec. Limo, Kota Depok, Jawa Barat 16512
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
-          <div
-            class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden border border-slate-700"
-          >
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-              <img
-                class="w-full"
-                src="/src/assets/img/kingkong soccer arena.jpg"
-                alt="Lapangan KingKong Soccer Arena"
-              />
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">KingKong Soccer Arena (Bekasi)</div>
-                <p class="text-gray-700 text-base">
-                  Jl. Gg. Rotan Pelita Jaya Blok Masjid Nurul Iman No.61, RT.3/RW.6, Bojongsari
-                  Baru, Kec. Bojongsari, Kota Depok, Jawa Barat 16516
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
-          <div
-            class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden border border-slate-700"
-          >
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-              <img
-                class="w-full h-40"
-                src="/src/assets/img/Pancoransoccerfield.jpg"
-                alt="Lapangan Pancoran Soccer Field"
-              />
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Pancoran Soccer Field (Jakarta)</div>
-                <p class="text-gray-700 text-base">
-                  Jl. Gatot Subroto No.72, RT.1/RW.4, Pancoran, Kec. Pancoran, Kota Jakarta Selatan,
-                  Daerah Khusus Ibukota Jakarta 12780
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
-          <div
-            class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden border border-slate-700"
-          >
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-              <img
-                class="w-full"
-                src="/src/assets/img/tehbotolayoarena.png"
-                alt="Lapangan Teh Botol Ayo Arena"
-              />
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Teh Botol Ayo Arena (Bogor)</div>
-                <p class="text-gray-700 text-base">
-                  Jl. Siliwangi, Sumur Batu, Kec. Babakan Madang, Kabupaten Bogor, Jawa Barat 16810
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
-          <div
-            class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden border border-slate-700"
-          >
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-              <img
-                class="w-full"
-                src="/src/assets/img/latihjakartainternationalstadium.jpg"
-                alt="Lapangan JIS"
-              />
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">Lapangan Latih JIS (Jakarta)</div>
-                <p class="text-gray-700 text-base">
-                  Papanggo, Tanjung Priok, Jakarta Utara, Jakarta, Indonesia
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
-          <div
-            class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden border border-slate-700"
-          >
-            <div class="max-w-sm rounded overflow-hidden shadow-lg">
-              <img class="w-full" src="/src/assets/img/dmsport.jpg" alt="Sunset in the mountains" />
-              <div class="px-6 py-4">
-                <div class="font-bold text-xl mb-2">DM Sport Ciledug (Tangerang)</div>
-                <p class="text-gray-700 text-base">
-                  Jl. Raden Fatah No.88A, Parung Serab, Kec. Ciledug, Kota Tangerang, Banten 15153
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="absolute top-0 -left-4 h-full items-center hidden md:flex">
-        <button
-          role="button"
-          class="prev px-2 py-2 rounded-full bg-neutral-100 text-neutral-900 group"
-          aria-label="prev"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-5 h-5 group-active:-translate-x-2 transition-all duration-200 ease-linear"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-          </svg>
-        </button>
-      </div>
-      <div class="absolute top-0 -right-4 h-full items-center hidden md:flex">
-        <button
-          role="button"
-          class="next px-2 py-2 rounded-full bg-neutral-100 text-neutral-900 group"
-          aria-label="next"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-5 h-5 group-active:translate-x-2 transition-all duration-200 ease-linear"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
-        </button>
-      </div>
+    <div
+      class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-4"
+    >
+      <img
+        class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+        src="/src/assets/img/Chavi Putih.png"
+        alt="Transistor"
+        width="158"
+        height="48"
+      />
+      <img
+        class="col-span-2 object-contain h-20 w-32 lg:col-span-1 justify-self-center"
+        src="/src/assets/img/logokratingdaeng.png"
+        alt="Logo Kratingdaeng"
+        width="158"
+        height="48"
+      />
+      <img
+        class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+        src="/src/assets/img/Kahf Abu.png"
+        alt="Logo Kahf"
+        width="158"
+        height="48"
+      />
+      <img
+        class="col-span-2 object-contain h-24 w-32 mt-4 sm:col-start-2 lg:col-span-1 justify-self-center"
+        src="/src/assets/img/Panguripan Putih.png"
+        alt="Logo Panguripan"
+        width="158"
+        height="48"
+      />
     </div>
   </div>
 
   <!-- ---------- Events ----------  -->
-  <div class="container px-2 sm:px-6 py-4 sm:py-8 lg:px-8 mx-auto">
-    <div class="mb-4 flex flex-col sm:flex-row items-center justify-between">
-      <h1 class="font-mabolistafont text-2xl sm:text-4xl mb-2 sm:mb-0">Events Terdekat</h1>
-      <a href="#" class="text-2 text-yellow-400 hover:underline">Selengkapnya</a>
+  <div class="container px-2 sm:px-6 py-4 sm:py-8 lg:px-40 mx-auto">
+    <div class="mb-20 flex flex-col sm:flex-row items-center justify-between">
+      <h1 class="font-sans font-bold text-2xl sm:text-4xl mb-2 sm:mb-0">Upcoming Events</h1>
+      <a href="#" class="text-2 text-yellow-400 hover:underline">Selengkapnya...</a>
     </div>
 
     <div class="flex flex-col sm:flex-row gap-4">
@@ -301,13 +120,6 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
               <i class="fa-regular fa-money-bill-1"></i> Pemain 115 K / Kiper 95K
             </p>
           </div>
-
-          <a
-            href="/events/nytcsawangan"
-            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-4 py-2 text-center"
-          >
-            Join Events
-          </a>
         </div>
       </div>
 
@@ -341,13 +153,6 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
               <i class="fa-regular fa-money-bill-1"></i> Pemain 115 K / Kiper 95K
             </p>
           </div>
-
-          <a
-            href="/events/nytcsawangan"
-            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-4 py-2 text-center"
-          >
-            Join Events
-          </a>
         </div>
       </div>
 
@@ -381,55 +186,23 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
               <i class="fa-regular fa-money-bill-1"></i> Pemain 115 K / Kiper 95K
             </p>
           </div>
-
-          <a
-            href="/events/nytcsawangan"
-            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-4 py-2 text-center"
-          >
-            Join Events
-          </a>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div
-        class="max-w-sm bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+  <div class="bg-zinc-800 my-16 h-64 w-full text-white flex px-40">
+    <div class="relative">
+      <img src="/src/assets/img/goalkeeper blackpink.png" alt="" />
+    </div>
+    <div class="mt-6 lg:ml-56">
+      <h1 class="font-bold text-4xl">Be part of us</h1>
+      <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <button
+        class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-4 px-14 rounded-full mb-2 sm:mb-0"
       >
-        <a href="#">
-          <img class="rounded-t-lg" src="/src/assets/img/internalevents.png" alt="" />
-        </a>
-        <div class="p-4 sm:p-5">
-          <a href="#">
-            <h5
-              class="mb-1 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-            >
-              INTERNAL FUN MATCH
-            </h5>
-          </a>
-          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">Lokasi: NYTC Sawangan</p>
-          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
-            <i class="fa-regular fa-calendar"></i> Sabtu, 07 Oktober 2023
-          </p>
-          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
-            <i class="fa-regular fa-clock"></i> 15.30 - 18.00 WIB
-          </p>
-
-          <div class="flex gap-4 mb-3">
-            <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
-              <i class="fa-regular fa-circle-check"></i> Benefits
-            </p>
-            <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
-              <i class="fa-regular fa-money-bill-1"></i> Pemain 115 K / Kiper 95K
-            </p>
-          </div>
-
-          <a
-            href="/events/nytcsawangan"
-            class="mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-4 py-2 text-center"
-          >
-            Join Events
-          </a>
-        </div>
-      </div>
+        Join Events
+      </button>
     </div>
   </div>
 
@@ -604,15 +377,189 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           </div>
         </div>
       </div>
-      <a href="/events">
-        <button
-          class="flex mx-auto mt-16 text-white bg-gradient-to-r from-pink-500 to-violet-700 border-0 py-2 px-8 focus:outline-none rounded text-lg"
-        >
-          Join Events
-        </button></a
-      >
     </div>
   </section>
+
+  <!-- ---------- Home Base ----------  -->
+  <div class="flex flex-wrap w-full mb-5 flex-col items-center text-center">
+    <h1 class="font-sans font-bold text-2xl text-center sm:text-4xl mb-2 sm:mb-0">HomeBase</h1>
+    <p class="lg:w-1/2 w-full leading-relaxed text-base">
+      Home Base Mabolista Fc Untuk Area Jakarta, Bogor, Depok Tangerang dan Bekasi
+    </p>
+  </div>
+  <div
+    id="app"
+    class="max-w-screen-lg mx-auto px-4 md:px-8 py-12 transition-all duration-500 ease-linear"
+  >
+    <div class="relative">
+      <div
+        class="slides-container h-72 flex snap-x snap-mandatory overflow-hidden overflow-x-auto space-x-2 rounded scroll-smooth before:w-[45vw] before:shrink-0 after:w-[45vw] after:shrink-0 md:before:w-0 md:after:w-0"
+      >
+        <div
+          class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden border border-slate-700"
+        >
+          <div class="max-w-sm rounded overflow-hidden shadow-lg">
+            <img
+              class="w-full"
+              src="/src/assets/img/NYTC sawangan.jpg"
+              alt="Lapangan NYTC Sawangan"
+            />
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">NYTC Sawangan (Depok)</div>
+              <p class="text-gray-700 text-base">
+                Jl. Gg. Rotan Pelita Jaya Blok Masjid Nurul Iman No.61, RT.3/RW.6, Bojongsari Baru,
+                Kec. Bojongsari, Kota Depok, Jawa Barat 16516
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+          <div
+            class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden border border-slate-700"
+          >
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+              <img class="w-full" src="/src/assets/img/big ham.jpg" alt="Lapangan BIG Ham" />
+              <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">BIG Ham Stadium (Depok)</div>
+                <p class="text-gray-700 text-base">
+                  Jl. Yayasan No.RT.006/01, Grogol, Kec. Limo, Kota Depok, Jawa Barat 16512
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+          <div
+            class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden border border-slate-700"
+          >
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+              <img
+                class="w-full"
+                src="/src/assets/img/kingkong soccer arena.jpg"
+                alt="Lapangan KingKong Soccer Arena"
+              />
+              <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">KingKong Soccer Arena (Bekasi)</div>
+                <p class="text-gray-700 text-base">
+                  Jl. Gg. Rotan Pelita Jaya Blok Masjid Nurul Iman No.61, RT.3/RW.6, Bojongsari
+                  Baru, Kec. Bojongsari, Kota Depok, Jawa Barat 16516
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+          <div
+            class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden border border-slate-700"
+          >
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+              <img
+                class="w-full h-40"
+                src="/src/assets/img/Pancoransoccerfield.jpg"
+                alt="Lapangan Pancoran Soccer Field"
+              />
+              <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Pancoran Soccer Field (Jakarta)</div>
+                <p class="text-gray-700 text-base">
+                  Jl. Gatot Subroto No.72, RT.1/RW.4, Pancoran, Kec. Pancoran, Kota Jakarta Selatan,
+                  Daerah Khusus Ibukota Jakarta 12780
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+          <div
+            class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden border border-slate-700"
+          >
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+              <img
+                class="w-full"
+                src="/src/assets/img/tehbotolayoarena.png"
+                alt="Lapangan Teh Botol Ayo Arena"
+              />
+              <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Teh Botol Ayo Arena (Bogor)</div>
+                <p class="text-gray-700 text-base">
+                  Jl. Siliwangi, Sumur Batu, Kec. Babakan Madang, Kabupaten Bogor, Jawa Barat 16810
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+          <div
+            class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden border border-slate-700"
+          >
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+              <img
+                class="w-full"
+                src="/src/assets/img/latihjakartainternationalstadium.jpg"
+                alt="Lapangan JIS"
+              />
+              <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Lapangan Latih JIS (Jakarta)</div>
+                <p class="text-gray-700 text-base">
+                  Papanggo, Tanjung Priok, Jakarta Utara, Jakarta, Indonesia
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden">
+          <div
+            class="slide aspect-square h-full flex-shrink-0 snap-center rounded overflow-hidden border border-slate-700"
+          >
+            <div class="max-w-sm rounded overflow-hidden shadow-lg">
+              <img class="w-full" src="/src/assets/img/dmsport.jpg" alt="Sunset in the mountains" />
+              <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">DM Sport Ciledug (Tangerang)</div>
+                <p class="text-gray-700 text-base">
+                  Jl. Raden Fatah No.88A, Parung Serab, Kec. Ciledug, Kota Tangerang, Banten 15153
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute top-0 -left-4 h-full items-center hidden md:flex">
+        <button
+          role="button"
+          class="prev px-2 py-2 rounded-full bg-neutral-100 text-neutral-900 group"
+          aria-label="prev"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5 group-active:-translate-x-2 transition-all duration-200 ease-linear"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="absolute top-0 -right-4 h-full items-center hidden md:flex">
+        <button
+          role="button"
+          class="next px-2 py-2 rounded-full bg-neutral-100 text-neutral-900 group"
+          aria-label="next"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5 group-active:translate-x-2 transition-all duration-200 ease-linear"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <FooterSection />
   <a

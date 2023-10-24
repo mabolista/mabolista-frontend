@@ -1,20 +1,17 @@
 <template>
-  <nav class="sticky top-0 w-full transition bg-transparent backdrop-blur-md z-10">
+  <nav class="sticky top-0 w-full transition bg-transparent backdrop-blur-md z-10 lg:px-40">
     <div class="xl:max-w-full px-3">
       <div class="flex justify-between">
-        <div class="flex space-x-4">
-          <div>
-            <a href="#" class="flex items-center py-5 px-2">
-              <img src="/src/assets/img/MABOLISTA FC.png" alt="Mabolista Fc" class="w-20 h-20" />
-              <span class="font-mabolistafont">Mabolista Fc</span>
-            </a>
-          </div>
-
+        <a href="#" class="flex items-center py-5 px-2">
+          <img src="/src/assets/img/MABOLISTA FC.png" alt="Mabolista Fc" class="w-20 h-20" />
+          <span class="font-mabolistafont text-xl">Mabolista Fc</span>
+        </a>
+        <div class="flex justify-end">
           <div class="hidden md:flex items-center gap-3 font-mabolistafont text-2xl">
-            <RouterLink class="hover:text-yellow-300" to="/">Home</RouterLink>
-            <RouterLink class="hover:text-yellow-300" to="/about">About</RouterLink>
-            <RouterLink class="hover:text-yellow-300" to="/events">Events</RouterLink>
-            <RouterLink class="hover:text-yellow-300" to="/contact">Contact</RouterLink>
+            <router-link class="hover:text-yellow-300" to="/">Home</router-link>
+            <router-link class="hover:text-yellow-300" to="/about">About</router-link>
+            <router-link class="hover:text-yellow-300" to="/events">Events</router-link>
+            <router-link class="hover:text-yellow-300" to="/contact">Contact</router-link>
           </div>
         </div>
 
@@ -74,13 +71,17 @@
             </div>
           </div>
           <div v-else>
-            <router-link to="/login" class="py-5 px-3 font-extrabold">Login</router-link>
             <router-link
+              to="/login"
+              class="bg-transparent hover:bg-white-500 text-white font-1xl font-medium hover:text-black py-2 px-8 border border-white-500 hover:bg-white rounded-full"
+              >Login</router-link
+            >
+            <!-- <router-link
               to="/signup"
               class="py-2 px-3 font-extrabold bg-gradient-to-r from-pink-500 to-violet-700 text-white rounded transition duration-300"
             >
               SignUp
-            </router-link>
+            </router-link> -->
           </div>
         </div>
 
