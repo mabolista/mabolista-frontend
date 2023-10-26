@@ -1,120 +1,68 @@
 <template>
-  <nav class="sticky top-0 w-full transition bg-transparent backdrop-blur-md z-10 lg:px-40">
-    <div class="xl:max-w-full px-3">
-      <div class="flex justify-between">
-        <a href="#" class="flex items-center py-5 px-2">
-          <img src="/src/assets/img/MABOLISTA FC.png" alt="Mabolista Fc" class="w-20 h-20" />
-          <span class="font-mabolistafont text-xl">Mabolista Fc</span>
-        </a>
-        <div class="flex justify-end">
-          <div class="hidden md:flex items-center gap-3 font-mabolistafont text-2xl">
-            <router-link class="hover:text-yellow-300" to="/">Home</router-link>
-            <router-link class="hover:text-yellow-300" to="/about">About</router-link>
-            <router-link class="hover:text-yellow-300" to="/events">Events</router-link>
-            <router-link class="hover:text-yellow-300" to="/contact">Contact</router-link>
-          </div>
-        </div>
+  <nav class="fixed w-full z-50 top-0">
+    <ul
+      class="navigation max-w-[90vw] flex flex-wrap justify-between items-center relative mx-auto py-8 bg-opacity-50"
+    >
+      <a class="flex items-center" href="#">
+        <img src="/src/assets/img/MABOLISTA FC.png" height="50" width="50" alt="" />
+        <h3 class="font-mabolistafont text-xl">Mabolista Fc</h3>
+      </a>
+      <input type="checkbox" id="check" />
 
-        <div class="hidden md:flex items-center space-x-1">
-          <div v-if="isAuthenticated">
-            <div>
-              <button
-                id="dropdownAvatarNameButton"
-                data-dropdown-toggle="dropdownAvatarName"
-                class="flex items-center text-sm font-medium text-gray-900 rounded-full hover:text-yellow-600 dark:hover:text-yellow-500 md:mr-0 dark:text-white"
-                type="button"
-              >
-                <span class="sr-only">Open user menu</span>
-                <img
-                  class="w-8 h-8 mr-2 rounded-full"
-                  src="/src/assets/img/azraprofil.jpg"
-                  alt="user photo"
-                />
-              </button>
+      <span
+        class="menu flex items-center [&>li]:pl-8 [&>li>a]:text-center [&>li>a]:relative [&>li>a]:transition [&>li>a]:duration-200 [&>li>a]:ease-in-out [&>li>a]:font-mabolistafont [&>li>a]:text-lg"
+      >
+        <li><router-link class="hover:text-yellow-300" to="/">Home</router-link></li>
+        <li><router-link class="hover:text-yellow-300" to="/about">About</router-link></li>
+        <li><router-link class="hover:text-yellow-300" to="/events">Events</router-link></li>
+        <li><router-link class="hover:text-yellow-300" to="/contact">Contact</router-link></li>
+        <div v-if="isAuthenticated">
+          <img
+            id="avatarButton"
+            type="button"
+            data-dropdown-toggle="userDropdown"
+            data-dropdown-placement="bottom-start"
+            class="w-10 h-10 rounded-full cursor-pointer"
+            src="/src/assets/img/MABOLISTA FC.png"
+            alt="User dropdown"
+          />
 
-              <!-- Dropdown menu -->
-              <div
-                id="dropdownAvatarName"
-                class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+          <!-- Dropdown menu -->
+          <div
+            id="userDropdown"
+            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+          >
+            <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+              <div>my name</div>
+              <div class="font-medium truncate">name@gmail.com</div>
+            </div>
+            <router-link
+              :to="{ name: 'profile', params: { id: id } }"
+              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              >{{ users.name }}</router-link
+            >
+            <div class="py-1">
+              <a
+                href="#"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                >Sign out</a
               >
-                <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
-                  <div class="font-medium">
-                    <span>Admin</span>
-                  </div>
-                  <div class="truncate">mabolista@gmail.com</div>
-                </div>
-                <div>
-                  <ul
-                    class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                    aria-labelledby="dropdownAvatarNameButton"
-                  >
-                    <li>
-                      <router-link
-                        :to="{ path: `profile/${users.id}` }"
-                        class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >
-                        View Profile
-                      </router-link>
-                    </li>
-                  </ul>
-                </div>
-                <div class="py-2">
-                  <a
-                    href="javascript:void(0)"
-                    @click="signOut"
-                    class="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                  >
-                    Sign out
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
-          <div v-else>
-            <router-link
-              to="/login"
-              class="bg-transparent hover:bg-white-500 text-white font-1xl font-medium hover:text-black py-2 px-8 border border-white-500 hover:bg-white rounded-full"
-              >Login</router-link
-            >
-            <!-- <router-link
-              to="/signup"
-              class="py-2 px-3 font-extrabold bg-gradient-to-r from-pink-500 to-violet-700 text-white rounded transition duration-300"
-            >
-              SignUp
-            </router-link> -->
-          </div>
+          +
         </div>
-
-        <!-- ---------- BUTTON: MOBILE MENU ----------  -->
-        <div class="md:hidden flex items-center">
-          <button class="mobile-menu-button">
-            <svg
-              class="w-6 h-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          </button>
+        <div v-else>
+          <router-link
+            to="/login"
+            class="bg-transparent hover:bg-white-500 text-white font-1xl ml-7 font-medium hover:text-black py-2 px-8 border border-white-500 hover:bg-white rounded-full"
+            >Login</router-link
+          >
         </div>
-      </div>
-    </div>
+        <label for="check" class="close-menu">X</label>
+      </span>
 
-    <!-- ---------- MOBILE MENU  ----------  -->
-
-    <div class="mobile-menu hidden md:hidden font-mabolistafont">
-      <a href="/" class="block py-2 px-4 text-sm hover:bg-gray-300">HOME</a>
-      <a href="/about" class="block py-2 px-4 text-sm hover:bg-gray-300">ABOUT</a>
-      <a href="/events" class="block py-2 px-4 text-sm hover:bg-gray-300">EVENTS</a>
-      <a href="/contact" class="block py-2 px-4 text-sm hover:bg-gray-300">CONTACT</a>
-    </div>
+      <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+    </ul>
   </nav>
 </template>
 
@@ -133,7 +81,7 @@ export default {
         image: ''
       },
       authenticated: false,
-      id: this.$route.params.id
+      id: JSON.parse(localStorage.getItem('user'))?.id
     }
   },
   computed: {
@@ -141,7 +89,7 @@ export default {
       return !!localStorage.getItem('token')
     }
   },
-  mounted() {
+  beforeMount() {
     this.getUsers()
   },
   methods: {
@@ -149,7 +97,7 @@ export default {
       axios
         .get(`users/${this.id}`)
         .then((response) => {
-          this.users = response.data.data.users
+          this.users = response.data.data
           console.log(this.users)
         })
         .catch((error) => {
@@ -167,4 +115,62 @@ export default {
   }
 }
 </script>
-<style></style>
+<style scoped>
+.close-menu,
+.open-menu {
+  position: absolute;
+  cursor: pointer;
+  display: none;
+}
+
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 73%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: #000;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+
+  .menu li {
+    margin-top: 40px;
+  }
+
+  .menu li a {
+    padding: 10px;
+  }
+
+  .close-menu,
+  .open-menu {
+    display: block;
+  }
+
+  #check:checked ~ .menu {
+    right: 0;
+  }
+}
+</style>

@@ -110,7 +110,7 @@
     <div class="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
       <img
         alt="Welcome"
-        src="src/assets/img/azraprofil.jpg"
+        src="src/assets/img/dmsport.jpg"
         class="absolute inset-0 h-full w-full object-cover"
       />
     </div>

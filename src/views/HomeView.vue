@@ -404,26 +404,24 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 
       <div class="mx-auto flex flex-col w-96">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
-          <img src="/src/assets/img/NYTC sawangan.jpg" alt="NYTC Sawangan" class="rounded-xl" />
+          <img src="/src/assets/img/dmsport.jpg" alt="DM Sport" class="rounded-xl" />
         </div>
         <div class="px-4">
-          <div class="font-bold text-xl mb-2">NYTC Sawangan (Depok)</div>
+          <div class="font-bold text-xl mb-2">DM Sport (Tangerang)</div>
           <p class="text-gray-700 text-base">
-            Jl. Gg. Rotan Pelita Jaya Blok Masjid Nurul Iman No.61, RT.3/RW.6, Bojongsari Baru, Kec.
-            Bojongsari, Kota Depok, Jawa Barat 16516
+            Jl. Raden Patah No.88A, Parung Serab, Kec. Ciledug, Kota Tangerang, Banten 15153
           </p>
         </div>
       </div>
 
       <div class="mx-auto flex flex-col w-96">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
-          <img src="/src/assets/img/NYTC sawangan.jpg" alt="NYTC Sawangan" class="rounded-xl" />
+          <img src="/src/assets/img/big ham.jpg" alt="Big Ham Stadium" class="rounded-xl" />
         </div>
         <div class="px-4">
-          <div class="font-bold text-xl mb-2">NYTC Sawangan (Depok)</div>
+          <div class="font-bold text-xl mb-2">Big Ham Stadium (Depok)</div>
           <p class="text-gray-700 text-base">
-            Jl. Gg. Rotan Pelita Jaya Blok Masjid Nurul Iman No.61, RT.3/RW.6, Bojongsari Baru, Kec.
-            Bojongsari, Kota Depok, Jawa Barat 16516
+            Jl. Yayasan No.RT.006/01, Grogol, Kec. Limo, Kota Depok, Jawa Barat 16512
           </p>
         </div>
       </div>
