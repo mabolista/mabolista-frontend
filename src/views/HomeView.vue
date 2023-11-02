@@ -92,11 +92,11 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
       <div
         class="max-w-sm bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
-        <a href="#">
+        <a href="/events">
           <img class="rounded-t-lg" src="/src/assets/img/internalevents.png" alt="" />
         </a>
         <div class="p-4 sm:p-5">
-          <a href="#">
+          <a href="/events">
             <h5
               class="mb-1 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
             >
