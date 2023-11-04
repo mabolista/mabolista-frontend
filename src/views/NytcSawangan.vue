@@ -178,16 +178,6 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           </ol>
         </li>
       </ul>
-      <ul class="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400">
-        <li class="font-bold">
-          Waiting List
-          <ol class="pl-5 mt-2 space-y-1 list-decimal list-inside">
-            <li>Reza</li>
-            <li>Azra</li>
-            <li>test</li>
-          </ol>
-        </li>
-      </ul>
     </div>
   </div>
 

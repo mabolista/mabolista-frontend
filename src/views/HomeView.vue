@@ -20,22 +20,24 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="text-center md:text-left lg:w-headwidth">
             <h1 class="font-bold text-white text-4xl mb-4">Welcome, Mabolism</h1>
             <p class="text-white font-medium">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-              has been the industry's standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a type specimen book.
+              Ini adalah website resmi Mabolista Fc, Eksplore lebih lanjut dengan klik tombol
+              dibawah atau scroll
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 mt-4">
-              <button
+              <a
+                href="https://www.instagram.com/mabolista_fc/"
+                target="blank"
                 class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full mb-2 sm:mb-0"
               >
                 Our Instagram
-              </button>
-              <button
+              </a>
+              <a
+                href="/about"
                 class="bg-transparent hover:bg-white-500 text-white font-xl hover:text-black py-2 px-4 border border-white-500 hover:bg-white rounded-full"
               >
                 Learn More
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -88,8 +90,10 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
       <a href="#" class="text-2 text-yellow-400 hover:underline">Selengkapnya...</a>
     </div>
 
-    <div class="flex flex-col sm:flex-row gap-4">
+    <div v-if="isAuthenticated" class="flex flex-col sm:flex-row gap-4">
       <div
+        v-for="event in events"
+        :key="event.id"
         class="max-w-sm bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <a href="/events">
@@ -100,7 +104,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             <h5
               class="mb-1 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
             >
-              INTERNAL FUN MATCH
+              {{ event.title }}
             </h5>
           </a>
           <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">Lokasi: NYTC Sawangan</p>
@@ -194,14 +198,17 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     <div class="relative">
       <img src="/src/assets/img/goalkeeper blackpink.png" alt="" />
     </div>
-    <div class="mt-6 lg:ml-56">
+    <div class="my-6 lg:ml-56">
       <h1 class="font-bold text-4xl">Be part of us</h1>
-      <p class="my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <button
+      <p class="my-6">
+        Ayo gabung main bersama kita, Perbanyak saudara dan koneksi. Main bola gapernah se asik ini
+      </p>
+      <a
+        href="/events"
         class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-4 px-14 rounded-full mb-2 sm:mb-0"
       >
         Join Events
-      </button>
+      </a>
     </div>
   </div>
 
@@ -446,13 +453,33 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'HomePage',
-
+  data() {
+    return {
+      events: [],
+      id: this.$route.params.id
+    }
+  },
   mounted() {
-    let recaptchaScript = document.createElement('script')
-    recaptchaScript.setAttribute('src', '/src/assets/js/eventscard.js')
-    document.head.appendChild(recaptchaScript)
+    this.getEvents()
+  },
+
+  methods: {
+    // display benefits list
+    getEvents() {
+      axios
+        .get('admin/events?page=0&pageSize=10')
+        .then((res) => {
+          this.events = res.data.data.events
+          console.log(this.events)
+        })
+        .catch((error) => {
+          console.error('Error fetching benefits:', error)
+        })
+    }
   }
 }
 </script>
