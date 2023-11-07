@@ -17,8 +17,8 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             <img src="/src/assets/img/head-img.png" alt="" />
           </div>
 
-          <div class="text-center md:text-left lg:w-headwidth">
-            <h1 class="font-bold text-white text-4xl mb-4">Welcome, Mabolism</h1>
+          <div class="text-center mb-16 md:text-left lg:w-headwidth">
+            <h1 class="font-bold text-white text-4xl mb-4">Welcome, Mabolism!</h1>
             <p class="text-white font-medium">
               Ini adalah website resmi Mabolista Fc, Eksplore lebih lanjut dengan klik tombol
               dibawah atau scroll
@@ -90,26 +90,24 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
       <a href="#" class="text-2 text-yellow-400 hover:underline">Selengkapnya...</a>
     </div>
 
-    <div v-if="isAuthenticated" class="flex flex-col sm:flex-row gap-4">
+    <div class="flex flex-col sm:flex-row gap-4">
       <div
-        v-for="event in events"
-        :key="event.id"
         class="max-w-sm bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <a href="/events">
-          <img class="rounded-t-lg" src="/src/assets/img/internalevents.png" alt="" />
+          <img class="rounded-t-lg" src="/src/assets/img/eventshome/12 November 2023.png" alt="" />
         </a>
         <div class="p-4 sm:p-5">
           <a href="/events">
             <h5
               class="mb-1 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
             >
-              {{ event.title }}
+              INTERNAL FUN MATCH
             </h5>
           </a>
           <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">Lokasi: NYTC Sawangan</p>
           <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
-            <i class="fa-regular fa-calendar"></i> Sabtu, 07 Oktober 2023
+            <i class="fa-regular fa-calendar"></i> Minggu, 12 November 2023
           </p>
           <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
             <i class="fa-regular fa-clock"></i> 15.30 - 18.00 WIB
@@ -130,7 +128,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         class="max-w-sm bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <a href="#">
-          <img class="rounded-t-lg" src="/src/assets/img/internalevents.png" alt="" />
+          <img class="rounded-t-lg" src="/src/assets/img/eventshome/EventsComingSoon.jpg" alt="" />
         </a>
         <div class="p-4 sm:p-5">
           <a href="#">
@@ -140,12 +138,12 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
               INTERNAL FUN MATCH
             </h5>
           </a>
-          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">Lokasi: NYTC Sawangan</p>
+          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">Lokasi: Coming Soon</p>
           <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
-            <i class="fa-regular fa-calendar"></i> Sabtu, 07 Oktober 2023
+            <i class="fa-regular fa-calendar"></i> Coming Soon
           </p>
           <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
-            <i class="fa-regular fa-clock"></i> 15.30 - 18.00 WIB
+            <i class="fa-regular fa-clock"></i> Coming Soon
           </p>
 
           <div class="flex gap-4 mb-3">
@@ -153,7 +151,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
               <i class="fa-regular fa-circle-check"></i> Benefits
             </p>
             <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
-              <i class="fa-regular fa-money-bill-1"></i> Pemain 115 K / Kiper 95K
+              <i class="fa-regular fa-money-bill-1"></i> Coming Soon
             </p>
           </div>
         </div>
@@ -163,7 +161,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         class="max-w-sm bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <a href="#">
-          <img class="rounded-t-lg" src="/src/assets/img/internalevents.png" alt="" />
+          <img class="rounded-t-lg" src="/src/assets/img/eventshome/EventsComingSoon.jpg" alt="" />
         </a>
         <div class="p-4 sm:p-5">
           <a href="#">
@@ -173,12 +171,12 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
               INTERNAL FUN MATCH
             </h5>
           </a>
-          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">Lokasi: NYTC Sawangan</p>
+          <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">Lokasi: Coming Soon</p>
           <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
-            <i class="fa-regular fa-calendar"></i> Sabtu, 07 Oktober 2023
+            <i class="fa-regular fa-calendar"></i> Coming Soon
           </p>
           <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
-            <i class="fa-regular fa-clock"></i> 15.30 - 18.00 WIB
+            <i class="fa-regular fa-clock"></i> Coming Soon
           </p>
 
           <div class="flex gap-4 mb-3">
@@ -186,7 +184,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
               <i class="fa-regular fa-circle-check"></i> Benefits
             </p>
             <p class="mb-1 font-semibold text-gray-700 dark:text-gray-400">
-              <i class="fa-regular fa-money-bill-1"></i> Pemain 115 K / Kiper 95K
+              <i class="fa-regular fa-money-bill-1"></i> Coming Soon
             </p>
           </div>
         </div>
@@ -194,18 +192,20 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     </div>
   </div>
 
-  <div class="bg-zinc-800 my-16 h-64 w-full text-white flex px-40">
-    <div class="relative">
-      <img src="/src/assets/img/goalkeeper blackpink.png" alt="" />
+  <div
+    class="bg-zinc-800 justify-center my-4 sm:my-8 md:my-16 h-64 w-full text-white flex flex-col sm:flex-row md:flex-col px-4 sm:px-8 md:px-40"
+  >
+    <div class="relative hidden lg:mt-0 lg:col-span-5 lg:flex">
+      <img src="/src/assets/img/goalkeeper blackpink.png" alt="" class="h-80" />
     </div>
-    <div class="my-6 lg:ml-56">
-      <h1 class="font-bold text-4xl">Be part of us</h1>
-      <p class="my-6">
+    <div class="my-4 sm:my-0 sm:ml-4 md:ml-0">
+      <h1 class="font-bold text-2xl sm:text-3xl md:text-4xl">Be part of us</h1>
+      <p class="my-2 sm:my-4 md:my-6">
         Ayo gabung main bersama kita, Perbanyak saudara dan koneksi. Main bola gapernah se asik ini
       </p>
       <a
         href="/events"
-        class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-4 px-14 rounded-full mb-2 sm:mb-0"
+        class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 sm:py-4 md:py-6 px-4 sm:px-8 md:px-14 rounded-full mb-2 sm:mb-0"
       >
         Join Events
       </a>
@@ -395,8 +395,8 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
   </div>
 
   <div class="items-center">
-    <div class="flex" style="margin: 4rem 10rem 4rem 10rem">
-      <div class="mx-auto flex flex-col w-96">
+    <div class="md:flex lg:flex mx-40 mt-16">
+      <div class="mx-auto flex flex-col w-96 mb-10">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
           <img src="/src/assets/img/NYTC sawangan.jpg" alt="NYTC Sawangan" class="rounded-xl" />
         </div>
@@ -409,7 +409,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         </div>
       </div>
 
-      <div class="mx-auto flex flex-col w-96">
+      <div class="mx-auto flex flex-col w-96 mb-10">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
           <img src="/src/assets/img/dmsport.jpg" alt="DM Sport" class="rounded-xl" />
         </div>
@@ -421,7 +421,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         </div>
       </div>
 
-      <div class="mx-auto flex flex-col w-96">
+      <div class="mx-auto flex flex-col w-96 mb-10">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
           <img src="/src/assets/img/big ham.jpg" alt="Big Ham Stadium" class="rounded-xl" />
         </div>
@@ -453,34 +453,8 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
-  name: 'HomePage',
-  data() {
-    return {
-      events: [],
-      id: this.$route.params.id
-    }
-  },
-  mounted() {
-    this.getEvents()
-  },
-
-  methods: {
-    // display benefits list
-    getEvents() {
-      axios
-        .get('admin/events?page=0&pageSize=10')
-        .then((res) => {
-          this.events = res.data.data.events
-          console.log(this.events)
-        })
-        .catch((error) => {
-          console.error('Error fetching benefits:', error)
-        })
-    }
-  }
+  name: 'HomePage'
 }
 </script>
 

@@ -125,9 +125,9 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="flex-grow">
             <h2 class="text-3xl font-mabolistafont leading-8 text-gray-900">Keterangan</h2>
             <p class="leading-relaxed text-left">
-              📆 : Sabtu, 19 Agustus 2023<br />
+              📆 : Minggu, 12 November 2023<br />
               ⏰ : 15.30 - 18.00 WIB<br />
-              🏟 : BIG HAM DEPOK<br />
+              🏟 : NYTC Sawangan<br />
               📸 : Fotographer<br />
               📹 : Videographer<br />
               🙅🏻‍♂ : Wasit Tengah 1<br />

@@ -6,7 +6,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 <template>
   <NavbarSection />
 
-  <section class="bg-white dark:bg-gray-900">
+  <section class="bg-white dark:bg-gray-900 pt-20">
     <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
       <h2
         class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white"
@@ -72,7 +72,8 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     href="https://api.whatsapp.com/send?phone=6287773622095"
     class="rounded-full w-12 h-12 bg-gray-100 fixed bottom-0 right-0 flex items-center justify-center text-gray-800 mr-8 mb-8 shadow-sm border-gray-300 border"
     target="_blank"
-    ><i class="fa-brands fa-whatsapp fa-2xl" style="color: #05ff37;"></i></a>
+    ><i class="fa-brands fa-whatsapp fa-2xl" style="color: #05ff37"></i
+  ></a>
 </template>
 
 <style></style>

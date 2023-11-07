@@ -3,19 +3,21 @@
     <ul
       class="navigation max-w-[90vw] flex flex-wrap justify-between items-center relative mx-auto py-8 bg-opacity-50"
     >
-      <a class="flex items-center" href="#">
+      <a class="flex items-center" href="/">
         <img src="/src/assets/img/MABOLISTA FC.png" height="50" width="50" alt="" />
         <h3 class="font-mabolistafont text-xl">Mabolista Fc</h3>
       </a>
       <input type="checkbox" id="check" />
 
       <span
-        class="menu flex items-center [&>li]:pl-8 [&>li>a]:text-center [&>li>a]:relative [&>li>a]:transition [&>li>a]:duration-200 [&>li>a]:ease-in-out [&>li>a]:font-mabolistafont [&>li>a]:text-lg"
+        class="menu flex items-center [&>li>a]:text-center [&>li>a]:relative [&>li>a]:transition [&>li>a]:duration-200 [&>li>a]:ease-in-out"
       >
-        <li><router-link class="hover:text-yellow-300" to="/">Home</router-link></li>
-        <li><router-link class="hover:text-yellow-300" to="/about">About</router-link></li>
-        <li><router-link class="hover:text-yellow-300" to="/events">Events</router-link></li>
-        <li><router-link class="hover:text-yellow-300" to="/contact">Contact</router-link></li>
+        <div class="md:flex lg:flex mb-8 mt-8 font-mabolistafont text-lg [&>li]:pl-8">
+          <li><router-link class="hover:text-yellow-300" to="/">Home</router-link></li>
+          <li><router-link class="hover:text-yellow-300" to="/about">About</router-link></li>
+          <li><router-link class="hover:text-yellow-300" to="/events">Events</router-link></li>
+          <li><router-link class="hover:text-yellow-300" to="/contact">Contact</router-link></li>
+        </div>
         <div v-if="isAuthenticated" class="py-2 lg:px-4">
           <img
             id="avatarButton"
@@ -87,6 +89,7 @@ export default {
         image: ''
       },
       authenticated: false,
+      isScrolled: false,
       id: JSON.parse(localStorage.getItem('user'))?.id
     }
   },

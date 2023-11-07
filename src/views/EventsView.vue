@@ -6,7 +6,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 <template>
   <NavbarSection />
 
-  <section class="bg-white dark:bg-gray-900">
+  <section class="bg-white dark:bg-gray-900 pt-20 px-8">
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
       <div class="mr-auto place-self-center lg:col-span-7">
         <h1
@@ -75,7 +75,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
               15.30 - 18.00
             </p>
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              <p>Sabtu, 30 September 2023 | NYTC Sawangan Depok</p>
+              <p>Minggu, 12 November 2023 | NYTC Sawangan Depok</p>
             </h3>
             <a
               href="/events/nytcsawangan"
@@ -110,13 +110,26 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 >Minggu, 00 September 2023 | Big Ham Stadium Depok</a
               >
             </h3>
-            <a href=""
-              ><button
-                class="bg-transparent hover:bg-yellow-500 text-black font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded"
-              >
-                Join List
-              </button></a
+            <a
+              href="#"
+              title=""
+              class="inline-flex items-center text-lg font-medium text-primary-600 hover:underline dark:text-primary-500"
             >
+              Join List
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5 ml-2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
           </div>
 
           <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
@@ -130,53 +143,26 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
                 >Minggu, 00 September 2023 | Big Ham Stadium Depok</a
               >
             </h3>
-            <a href=""
-              ><button
-                class="bg-transparent hover:bg-yellow-500 text-black font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded"
-              >
-                Join List
-              </button></a
+            <a
+              href="#"
+              title=""
+              class="inline-flex items-center text-lg font-medium text-primary-600 hover:underline dark:text-primary-500"
             >
-          </div>
-
-          <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
-            <p
-              class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0"
-            >
-              00:00 - 00:00
-            </p>
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              <a href="#" class="hover:underline"
-                >Minggu, 00 September 2023 | Big Ham Stadium Depok</a
+              Join List
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5 ml-2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
               >
-            </h3>
-            <a href=""
-              ><button
-                class="bg-transparent hover:bg-yellow-500 text-black font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded"
-              >
-                Join List
-              </button></a
-            >
-          </div>
-
-          <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
-            <p
-              class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0"
-            >
-              00:00 - 00:00
-            </p>
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-              <a href="#" class="hover:underline"
-                >Minggu, 00 September 2023 | Big Ham Stadium Depok</a
-              >
-            </h3>
-            <a href=""
-              ><button
-                class="bg-transparent hover:bg-yellow-500 text-black font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded"
-              >
-                Join List
-              </button></a
-            >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -803,23 +789,15 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         <div class="hidden md:block md:w-1/2 px-4">
           <div
             class="h-full w-full bg-cover rounded shadow-md"
-            style="background-image: url('https://source.unsplash.com/random/1280x720')"
+            style="background-image: url('/src/assets/img/gallery/Gallery.jpg')"
           ></div>
         </div>
         <div class="md:w-1/2 h-auto px-4">
           <div class="mb-8">
-            <img
-              class="rounded shadow-md"
-              src="https://source.unsplash.com/random/1280x720"
-              alt=""
-            />
+            <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery14.jpg" alt="" />
           </div>
           <div>
-            <img
-              class="rounded shadow-md"
-              src="https://source.unsplash.com/random/1280x720"
-              alt=""
-            />
+            <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery17.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -828,10 +806,10 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     <section class="py-8 px-4">
       <div class="flex flex-wrap -mx-4">
         <div class="md:w-1/2 px-4 mb-8 md:mb-0">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery18.jpg" alt="" />
         </div>
         <div class="md:w-1/2 px-4 mb-8 md:mb-0">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery8.jpg" alt="" />
         </div>
       </div>
     </section>
@@ -839,22 +817,22 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     <section class="pt-8 px-4">
       <div class="flex flex-wrap -mx-4">
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery2.jpg" alt="" />
         </div>
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery3.jpg" alt="" />
         </div>
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery4.jpg" alt="" />
         </div>
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery5.jpg" alt="" />
         </div>
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery6.jpg" alt="" />
         </div>
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery7.jpg" alt="" />
         </div>
       </div>
     </section>
@@ -862,28 +840,28 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     <section class="py-8 px-4">
       <div class="flex flex-wrap -mx-4 -mb-8">
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery9.jpg" alt="" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery10.jpg" alt="" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery11.jpg" alt="" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery12.jpg" alt="" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery13.jpg" alt="" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery15.jpg" alt="" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery16.jpg" alt="" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="https://source.unsplash.com/random/1280x720" alt="" />
+          <img class="rounded shadow-md" src="/src/assets/img/gallery/Gallery20.jpg" alt="" />
         </div>
       </div>
     </section>
