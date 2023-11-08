@@ -230,7 +230,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-              src="/src/assets/img/rezateams.jpg"
+              src="/src/assets/img/azrateams.jpg"
             />
             <div class="flex-grow">
               <h2 class="text-gray-900 title-font font-medium">Reza (Captain)</h2>
