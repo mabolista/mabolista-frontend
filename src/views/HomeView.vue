@@ -446,7 +446,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 
       <div class="mx-auto flex flex-col w-96 mb-10">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
-          <img src="/src/assets/img/big ham.jpg" alt="Big Ham Stadium" class="rounded-xl" />
+          <img src="/src/assets/img/bigham.jpg" alt="Big Ham Stadium" class="rounded-xl" />
         </div>
         <div class="px-4">
           <div class="font-bold text-xl mb-2">Big Ham Stadium (Depok)</div>

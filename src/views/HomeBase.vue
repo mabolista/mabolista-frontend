@@ -43,7 +43,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6" style="cursor: auto">
             <img
               alt="BIG Ham"
-              src="/src/assets/img/big ham.jpg"
+              src="/src/assets/img/bigham.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
