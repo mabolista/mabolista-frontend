@@ -27,7 +27,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6">
             <img
               alt="NYTC Sawangan"
-              src="/src/assets/img/NYTC sawangan.jpg"
+              src="/src/assets/img/NYTCsawangan.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -114,7 +114,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6" style="cursor: auto">
             <img
               alt="KingKong Soccer Arena"
-              src="/src/assets/img/kingkong soccer arena.jpg"
+              src="/src/assets/img/kingkongsoccerarena.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">

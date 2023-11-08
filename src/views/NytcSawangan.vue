@@ -115,7 +115,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         <img
           alt="feature"
           class="object-cover object-center h-full w-full"
-          src="/src/assets/img/NYTC Sawangan.jpg"
+          src="/src/assets/img/NYTCsawangan.jpg"
         />
       </div>
       <div

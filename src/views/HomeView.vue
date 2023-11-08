@@ -54,7 +54,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     >
       <img
         class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-        src="/src/assets/img/Chavi Putih.png"
+        src="/src/assets/img/ChaviPutih.png"
         alt="Transistor"
         width="158"
         height="48"
@@ -68,14 +68,14 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
       />
       <img
         class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-        src="/src/assets/img/Kahf Abu.png"
+        src="/src/assets/img/KahfAbu.png"
         alt="Logo Kahf"
         width="158"
         height="48"
       />
       <img
         class="col-span-2 object-contain h-24 w-32 mt-4 sm:col-start-2 lg:col-span-1 justify-self-center"
-        src="/src/assets/img/Panguripan Putih.png"
+        src="/src/assets/img/PanguripanPutih.png"
         alt="Logo Panguripan"
         width="158"
         height="48"
@@ -219,7 +219,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     class="bg-zinc-800 justify-center my-4 sm:my-8 md:my-16 h-64 w-full text-white flex flex-col sm:flex-row md:flex-col px-4 sm:px-8 md:px-40"
   >
     <div class="relative hidden lg:mt-0 lg:col-span-5 lg:flex">
-      <img src="/src/assets/img/goalkeeper blackpink.png" alt="" class="h-80" />
+      <img src="/src/assets/img/goalkeeperblackpink.png" alt="" class="h-80" />
     </div>
     <div class="my-4 sm:my-0 sm:ml-4 md:ml-0">
       <h1 class="font-bold text-2xl sm:text-3xl md:text-4xl">Be part of us</h1>
@@ -421,7 +421,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     <div class="md:flex lg:flex mx-40 mt-16">
       <div class="mx-auto flex flex-col w-96 mb-10">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
-          <img src="/src/assets/img/NYTC sawangan.jpg" alt="NYTC Sawangan" class="rounded-xl" />
+          <img src="/src/assets/img/NYTCsawangan.jpg" alt="NYTC Sawangan" class="rounded-xl" />
         </div>
         <div class="px-4">
           <div class="font-bold text-xl mb-2">NYTC Sawangan (Depok)</div>
