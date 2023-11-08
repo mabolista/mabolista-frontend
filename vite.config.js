@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [vue(), vueJsx()],
   build: {
     rollupOptions: {
-      external: ['vue']
+      external: ['./src/assets']
     }
   },
   resolve: {
