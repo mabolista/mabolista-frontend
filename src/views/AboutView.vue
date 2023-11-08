@@ -200,7 +200,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         </p>
       </div>
       <div class="grid grid-cols-2 gap-4 mt-8">
-        <img class="w-full rounded-lg" src="/src/assets/img/visimisi1.jpg" alt="office content 1" />
+        <img class="w-full rounded-lg" src="/src/assets/img/visimisi.jpg" alt="office content 1" />
         <img
           class="mt-4 w-full lg:mt-10 rounded-lg"
           src="/src/assets/img/visimisi2.jpg"
