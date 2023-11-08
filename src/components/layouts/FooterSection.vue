@@ -5,7 +5,7 @@
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
           <a href="#" class="flex items-center">
-            <img src="/src/assets/img/MABOLISTA FC.png" class="h-11 mr-3" alt="Mabolista Logo" />
+            <img src="/src/assets/img/MABOLISTAFC.png" class="h-11 mr-3" alt="Mabolista Logo" />
             <span
               class="self-center font-mabolistafont text-2xl font-semibold whitespace-nowrap text-white"
               >Mabolista Fc</span
@@ -34,10 +34,20 @@
             <h2 class="mb-6 font-mabolistafont text-lg text-white uppercase">Follow us</h2>
             <ul class="text-gray-500 dark:text-gray-400 font-mabolistafont">
               <li class="mb-4">
-                <a href="https://www.instagram.com/mabolista_fc/" target="blank" class="hover:text-white">Instagram</a>
+                <a
+                  href="https://www.instagram.com/mabolista_fc/"
+                  target="blank"
+                  class="hover:text-white"
+                  >Instagram</a
+                >
               </li>
               <li>
-                <a href="https://www.tiktok.com/@mabolistafc?is_from_webapp=1&sender_device=pc" target="blank" class="hover:text-white">Tiktok</a>
+                <a
+                  href="https://www.tiktok.com/@mabolistafc?is_from_webapp=1&sender_device=pc"
+                  target="blank"
+                  class="hover:text-white"
+                  >Tiktok</a
+                >
               </li>
             </ul>
           </div>
@@ -146,7 +156,7 @@
 
 <script>
 export default {
-  name: "FooterSection",
+  name: 'FooterSection'
 }
 </script>
 
