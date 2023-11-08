@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [vue(), vueJsx()],
   build: {
     rollupOptions: {
-      external: ['lodash']
+      external: ['vue', 'axios', 'sweetalert2']
     }
   },
   resolve: {
