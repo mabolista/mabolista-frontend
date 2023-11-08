@@ -158,7 +158,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6">
             <img
               alt="Pitch Kemang"
-              src="/src/assets/img/minisoccer/pitch kemang.jpg"
+              src="/src/assets/img/minisoccer/pitchkemang.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
