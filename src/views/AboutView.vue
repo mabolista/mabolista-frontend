@@ -230,7 +230,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-              src="/src/assets/img/rezateams.jpg"
+              src="../assets/img/rezateams.jpg"
             />
             <div class="flex-grow">
               <h2 class="text-gray-900 title-font font-medium">Reza (Captain)</h2>
@@ -243,7 +243,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-              src="/src/assets/img/azrateams.jpg"
+              src="../assets/img/azrateams.jpg"
             />
             <div class="flex-grow">
               <h2 class="text-gray-900 title-font font-medium">Azra</h2>
@@ -256,7 +256,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-              src="/src/assets/img/dendyteams.jpg"
+              src="../assets/img/dendyteams.jpg"
             />
             <div class="flex-grow">
               <h2 class="text-gray-900 title-font font-medium">Dendy</h2>
@@ -269,7 +269,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-              src="/src/assets/img/hilalteams.jpg"
+              src="../assets/img/hilalteams.jpg"
             />
             <div class="flex-grow">
               <h2 class="text-gray-900 title-font font-medium">Hilal (Balong)</h2>
@@ -282,7 +282,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-              src="/src/assets/img/ilhamteams.jpg"
+              src="../assets/img/ilhamteams.jpg"
             />
             <div class="flex-grow">
               <h2 class="text-gray-900 title-font font-medium">Ilham</h2>
