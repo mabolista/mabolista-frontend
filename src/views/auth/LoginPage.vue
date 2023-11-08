@@ -65,7 +65,11 @@
               required
             />
 
-            <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
+            <span
+              @click="showPassword"
+              class="absolute inset-y-0 end-0 grid place-content-center px-4"
+              id="eye"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-4 w-4 text-gray-400"
@@ -149,11 +153,12 @@ export default {
           this.$router.push({ name: 'HomePage' })
         })
         .catch((error) => {
+          alert('Login Gagal! Periksa Kembali Email atau Password')
+          window.location.reload('/login')
           console.error('Login failed:', error)
         })
     },
     created() {
-      // Check if the user is already authenticated on component creation
       const token = localStorage.getItem('token')
       const user = JSON.parse(localStorage.getItem('user'))
 
@@ -164,6 +169,14 @@ export default {
     },
     loginpreloader() {
       this.loading = true
+    },
+    showPassword() {
+      var x = document.getElementById('password')
+      if (x.type === 'password') {
+        x.type = 'text'
+      } else {
+        x.type = 'password'
+      }
     }
   }
 }

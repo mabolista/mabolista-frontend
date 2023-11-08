@@ -4,7 +4,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 
 <template>
   <NavbarSection />
-  <div>
+  <div class="mt-32">
     <div v-if="users" class="max-w-lg mx-auto my-10 bg-white rounded-lg shadow-md p-5">
       <img class="w-32 h-32 rounded-full mx-auto" :src="users.imageUrl" alt="Profile picture" />
       <h2 class="text-center text-2xl font-semibold mt-3">Hi, {{ users.name }}</h2>
@@ -267,7 +267,6 @@ export default {
         .get(`users/${this.id}`)
         .then((response) => {
           this.users = response.data.data
-          console.log(this.users)
         })
         .catch((error) => {
           console.error('Error fetching data:', error)
@@ -287,7 +286,7 @@ export default {
       axios
         .put(`users/${this.id}`, formData)
         .then((response) => {
-          console.log('User updated successfully', response.data.data)
+          this.users = response.data.data
         })
         .catch((error) => {
           console.error('Error updating user', error)

@@ -40,7 +40,7 @@
             </div>
             <router-link
               :to="{ name: 'profile', params: { id: id } }"
-              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              class="block px-4 py-2 text-sm text-black font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >View Profile</router-link
             >
             <div class="py-1">
@@ -107,20 +107,19 @@ export default {
         .get(`users/${this.id}`)
         .then((response) => {
           this.users = response.data.data
-          console.log(this.users)
         })
         .catch((error) => {
           console.error(error)
           console.error(this.users)
         })
+    },
+    signOut() {
+      localStorage.removeItem('token')
+      localStorage.removeItem('user')
+      this.authenticated = false
+      this.users = {}
+      window.location.reload('/')
     }
-  },
-  signOut() {
-    localStorage.removeItem('token')
-    localStorage.removeItem('user')
-    this.authenticated = false
-    this.users = {}
-    window.location.reload('/')
   }
 }
 </script>
