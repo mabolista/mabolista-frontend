@@ -5,7 +5,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 
 <template>
   <NavbarSection />
-  <div class="container mx-auto text-center py-10 my-20 w-homebasesecond">
+  <div class="container mx-auto text-center py-20 my-10 w-96 lg:w-homebasesecond">
     <h1 class="font-bold text-4xl mb-4">
       Our <span class="font-bold text-4xl text-yellow-600">HomeBase</span>
     </h1>
