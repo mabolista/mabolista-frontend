@@ -4,7 +4,7 @@
       class="navigation max-w-[90vw] flex flex-wrap justify-between items-center relative mx-auto py-8 bg-opacity-50"
     >
       <a class="flex items-center" href="/">
-        <img src="/src/assets/img/MABOLISTAFC.png" height="50" width="50" alt="" />
+        <img src=".../src/assets/img/MABOLISTAFC.png" height="50" width="50" alt="" />
         <h3 class="font-mabolistafont text-xl">Mabolista Fc</h3>
       </a>
       <input type="checkbox" id="check" />
@@ -25,7 +25,7 @@
             data-dropdown-toggle="userDropdown"
             data-dropdown-placement="bottom-start"
             class="w-10 h-10 rounded-full cursor-pointer ring-2 ring-gray-300 dark:ring-gray-500"
-            src="/src/assets/img/MABOLISTAFC.png"
+            src=".../src/assets/img/MABOLISTAFC.png"
             alt="User dropdown"
           />
 
