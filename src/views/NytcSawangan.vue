@@ -18,7 +18,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
       />
       <div class="carousel-item absolute opacity-0" style="height: 50vh">
         <div class="h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right">
-          <img src=".../src/assets/img/events/nytchead1.jpg" alt="" />
+          <img src="../assets/img/events/nytchead1.jpg" alt="" />
         </div>
       </div>
       <label
@@ -43,7 +43,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
       />
       <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height: 50vh">
         <div class="h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right">
-          <img src=".../src/assets/img/events/nytchead2.jpg" alt="" />
+          <img src="../assets/img/events/nytchead2.jpg" alt="" />
         </div>
       </div>
       <label
@@ -68,7 +68,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
       />
       <div class="carousel-item absolute opacity-0" style="height: 50vh">
         <div class="h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom">
-          <img src=".../src/assets/img/events/nytchead3.jpg" alt="" />
+          <img src="../assets/img/events/nytchead3.jpg" alt="" />
         </div>
       </div>
       <label
@@ -115,7 +115,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         <img
           alt="feature"
           class="object-cover object-center h-full w-full"
-          src=".../src/assets/img/NYTCsawangan.jpg"
+          src="../assets/img/NYTCsawangan.jpg"
         />
       </div>
       <div

@@ -47,7 +47,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         </a>
       </div>
       <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-        <img src=".../src/assets/img/headevents.png" alt="events mabolista" />
+        <img src="../assets/img/headevents.png" alt="events mabolista" />
       </div>
     </div>
   </section>
@@ -789,15 +789,15 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         <div class="hidden md:block md:w-1/2 px-4">
           <div
             class="h-full w-full bg-cover rounded shadow-md"
-            style="background-image: url('.../src/assets/img/gallery/Gallery.jpg')"
+            style="background-image: url('/src/assets/img/gallery/Gallery.jpg')"
           ></div>
         </div>
         <div class="md:w-1/2 h-auto px-4">
           <div class="mb-8">
-            <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery14.jpg" alt="" />
+            <img class="rounded shadow-md" src="../assets/img/gallery/Gallery14.jpg" alt="" />
           </div>
           <div>
-            <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery17.jpg" alt="" />
+            <img class="rounded shadow-md" src="../assets/img/gallery/Gallery17.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -806,10 +806,10 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     <section class="py-8 px-4">
       <div class="flex flex-wrap -mx-4">
         <div class="md:w-1/2 px-4 mb-8 md:mb-0">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery18.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery18.jpg" alt="" />
         </div>
         <div class="md:w-1/2 px-4 mb-8 md:mb-0">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery8.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery8.jpg" alt="" />
         </div>
       </div>
     </section>
@@ -817,22 +817,22 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     <section class="pt-8 px-4">
       <div class="flex flex-wrap -mx-4">
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery2.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery2.jpg" alt="" />
         </div>
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery3.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery3.jpg" alt="" />
         </div>
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery4.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery4.jpg" alt="" />
         </div>
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery5.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery5.jpg" alt="" />
         </div>
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery6.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery6.jpg" alt="" />
         </div>
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery7.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery7.jpg" alt="" />
         </div>
       </div>
     </section>
@@ -840,28 +840,28 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     <section class="py-8 px-4">
       <div class="flex flex-wrap -mx-4 -mb-8">
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery9.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery9.jpg" alt="" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery10.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery10.jpg" alt="" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery11.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery11.jpg" alt="" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery12.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery12.jpg" alt="" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery13.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery13.jpg" alt="" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery15.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery15.jpg" alt="" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery16.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery16.jpg" alt="" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src=".../src/assets/img/gallery/Gallery20.jpg" alt="" />
+          <img class="rounded shadow-md" src="../assets/img/gallery/Gallery20.jpg" alt="" />
         </div>
       </div>
     </section>

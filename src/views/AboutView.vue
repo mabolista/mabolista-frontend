@@ -10,7 +10,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
       class="relative overflow-hidden bg-cover bg-no-repeat"
       style="
         background-position: 50%;
-        background-image: url('.../src/assets/img/NYTC-about.jpg');
+        background-image: url('../assets/img/NYTC-about.jpg');
         height: 500px;
       "
     >
@@ -45,7 +45,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
               <div
                 class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-white text-white flex-shrink-0"
               >
-                <img src=".../src/assets/img/logokratingdaeng.png" alt="Kratingdaeng" />
+                <img src="../assets/img/logokratingdaeng.png" alt="Kratingdaeng" />
               </div>
               <h2 class="text-gray-900 text-lg title-font font-medium">Kratingdaeng</h2>
             </div>
@@ -80,7 +80,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
               <div
                 class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-white text-white flex-shrink-0"
               >
-                <img src=".../src/assets/img/logokahf.png" alt="KAHF" />
+                <img src="../assets/img/logokahf.png" alt="KAHF" />
               </div>
               <h2 class="text-gray-900 text-lg title-font font-medium">Kahf</h2>
             </div>
@@ -115,7 +115,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
               <div
                 class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-white text-white flex-shrink-0"
               >
-                <img src=".../src/assets/img/logochavi.png" alt="Chavi Helmets" />
+                <img src="../assets/img/logochavi.png" alt="Chavi Helmets" />
               </div>
               <h2 class="text-gray-900 text-lg title-font font-medium">Chavi Helmets</h2>
             </div>
@@ -153,7 +153,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         <img
           alt="feature"
           class="object-cover object-center h-full w-full"
-          src=".../src/assets/img/aboutus.jpg"
+          src="../assets/img/aboutus.jpg"
         />
       </div>
       <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left">
@@ -200,24 +200,16 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         </p>
       </div>
       <div class="grid grid-cols-2 gap-4 mt-8">
-        <img
-          class="w-full rounded-lg"
-          src=".../src/assets/img/visimisi.jpg"
-          alt="office content 1"
-        />
+        <img class="w-full rounded-lg" src="../assets/img/visimisi.jpg" alt="office content 1" />
         <img
           class="mt-4 w-full lg:mt-10 rounded-lg"
-          src=".../src/assets/img/visimisi2.jpg"
+          src="../assets/img/visimisi2.jpg"
           alt="office content 2"
         />
-        <img
-          class="w-full rounded-lg"
-          src=".../src/assets/img/visimisi3.jpg"
-          alt="office content 1"
-        />
+        <img class="w-full rounded-lg" src="../assets/img/visimisi3.jpg" alt="office content 1" />
         <img
           class="mt-4 w-full lg:mt-10 rounded-lg"
-          src=".../src/assets/img/visimisi4.jpg"
+          src="../assets/img/visimisi4.jpg"
           alt="office content 2"
         />
       </div>
@@ -238,7 +230,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-              src=".../src/assets/img/rezateams.jpg"
+              src="../assets/img/rezateams.jpg"
             />
             <div class="flex-grow">
               <h2 class="text-gray-900 title-font font-medium">Reza (Captain)</h2>
@@ -251,7 +243,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-              src=".../src/assets/img/azrateams.jpg"
+              src="../assets/img/azrateams.jpg"
             />
             <div class="flex-grow">
               <h2 class="text-gray-900 title-font font-medium">Azra</h2>
@@ -264,7 +256,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-              src=".../src/assets/img/dendyteams.jpg"
+              src="../assets/img/dendyteams.jpg"
             />
             <div class="flex-grow">
               <h2 class="text-gray-900 title-font font-medium">Dendy</h2>
@@ -277,7 +269,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-              src=".../src/assets/img/hilalteams.jpg"
+              src="../assets/img/hilalteams.jpg"
             />
             <div class="flex-grow">
               <h2 class="text-gray-900 title-font font-medium">Hilal (Balong)</h2>
@@ -290,7 +282,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-              src=".../src/assets/img/ilhamteams.jpg"
+              src="../assets/img/ilhamteams.jpg"
             />
             <div class="flex-grow">
               <h2 class="text-gray-900 title-font font-medium">Ilham</h2>
