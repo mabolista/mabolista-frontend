@@ -1,7 +1,7 @@
 <template>
   <!-- Preloader -->
   <div v-if="loading" class="preloader">
-    <img class="logo" src="/src/assets/img/mabolistafc.png" alt="Loading Logo" />
+    <img class="logo" src="/src@/assets/img/mabolistafc.png" alt="Loading Logo" />
   </div>
 
   <section class="relative flex flex-wrap lg:h-screen lg:items-center">
