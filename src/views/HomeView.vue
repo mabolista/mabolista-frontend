@@ -6,7 +6,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 <template>
   <NavbarSection />
   <div class="relative">
-    <img src="../assets/img/head-bg.jpg" alt="Your Image" class="bg-cover w-full h-screen" />
+    <img src="@/assets/img/head-bg.jpg" alt="Your Image" class="bg-cover w-full h-screen" />
 
     <div
       class="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 opacity-90"
@@ -14,7 +14,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
       <div class="lg:container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         <div class="h-screen grid sm:grid-cols-1 md:grid-cols-2 grid-rows-1 gap-4 items-center">
           <div class="imagehero">
-            <img src="../assets/img/head-img.png" alt="" />
+            <img src="@/assets/img/head-img.png" alt="" />
           </div>
 
           <div class="text-center mb-16 md:text-left lg:w-headwidth">
@@ -54,28 +54,28 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     >
       <img
         class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-        src="../assets/img/ChaviPutih.png"
+        src="@/assets/img/ChaviPutih.png"
         alt="Transistor"
         width="158"
         height="48"
       />
       <img
         class="col-span-2 object-contain h-20 w-32 lg:col-span-1 justify-self-center"
-        src="../assets/img/logokratingdaeng.png"
+        src="@/assets/img/logokratingdaeng.png"
         alt="Logo Kratingdaeng"
         width="158"
         height="48"
       />
       <img
         class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-        src="../assets/img/KahfAbu.png"
+        src="@/assets/img/KahfAbu.png"
         alt="Logo Kahf"
         width="158"
         height="48"
       />
       <img
         class="col-span-2 object-contain h-24 w-32 mt-4 sm:col-start-2 lg:col-span-1 justify-self-center"
-        src="../assets/img/PanguripanPutih.png"
+        src="@/assets/img/PanguripanPutih.png"
         alt="Logo Panguripan"
         width="158"
         height="48"
@@ -100,7 +100,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         <a href="/events">
           <img
             class="rounded-t-lg w-full"
-            src="../assets/img/eventshome/12November2023.jpg"
+            src="@/assets/img/eventshome/12November2023.jpg"
             alt=""
           />
         </a>
@@ -140,7 +140,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         <a href="#">
           <img
             class="rounded-t-lg w-full"
-            src="../assets/img/eventshome/ChampionsFutsal28Oktober2023.jpg"
+            src="@/assets/img/eventshome/ChampionsFutsal28Oktober2023.jpg"
             alt=""
           />
         </a>
@@ -180,7 +180,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         <a href="#">
           <img
             class="rounded-t-lg w-full"
-            src="../assets/img/eventshome/15Oktober2023Sparing.jpg"
+            src="@/assets/img/eventshome/15Oktober2023Sparing.jpg"
             alt=""
           />
         </a>
@@ -219,7 +219,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     class="bg-zinc-800 justify-center my-4 sm:my-8 md:my-16 h-64 w-full text-white flex flex-col sm:flex-row md:flex-col px-4 sm:px-8 md:px-40"
   >
     <div class="relative hidden lg:mt-0 lg:col-span-5 lg:flex">
-      <img src="../assets/img/goalkeeperblackpink.png" alt="" class="h-80" />
+      <img src="@/assets/img/goalkeeperblackpink.png" alt="" class="h-80" />
     </div>
     <div class="my-4 sm:my-0 sm:ml-4 md:ml-0">
       <h1 class="font-bold text-2xl sm:text-3xl md:text-4xl">Be part of us</h1>
@@ -421,7 +421,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
     <div class="md:flex lg:flex mx-40 mt-16">
       <div class="mx-auto flex flex-col w-96 mb-10">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
-          <img src="../assets/img/NYTCsawangan.jpg" alt="NYTC Sawangan" class="rounded-xl" />
+          <img src="@/assets/img/NYTCsawangan.jpg" alt="NYTC Sawangan" class="rounded-xl" />
         </div>
         <div class="px-4">
           <div class="font-bold text-xl mb-2">NYTC Sawangan (Depok)</div>
@@ -434,7 +434,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 
       <div class="mx-auto flex flex-col w-96 mb-10">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
-          <img src="../assets/img/dmsport.jpg" alt="DM Sport" class="rounded-xl" />
+          <img src="@/assets/img/dmsport.jpg" alt="DM Sport" class="rounded-xl" />
         </div>
         <div class="px-4">
           <div class="font-bold text-xl mb-2">DM Sport (Tangerang)</div>
@@ -446,7 +446,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 
       <div class="mx-auto flex flex-col w-96 mb-10">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
-          <img src="../assets/img/bigham.jpg" alt="Big Ham Stadium" class="rounded-xl" />
+          <img src="@/assets/img/bigham.jpg" alt="Big Ham Stadium" class="rounded-xl" />
         </div>
         <div class="px-4">
           <div class="font-bold text-xl mb-2">Big Ham Stadium (Depok)</div>
