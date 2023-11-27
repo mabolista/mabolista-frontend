@@ -27,7 +27,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6">
             <img
               alt="NYTC Sawangan"
-              src="src/assets/img/NYTCsawangan.jpg"
+              src="@/assets/img/NYTCsawangan.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -43,7 +43,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6" style="cursor: auto">
             <img
               alt="BIG Ham"
-              src="src/assets/img/bigham.jpg"
+              src="@/assets/img/bigham.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -58,7 +58,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6" style="cursor: auto">
             <img
               alt="Teh Botol Ayo Arena"
-              src="src/assets/img/tehbotolayoarena.png"
+              src="@/assets/img/tehbotolayoarena.png"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -73,7 +73,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6" style="cursor: auto">
             <img
               alt="Pancoran Soccer Field"
-              src="src/assets/img/Pancoransoccerfield.jpg"
+              src="@/assets/img/Pancoransoccerfield.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -97,7 +97,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6">
             <img
               alt="Jakarta International Stadium"
-              src="src/assets/img/latihjakartainternationalstadium.jpg"
+              src="@/assets/img/latihjakartainternationalstadium.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -114,7 +114,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6" style="cursor: auto">
             <img
               alt="KingKong Soccer Arena"
-              src="src/assets/img/kingkongsoccerarena.jpg"
+              src="@/assets/img/kingkongsoccerarena.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -130,7 +130,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6" style="cursor: auto">
             <img
               alt="DM Sport Ciledug"
-              src="src/assets/img/dmsport.jpg"
+              src="@/assets/img/dmsport.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -158,7 +158,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6">
             <img
               alt="Pitch Kemang"
-              src="src/assets/img/minisoccer/pitchkemang.jpg"
+              src="@/assets/img/minisoccer/pitchkemang.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -174,7 +174,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6" style="cursor: auto">
             <img
               alt="F7 TB Simatupang"
-              src="src/assets/img/minisoccer/f7.jpg"
+              src="@/assets/img/minisoccer/f7.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -190,7 +190,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6" style="cursor: auto">
             <img
               alt="Serenia Mansion"
-              src="src/assets/img/minisoccer/sereniamansion.jpg"
+              src="@/assets/img/minisoccer/sereniamansion.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -206,7 +206,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6" style="cursor: auto">
             <img
               alt="Jonas Ciputat"
-              src="src/assets/img/minisoccer/jonas.png"
+              src="@/assets/img/minisoccer/jonas.png"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -230,7 +230,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6">
             <img
               alt="Triboon Mini Soccer"
-              src="src/assets/img/minisoccer/triboon.jpeg"
+              src="@/assets/img/minisoccer/triboon.jpeg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -246,7 +246,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6" style="cursor: auto">
             <img
               alt="NF Mini Soccer"
-              src="src/assets/img/minisoccer/NFminisoccer.jpg"
+              src="@/assets/img/minisoccer/NFminisoccer.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -275,7 +275,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6">
             <img
               alt="My Futsal"
-              src="src/assets/img/futsal/myfutsal.jpg"
+              src="@/assets/img/futsal/myfutsal.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -291,7 +291,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6" style="cursor: auto">
             <img
               alt="Vini Vidi Vici (V3)"
-              src="src/assets/img/futsal/V3.jpg"
+              src="@/assets/img/futsal/V3.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -307,7 +307,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6" style="cursor: auto">
             <img
               alt="Citos Futsal"
-              src="src/assets/img/futsal/citosfutsal.jpg"
+              src="@/assets/img/futsal/citosfutsal.jpg"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
@@ -323,7 +323,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
           <div class="px-6" style="cursor: auto">
             <img
               alt="Champions Futsal Binus"
-              src="src/assets/img/futsal/championsfutsal.png"
+              src="@/assets/img/futsal/championsfutsal.png"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
