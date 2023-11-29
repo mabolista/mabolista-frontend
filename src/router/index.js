@@ -8,10 +8,15 @@ import ContactView from '../views/ContactView.vue'
 import ProfilePage from '../views/ProfilePage.vue'
 import NytcSawangan from '../views/NytcSawangan.vue'
 import HomeBase from '../views/HomeBase.vue'
+import PageNotFound from '../views/PageNotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/:pathMatch(.*)*',
+      component: PageNotFound
+    },
     {
       path: '/',
       name: 'HomePage',
