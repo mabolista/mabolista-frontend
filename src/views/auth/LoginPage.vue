@@ -130,52 +130,38 @@ export default {
       email: '',
       password: '',
       loading: false,
-      authenticated: false,
-      userData: {}
+      authenticated: false
     }
   },
   methods: {
-    submitLoginForm() {
-      axios
-        .post('login', {
+    async submitLoginForm() {
+      try {
+        this.loading = true
+
+        const response = await axios.post('login', {
           email: this.email,
           password: this.password
         })
-        .then((response) => {
-          const { token, user } = response.data.data
 
-          localStorage.setItem('token', token)
-          localStorage.setItem('user', JSON.stringify(user))
+        const token = response.data.data // assuming the token is received in the response
 
-          this.authenticated = true
-          this.userData = user
-
-          this.$router.push({ name: 'HomePage' })
-        })
-        .catch((error) => {
-          alert('Login Gagal! Periksa Kembali Email atau Password')
-          window.location.reload('/login')
-          console.error('Login failed:', error)
-        })
-    },
-    created() {
-      const token = localStorage.getItem('token')
-      const user = JSON.parse(localStorage.getItem('user'))
-
-      if (token && user) {
-        this.authenticated = true
-        this.userData = user
+        // Set token in local storage
+        if (token) {
+          localStorage.setItem('token', JSON.stringify(token))
+          // Redirect to another page or perform any action upon successful login
+          // For example, you can use Vue Router to navigate to a different route
+        }
+      } catch (error) {
+        console.error('Login error:', error)
+        alert('login gagal!')
       }
     },
-    loginpreloader() {
-      this.loading = true
-    },
     showPassword() {
-      var x = document.getElementById('password')
-      if (x.type === 'password') {
-        x.type = 'text'
+      const passwordInput = document.getElementById('password')
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text'
       } else {
-        x.type = 'password'
+        passwordInput.type = 'password'
       }
     }
   }

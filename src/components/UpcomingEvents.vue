@@ -9,6 +9,8 @@
 
     <div v-if="isAuthenticated" class="flex flex-col sm:flex-row gap-4">
       <div
+        v-for="event in events"
+        :key="event.id"
         class="max-w-sm sm:max-w-md lg:max-w-lg bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <a href="/events">
@@ -23,17 +25,17 @@
             <h5
               class="mb-1 text-lg sm:text-xl font-bold tracking-tight text-gray-900 dark:text-white"
             >
-              {{ events.title }}
+              {{ event.title }}
             </h5>
           </a>
           <p class="mb-1 text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-400">
-            {{ events.location }}
+            {{ event.location }}
           </p>
           <p class="mb-1 text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-400">
-            <i class="fa-regular fa-calendar"></i> {{ events.eventDate }}
+            <i class="fa-regular fa-calendar"></i> {{ event.eventDate }}
           </p>
           <p class="mb-1 text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-400">
-            <i class="fa-regular fa-clock"></i> {{ events.startTime }}
+            <i class="fa-regular fa-clock"></i> {{ event.startTime }}
           </p>
 
           <div class="flex gap-4 mb-3">
@@ -41,91 +43,11 @@
               <i class="fa-regular fa-circle-check"></i> Benefits
             </p>
             <p class="mb-1 text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-400">
-              <i class="fa-regular fa-money-bill-1"></i> Pemain 115 K / Kiper 95K
+              <i class="fa-regular fa-money-bill-1"></i> {{ event.playerPrice }}
             </p>
           </div>
         </div>
       </div>
-
-      <!-- Event Card 2 (Coming Soon) -->
-      <!-- <div
-        class="max-w-sm sm:max-w-md lg:max-w-lg bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-      >
-        <a href="#">
-          <img
-            class="rounded-t-lg w-full"
-            src="@/assets/img/eventshome/ChampionsFutsal28Oktober2023.jpg"
-            alt=""
-          />
-        </a>
-        <div class="p-4 sm:p-5">
-          <a href="#">
-            <h5
-              class="mb-1 text-lg sm:text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-            >
-              <del> INTERNAL FUTSAL MATCH </del>
-            </h5>
-          </a>
-          <p class="mb-1 text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-400">
-            Lokasi: Coming Soon
-          </p>
-          <p class="mb-1 text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-400">
-            <i class="fa-regular fa-calendar"></i> Coming Soon
-          </p>
-          <p class="mb-1 text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-400">
-            <i class="fa-regular fa-clock"></i> Coming Soon
-          </p>
-
-          <div class="flex gap-4 mb-3">
-            <p class="mb-1 text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-400">
-              <i class="fa-regular fa-circle-check"></i> Benefits
-            </p>
-            <p class="mb-1 text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-400">
-              <i class="fa-regular fa-money-bill-1"></i> Coming Soon
-            </p>
-          </div>
-        </div>
-      </div> -->
-
-      <!-- Event Card 3 (Coming Soon) -->
-      <!-- <div
-        class="max-w-sm sm:max-w-md lg:max-w-lg bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
-      >
-        <a href="#">
-          <img
-            class="rounded-t-lg w-full"
-            src="@/assets/img/eventshome/15Oktober2023Sparing.jpg"
-            alt=""
-          />
-        </a>
-        <div class="p-4 sm:p-5">
-          <a href="#">
-            <h5
-              class="mb-1 text-lg sm:text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-            >
-              <del> INTERNAL FUN MATCH </del>
-            </h5>
-          </a>
-          <p class="mb-1 text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-400">
-            Lokasi: Coming Soon
-          </p>
-          <p class="mb-1 text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-400">
-            <i class="fa-regular fa-calendar"></i> Coming Soon
-          </p>
-          <p class="mb-1 text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-400">
-            <i class="fa-regular fa-clock"></i> Coming Soon
-          </p>
-
-          <div class="flex gap-4 mb-3">
-            <p class="mb-1 text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-400">
-              <i class="fa-regular fa-circle-check"></i> Benefits
-            </p>
-            <p class="mb-1 text-sm sm:text-base font-semibold text-gray-700 dark:text-gray-400">
-              <i class="fa-regular fa-money-bill-1"></i> Coming Soon
-            </p>
-          </div>
-        </div>
-      </div> -->
     </div>
   </div>
 </template>
@@ -147,25 +69,29 @@ export default {
         description: '',
         location: '',
         image: ''
-      },
-      id: this.$route.params.id
+      }
     }
   },
   mounted() {
+    this.getBenefits()
     this.getEvents()
   },
   methods: {
-    getEvents() {
-      axios
-        .get(`admin/events/${this.id}`)
-        .then((response) => {
-          console.log(this.events)
-          this.events = response.data.data
-        })
-        .catch((error) => {
-          console.error(error)
-          console.error(this.events)
-        })
+    async getBenefits() {
+      try {
+        const response = await axios.get('admin/benefits?page=0&pageSize=10')
+        this.benefits = response.data.data.benefits
+      } catch (error) {
+        console.error('Error fetching benefits:', error)
+      }
+    },
+    async getEvents() {
+      try {
+        const response = await axios.get('admin/events?page=0&pageSize=10')
+        this.events = response.data.data.events
+      } catch (error) {
+        console.error('Error fetching events:', error)
+      }
     }
   }
 }
