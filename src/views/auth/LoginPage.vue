@@ -2,6 +2,7 @@
   <!-- Preloader -->
   <div v-if="loading" class="preloader">
     <img class="logo" src="@/assets/img/mabolistafc.png" alt="Loading Logo" />
+    <p>Loading...</p>
   </div>
 
   <section class="relative flex flex-wrap lg:h-screen lg:items-center">
@@ -134,34 +135,42 @@ export default {
     }
   },
   methods: {
-    async submitLoginForm() {
-      try {
-        this.loading = true
-
-        const response = await axios.post('login', {
+    submitLoginForm() {
+      axios
+        .post('login', {
           email: this.email,
           password: this.password
         })
+        .then((response) => {
+          const token = response.data.data
 
-        const token = response.data.data // assuming the token is received in the response
-
-        // Set token in local storage
-        if (token) {
           localStorage.setItem('token', JSON.stringify(token))
-          // Redirect to another page or perform any action upon successful login
-          // For example, you can use Vue Router to navigate to a different route
-        }
-      } catch (error) {
-        console.error('Login error:', error)
-        alert('login gagal!')
+
+          this.authenticated = true
+          this.$router.push({ name: 'HomePage' })
+        })
+        .catch((error) => {
+          alert('Login Gagal! Periksa Kembali Email atau Password')
+          window.location.reload('/login')
+          console.error('Login failed:', error)
+        })
+    },
+    created() {
+      const token = JSON.parse(localStorage.getItem('token'))
+
+      if (token) {
+        this.authenticated = true
       }
     },
+    loginpreloader() {
+      this.loading = true
+    },
     showPassword() {
-      const passwordInput = document.getElementById('password')
-      if (passwordInput.type === 'password') {
-        passwordInput.type = 'text'
+      var x = document.getElementById('password')
+      if (x.type === 'password') {
+        x.type = 'text'
       } else {
-        passwordInput.type = 'password'
+        x.type = 'password'
       }
     }
   }

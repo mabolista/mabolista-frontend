@@ -6,7 +6,7 @@ import AboutView from '../views/AboutView.vue'
 import EventsView from '../views/EventsView.vue'
 import ContactView from '../views/ContactView.vue'
 import ProfilePage from '../views/ProfilePage.vue'
-import NytcSawangan from '../views/NytcSawangan.vue'
+import EventsDetails from '../views/EventsDetails.vue'
 import HomeBase from '../views/HomeBase.vue'
 import PageNotFound from '../views/PageNotFound.vue'
 
@@ -61,9 +61,17 @@ const router = createRouter({
       }
     },
     {
-      path: '/events/nytcsawangan',
-      name: 'NytcSawangan',
-      component: NytcSawangan
+      path: '/events/eventsdetails/:id',
+      name: 'EventsDetails',
+      component: EventsDetails,
+      beforeEnter: (to, from, next) => {
+        const users = localStorage.getItem('token')
+        if (users) {
+          next()
+        } else {
+          next('/login')
+        }
+      }
     },
     {
       path: '/homebase',

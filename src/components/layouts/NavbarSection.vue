@@ -29,7 +29,6 @@
             alt="User Profile"
           />
 
-          <!-- Dropdown menu -->
           <div
             id="userDropdown"
             class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
@@ -89,8 +88,7 @@ export default {
         image: ''
       },
       authenticated: false,
-      isScrolled: false,
-      id: JSON.parse(localStorage.getItem('user'))?.id
+      id: JSON.parse(localStorage.getItem('token'))?.user.id
     }
   },
   computed: {
@@ -110,12 +108,10 @@ export default {
         })
         .catch((error) => {
           console.error(error)
-          console.error(this.users)
         })
     },
     signOut() {
       localStorage.removeItem('token')
-      localStorage.removeItem('user')
       this.authenticated = false
       this.users = {}
       window.location.reload('/')
@@ -123,6 +119,7 @@ export default {
   }
 }
 </script>
+
 <style scoped>
 .close-menu,
 .open-menu {
