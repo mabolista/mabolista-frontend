@@ -118,7 +118,7 @@
       <div class="flex flex-wrap items-center">
         <div
           data-aos="fade-right"
-          class="animate__animated animate__bounceIn animate__delay-1s w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-78"
+          class="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-78"
         >
           <div
             class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-pink-500"
@@ -151,9 +151,7 @@
         <div class="w-full md:w-6/12 px-4">
           <div class="flex flex-wrap">
             <div class="w-full md:w-6/12 px-4">
-              <div
-                class="animate__animated animate__bounceIn animate__delay-2s relative flex flex-col mt-4"
-              >
+              <div data-aos="zoom-in" data-aos-offset="200" class="relative flex flex-col mt-4">
                 <div class="px-4 py-5 flex-auto">
                   <div
                     class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
@@ -184,9 +182,7 @@
                   </p>
                 </div>
               </div>
-              <div
-                class="animate__animated animate__bounceIn animate__delay-2s relative flex flex-col min-w-0"
-              >
+              <div data-aos="zoom-in" data-aos-offset="200" class="relative flex flex-col min-w-0">
                 <div class="px-4 py-5 flex-auto">
                   <div
                     class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
@@ -214,7 +210,9 @@
             </div>
             <div class="w-full md:w-6/12 px-4">
               <div
-                class="animate__animated animate__bounceIn animate__delay-3s relative flex flex-col min-w-0 mt-4"
+                data-aos="zoom-in"
+                data-aos-offset="300"
+                class="relative flex flex-col min-w-0 mt-4"
               >
                 <div class="px-4 py-5 flex-auto">
                   <div
@@ -241,9 +239,7 @@
                   </p>
                 </div>
               </div>
-              <div
-                class="animate__animated animate__bounceIn animate__delay-3s relative flex flex-col min-w-0"
-              >
+              <div data-aos="zoom-in" data-aos-offset="300" class="relative flex flex-col min-w-0">
                 <div class="px-4 py-5 flex-auto">
                   <div
                     class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
@@ -278,7 +274,8 @@
 
   <!-- ---------- Home Base ----------  -->
   <div
-    class="animate__animated animate__fadeInDown animate__delay-1s flex flex-wrap w-full mb-5 flex-col items-center text-center"
+    data-aos="fade-up"
+    class="flex flex-wrap w-full mb-5 mt-20 flex-col items-center text-center"
   >
     <h1 class="font-sans font-bold text-2xl text-center sm:text-4xl mb-2 sm:mb-0">HomeBase</h1>
     <p class="lg:w-1/2 w-full leading-relaxed text-base">
@@ -287,7 +284,7 @@
   </div>
 
   <div class="items-center flex flex-col">
-    <div class="animate__animated animate__fadeIn animate__delay-2s md:flex lg:flex mx-40 mt-16">
+    <div data-aos="zoom-in-up" data-aos-offset="300" class="md:flex lg:flex mx-40 mt-16">
       <div class="mx-auto flex flex-col w-96 mb-10">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
           <img src="@/assets/img/NYTCsawangan.jpg" alt="NYTC Sawangan" class="rounded-xl" />

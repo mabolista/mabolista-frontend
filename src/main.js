@@ -19,7 +19,7 @@ axios.defaults.headers.common = { Authorization: `bearer ${token}` }
 const app = createApp(App)
 app.use(router)
 app.use(store)
-app.use(AOS)
+app.use(AOS.init())
 app.use(VueSweetalert2)
 
 app.mount('#app')
