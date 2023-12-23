@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import LoginPage from '../views/auth/LoginPage.vue'
 import RegisterPage from '../views/auth/RegisterPage.vue'
 import HomeView from '../views/HomeView.vue'
@@ -86,6 +88,7 @@ router.beforeEach((to, from, next) => {
   if (to.name === 'login' && isLoggedIn) {
     next({ name: 'HomePage' })
   } else {
+    AOS.init()
     next()
   }
 })

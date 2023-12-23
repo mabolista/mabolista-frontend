@@ -124,8 +124,8 @@
         >
           <div class="flex flex-col mb-10">
             <div class="flex-grow">
-              <h2 class="text-3xl font-mabolistafont leading-8 text-gray-900">Keterangan</h2>
-              <p class="leading-relaxed text-left">
+              <h2 class="text-3xl mb-4 font-mabolistafont leading-8 text-gray-900">Keterangan</h2>
+              <p class="leading-relaxed text-left text-xl">
                 📆 : {{ event.eventDate }}<br />
                 ⏰ : {{ event.startTime }} - {{ event.endTime }}<br />
                 🏟 : {{ event.location }}<br />
@@ -135,22 +135,48 @@
                 💧 : Mineral Water<br />
                 👕 : Jersey Inventaris<br />
               </p>
-              <div class="flex">
-                <button
-                  data-modal-target="joinModal"
-                  data-modal-toggle="joinModal"
-                  class="block mt-2 ml-1 bg-transparent hover:bg-yellow-500 text-black font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded"
-                  type="button"
-                >
-                  Join List
-                </button>
-                <button
-                  @click="leftEvents()"
-                  class="block mt-2 ml-1 bg-transparent hover:bg-red-500 text-black font-semibold hover:text-white py-2 px-4 border border-red-500 rounded"
-                  type="submit"
-                >
-                  Cancel List
-                </button>
+            </div>
+            <div class="flex mt-4 gap-3">
+              <button
+                type="button"
+                class="text-slate-700 hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900"
+                @click="showModal"
+              >
+                Joint Events
+              </button>
+
+              <JointEventsModal v-show="isModalVisible" @close="closeModal" />
+
+              <button
+                @click="leftEvents()"
+                class="block mt-2 ml-1 bg-transparent hover:bg-red-500 text-black font-semibold hover:text-white py-2 px-4 border border-red-500 rounded"
+                type="submit"
+              >
+                Cancel List
+              </button>
+            </div>
+            <div class="listUsersEvent mt-4">
+              <div class="grid grid-cols-3 grid-rows-1 gap-4">
+                <ul class="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400">
+                  <li class="font-bold">
+                    List Pemain
+                    <ol class="pl-5 mt-2 space-y-1 list-decimal list-inside">
+                      <li>Reza</li>
+                      <li>Azra</li>
+                      <li>test</li>
+                    </ol>
+                  </li>
+                </ul>
+                <ul class="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400">
+                  <li class="font-bold">
+                    List Kiper
+                    <ol class="pl-5 mt-2 space-y-1 list-decimal list-inside">
+                      <li>Reza</li>
+                      <li>Azra</li>
+                      <li>test</li>
+                    </ol>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -158,31 +184,7 @@
       </div>
     </section>
 
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-3 grid-rows-1 gap-4">
-        <ul class="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400">
-          <li class="font-bold">
-            List Pemain
-            <ol class="pl-5 mt-2 space-y-1 list-decimal list-inside">
-              <li>Reza</li>
-              <li>Azra</li>
-              <li>test</li>
-            </ol>
-          </li>
-        </ul>
-        <ul class="space-y-4 text-gray-500 list-disc list-inside dark:text-gray-400">
-          <li class="font-bold">
-            List Kiper
-            <ol class="pl-5 mt-2 space-y-1 list-decimal list-inside">
-              <li>Reza</li>
-              <li>Azra</li>
-              <li>test</li>
-            </ol>
-          </li>
-        </ul>
-      </div>
-    </div>
-
+    <!-- Footer Note -->
     <section class="bg-white py-4">
       <div class="container py-8 px-6 mx-auto">
         <a
@@ -198,85 +200,24 @@
         </p>
       </div>
     </section>
-    <!-- Main modal -->
-    <div
-      id="joinModal"
-      tabindex="-1"
-      aria-hidden="true"
-      class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full"
-    >
-      <div class="relative w-full max-w-2xl max-h-full">
-        <!-- Modal content -->
-        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-          <!-- Modal header -->
-          <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Keterangan List</h3>
-
-            <button
-              type="button"
-              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-              data-modal-hide="joinModal"
-            >
-              <svg
-                class="w-3 h-3"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 14"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                />
-              </svg>
-              <span class="sr-only">Close modal</span>
-            </button>
-          </div>
-          <!-- Modal body -->
-          <div class="p-6 space-y-6">
-            <select
-              id="countries"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            >
-              <option selected>Pemain / Kiper</option>
-              <option value="Pemain">Pemain</option>
-              <option value="Kiper">Kiper</option>
-            </select>
-          </div>
-          <!-- Modal footer -->
-          <div
-            class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600"
-          >
-            <button
-              @click="joinEvents()"
-              data-modal-hide="defaultModal"
-              type="submit"
-              class="bg-transparent hover:bg-yellow-500 text-black font-semibold hover:text-white py-2 px-4 border border-yellow-500 rounded"
-            >
-              Join List
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
 import NavbarSection from '../components/layouts/NavbarSection.vue'
+import JointEventsModal from '../components/JointEventsModal.vue'
 import axios from 'axios'
 
 export default {
   name: 'UpcomingEvents',
   components: {
-    NavbarSection
+    NavbarSection,
+    JointEventsModal
   },
   data() {
     return {
       events: [],
+      isModalVisible: false,
       id: this.$route.params.id
     }
   },
@@ -323,6 +264,12 @@ export default {
         .catch((error) => {
           console.error('Out List Failed:', error)
         })
+    },
+    showModal() {
+      this.isModalVisible = true
+    },
+    closeModal() {
+      this.isModalVisible = false
     }
   }
 }

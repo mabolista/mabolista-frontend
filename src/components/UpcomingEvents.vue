@@ -1,14 +1,16 @@
 <template>
-  <div class="container px-2 sm:px-6 py-4 sm:py-8 lg:px-40 mx-auto">
-    <div class="mb-6 sm:mb-8 lg:mb-20 flex flex-col sm:flex-row items-center justify-between">
+  <div class="container px-2 sm:px-6 py-4 sm:py-8 lg:px-40 mx-auto mb-10">
+    <div
+      class="animate__animated animate__fadeIn animate__delay-1s mb-6 sm:mb-8 lg:mb-20 flex flex-col sm:flex-row items-center justify-between"
+    >
       <h1 class="font-sans font-bold text-xl sm:text-2xl lg:text-4xl mb-2 sm:mb-0">
         Upcoming Events
       </h1>
       <a href="#" class="text-base sm:text-xl text-yellow-400 hover:underline">Selengkapnya...</a>
     </div>
 
-    <Carousel :items-to-show="3" :wrap-around="true">
-      <slide v-for="slide in 10" :key="slide">
+    <carousel v-bind="settings" :breakpoints="breakpoints">
+      <slide v-for="slide in 1" :key="slide">
         <div v-if="isAuthenticated" class="flex flex-col sm:flex-row gap-4">
           <div
             v-for="event in events"
@@ -49,17 +51,18 @@
         </div>
       </slide>
       <template #addons>
-        <navigation />
-        <pagination />
+        <Navigation />
+        <Pagination />
       </template>
-    </Carousel>
+    </carousel>
   </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
+import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
+
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 import axios from 'axios'
 
 export default defineComponent({
@@ -72,6 +75,22 @@ export default defineComponent({
   },
   data() {
     return {
+      settings: {
+        itemsToShow: 1,
+        snapAlign: 'center'
+      },
+      breakpoints: {
+        // 700px and up
+        700: {
+          itemsToShow: 3,
+          snapAlign: 'center'
+        },
+        // 1024 and up
+        1024: {
+          itemsToShow: 3.7,
+          snapAlign: 'start'
+        }
+      },
       events: []
     }
   },
@@ -96,4 +115,44 @@ export default defineComponent({
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+.carousel__slide {
+  padding: 5px;
+}
+
+.carousel__viewport {
+  perspective: 2000px;
+}
+
+.carousel__track {
+  transform-style: preserve-3d;
+}
+
+.carousel__slide--sliding {
+  transition: 0.5s;
+}
+
+.carousel__slide {
+  opacity: 0.9;
+  transform: rotateY(-20deg) scale(0.9);
+}
+
+.carousel__slide--active ~ .carousel__slide {
+  transform: rotateY(20deg) scale(0.9);
+}
+
+.carousel__slide--prev {
+  opacity: 1;
+  transform: rotateY(-10deg) scale(0.95);
+}
+
+.carousel__slide--next {
+  opacity: 1;
+  transform: rotateY(10deg) scale(0.95);
+}
+
+.carousel__slide--active {
+  opacity: 1;
+  transform: rotateY(0) scale(1.1);
+}
+</style>

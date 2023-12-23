@@ -17,7 +17,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         Untuk Info Kerjasama, Bisnis, Sparing, Join Member, Dan lainyaa. Jangan ragu untuk
         menghubungi kita
       </p>
-      <form @submit.prevent="onSubmit" class="space-y-8">
+      <form @submit.prevent="sendEmail" class="space-y-8">
         <div>
           <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
             >Your email</label
@@ -62,6 +62,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         </div>
         <button
           type="submit"
+          value="send"
           class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-slate-700 sm:w-fit hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800"
         >
           Send message
@@ -80,7 +81,10 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
 </template>
 
 <script>
+import emailjs from 'emailjs-com'
+
 export default {
+  name: 'ContactView',
   data() {
     return {
       email: '',
@@ -89,21 +93,51 @@ export default {
     }
   },
   methods: {
-    onSubmit() {
-      console.log('Contact form submitted:', {
+    sendEmail() {
+      // Assuming you have a form with refs for email, subject, and message fields
+      const formData = {
         email: this.email,
         subject: this.subject,
         message: this.message
-      })
+      }
 
-      this.email = ''
-      this.subject = ''
-      this.message = ''
-
-      alert('Form has been submitted')
+      emailjs.sendForm('service_kfpe6to', 'template_bzy8cut', formData, 'Xfv4Pwo6q8blucGg7').then(
+        (result) => {
+          console.log('SUCCESS!', result.text)
+          // Reset form fields after successful submission
+          this.email = ''
+          this.subject = ''
+          this.message = ''
+          alert('Success delivery message!')
+        },
+        (error) => {
+          alert('Failed delivery message!')
+          console.log('FAILED...', error.text)
+        }
+      )
     }
   }
 }
+
+//   methods: {
+//     sendEmail(e) {
+//       try {
+//         emailjs.sendForm('service_kfpe6to', 'template_g6dexkc', e.target, 'Xfv4Pwo6q8blucGg7', {
+//           email: this.email,
+//           subject: this.subject,
+//           message: this.message
+//         })
+//         alert('Berhasil Mengirim Pesan!')
+//       } catch (error) {
+//         console.log({ error })
+//       }
+
+//       this.email = ''
+//       this.subject = ''
+//       this.message = ''
+//     }
+//   }
+// }
 </script>
 
 <style></style>

@@ -8,11 +8,13 @@
     >
       <div class="lg:container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         <div class="h-screen grid sm:grid-cols-1 md:grid-cols-2 grid-rows-1 gap-4 items-center">
-          <div class="imagehero">
+          <div class="imagehero animate__animated animate__fadeIn">
             <img src="@/assets/img/head-img.png" alt="" />
           </div>
 
-          <div class="text-center mb-16 md:text-left lg:w-headwidth">
+          <div
+            class="animate__animated animate__fadeInUp animate__delay-1s text-center mb-16 md:text-left lg:w-headwidth"
+          >
             <h1 class="font-bold text-white text-4xl mb-4">Welcome, Mabolism!</h1>
             <p class="text-white font-medium">
               Ini adalah website resmi Mabolista Fc, Eksplore lebih lanjut dengan klik tombol
@@ -81,32 +83,43 @@
   <!-- ---------- Events ----------  -->
   <UpcomingEvents />
 
-  <div
-    class="bg-zinc-800 justify-center gap-8 my-4 sm:my-8 md:my-16 h-64 w-full text-white flex flex-col md:flex-col lg:flex-row px-4 sm:px-8 md:px-40"
+  <section
+    class="relative h-64 flex flex-col items-center justify-center text-center text-white py-0 px-3"
   >
-    <div class="relative hidden lg:mt-0 lg:col-span-5 lg:flex">
-      <img src="@/assets/img/goalkeeperblackpink.png" alt="" class="h-80" />
+    <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
+      <video
+        class="min-w-full min-h-full absolute object-cover"
+        src="@/assets/video/homevideo.mp4"
+        alt="Banner Video"
+        type="video/mp4"
+        autoplay
+        muted
+        loop
+      ></video>
     </div>
-    <div class="my-4 sm:my-0 sm:ml-4 md:ml-0">
-      <h1 class="font-bold text-2xl sm:text-3xl md:text-4xl">Be part of us</h1>
-      <p class="my-8 sm:my-4 md:my-6">
-        Ayo gabung main bersama kita, Perbanyak saudara dan koneksi. Main bola gapernah se asik ini
-      </p>
+    <div class="video-content space-y-2">
+      <h1
+        class="animate__animated animate__fadeInDown animate__delay-1s font-bold text-2xl md:text-6xl lg:text-6xl mb-8"
+      >
+        Become part of us
+      </h1>
       <a
         href="/events"
-        class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 sm:py-4 md:py-6 px-4 sm:px-8 md:px-14 rounded-full mb-2 sm:mb-0"
+        class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+        >Join events</a
       >
-        Join Events
-      </a>
     </div>
-  </div>
+  </section>
 
   <!-- ---------- Benefits ----------  -->
 
   <section class="relative pt-16">
     <div class="container mx-auto">
       <div class="flex flex-wrap items-center">
-        <div class="w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-78">
+        <div
+          data-aos="fade-right"
+          class="animate__animated animate__bounceIn animate__delay-1s w-10/12 md:w-6/12 lg:w-4/12 px-12 md:px-4 mr-auto ml-auto -mt-78"
+        >
           <div
             class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-pink-500"
           >
@@ -138,7 +151,9 @@
         <div class="w-full md:w-6/12 px-4">
           <div class="flex flex-wrap">
             <div class="w-full md:w-6/12 px-4">
-              <div class="relative flex flex-col mt-4">
+              <div
+                class="animate__animated animate__bounceIn animate__delay-2s relative flex flex-col mt-4"
+              >
                 <div class="px-4 py-5 flex-auto">
                   <div
                     class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
@@ -169,7 +184,9 @@
                   </p>
                 </div>
               </div>
-              <div class="relative flex flex-col min-w-0">
+              <div
+                class="animate__animated animate__bounceIn animate__delay-2s relative flex flex-col min-w-0"
+              >
                 <div class="px-4 py-5 flex-auto">
                   <div
                     class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
@@ -196,7 +213,9 @@
               </div>
             </div>
             <div class="w-full md:w-6/12 px-4">
-              <div class="relative flex flex-col min-w-0 mt-4">
+              <div
+                class="animate__animated animate__bounceIn animate__delay-3s relative flex flex-col min-w-0 mt-4"
+              >
                 <div class="px-4 py-5 flex-auto">
                   <div
                     class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
@@ -222,7 +241,9 @@
                   </p>
                 </div>
               </div>
-              <div class="relative flex flex-col min-w-0">
+              <div
+                class="animate__animated animate__bounceIn animate__delay-3s relative flex flex-col min-w-0"
+              >
                 <div class="px-4 py-5 flex-auto">
                   <div
                     class="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"
@@ -256,7 +277,9 @@
   </section>
 
   <!-- ---------- Home Base ----------  -->
-  <div class="flex flex-wrap w-full mb-5 flex-col items-center text-center">
+  <div
+    class="animate__animated animate__fadeInDown animate__delay-1s flex flex-wrap w-full mb-5 flex-col items-center text-center"
+  >
     <h1 class="font-sans font-bold text-2xl text-center sm:text-4xl mb-2 sm:mb-0">HomeBase</h1>
     <p class="lg:w-1/2 w-full leading-relaxed text-base">
       Home Base Mabolista Fc Untuk Area Jakarta, Bogor, Depok Tangerang dan Bekasi
@@ -264,7 +287,7 @@
   </div>
 
   <div class="items-center flex flex-col">
-    <div class="md:flex lg:flex mx-40 mt-16">
+    <div class="animate__animated animate__fadeIn animate__delay-2s md:flex lg:flex mx-40 mt-16">
       <div class="mx-auto flex flex-col w-96 mb-10">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
           <img src="@/assets/img/NYTCsawangan.jpg" alt="NYTC Sawangan" class="rounded-xl" />
