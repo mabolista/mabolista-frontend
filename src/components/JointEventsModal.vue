@@ -55,14 +55,14 @@
             type="button"
             class="text-white bg-yellow-500 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
-            I accept
+            Joint
           </button>
           <button
             @click="close"
             type="button"
             class="ms-3 text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600"
           >
-            Decline
+            Cancel
           </button>
         </div>
       </footer>
@@ -71,9 +71,25 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'JointEventsModal',
   methods: {
+    joinEvents() {
+      axios
+        .post('events/join-event', {
+          eventId: this.eventId,
+          userId: this.userId,
+          playerPosition: this.playerPosition
+        })
+        .then((response) => {
+          this.leftEvents = response.data.data.events
+        })
+        .catch((error) => {
+          console.error('Out List Failed:', error)
+        })
+    },
     close() {
       this.$emit('close')
     }

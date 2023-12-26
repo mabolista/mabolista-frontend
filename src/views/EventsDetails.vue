@@ -107,16 +107,12 @@
     </div>
 
     <section id="aboutmabolista" class="text-gray-700 body-font border-t border-gray-200">
-      <div
-        v-for="event in events"
-        :key="event.id"
-        class="container px-5 py-20 mx-auto flex flex-wrap"
-      >
+      <div v-if="events" class="container px-5 py-20 mx-auto flex flex-wrap">
         <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
           <img
             alt="feature"
             class="object-cover object-center h-full w-full"
-            :src="event.imageUrl"
+            :src="events.imageUrl"
           />
         </div>
         <div
@@ -126,9 +122,9 @@
             <div class="flex-grow">
               <h2 class="text-3xl mb-4 font-mabolistafont leading-8 text-gray-900">Keterangan</h2>
               <p class="leading-relaxed text-left text-xl">
-                📆 : {{ event.eventDate }}<br />
-                ⏰ : {{ event.startTime }} - {{ event.endTime }}<br />
-                🏟 : {{ event.location }}<br />
+                📆 : {{ events.eventDate }}<br />
+                ⏰ : {{ events.startTime }} - {{ events.endTime }}<br />
+                🏟 : {{ events.location }}<br />
                 📸 : Fotographer<br />
                 📹 : Videographer<br />
                 🙅🏻‍♂ : Wasit Tengah 1<br />
@@ -216,7 +212,13 @@ export default {
   },
   data() {
     return {
-      events: [],
+      events: {
+        eventDate: '',
+        startTime: '',
+        endTime: '',
+        location: '',
+        image: null
+      },
       isModalVisible: false,
       id: this.$route.params.id
     }
@@ -232,25 +234,11 @@ export default {
   methods: {
     async getEvents() {
       try {
-        const response = await axios.get('events?page=0&pageSize=10')
+        const response = await axios.get(`events/${this.id}`)
         this.events = response.data.data.events
       } catch (error) {
         console.error('Error fetching events:', error)
       }
-    },
-    joinEvents() {
-      axios
-        .post('events/join-event', {
-          eventId: this.eventId,
-          userId: this.userId,
-          playerPosition: this.playerPosition
-        })
-        .then((response) => {
-          this.leftEvents = response.data.data.events
-        })
-        .catch((error) => {
-          console.error('Out List Failed:', error)
-        })
     },
     leftEvents() {
       axios
