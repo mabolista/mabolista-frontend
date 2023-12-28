@@ -14,7 +14,6 @@
         :modules="modules"
         :slides-per-view="3"
         :space-between="50"
-        navigation
         :pagination="{ clickable: true }"
         @swiper="onSwiper"
         @slideChange="onSlideChange"
@@ -62,12 +61,11 @@
 
 <script>
 import axios from 'axios'
-import { Navigation, Pagination, A11y } from 'swiper/modules'
+import { Pagination, A11y } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
 // Import Swiper styles
 import 'swiper/css'
-import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
 export default {
@@ -91,7 +89,7 @@ export default {
     return {
       onSwiper,
       onSlideChange,
-      modules: [Navigation, Pagination, A11y]
+      modules: [Pagination, A11y]
     }
   },
   computed: {
