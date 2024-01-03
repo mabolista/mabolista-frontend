@@ -15,20 +15,20 @@ const azraTeams = new URL('@/assets/img/azrateams.jpg', import.meta.url).href
 const dendyTeams = new URL('@/assets/img/dendyteams.jpg', import.meta.url).href
 const hilalTeams = new URL('@/assets/img/hilalteams.jpg', import.meta.url).href
 const ilhamTeams = new URL('@/assets/img/ilhamteams.jpg', import.meta.url).href
+const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
 </script>
 
 <template>
   <NavbarSection />
 
   <section>
-    <div
-      class="relative overflow-hidden bg-cover bg-no-repeat"
-      style="
-        background-position: 50%;
-        background-image: url('src/assets/img/NYTC-about.jpg');
-        height: 500px;
-      "
-    >
+    <div class="relative overflow-hidden bg-cover bg-no-repeat">
+      <img
+        :src="nytcAbout"
+        class="bg-center bg-no-repeat bg-contain w-full"
+        style="height: 500px"
+        alt="nytcAbout"
+      />
       <div
         class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.75)] bg-fixed"
       >
