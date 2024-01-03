@@ -1,5 +1,5 @@
 <script setup>
-const mabolistaLogoFooter = new URL('@/assets/img/mabolistafc.png', import.meta.url).href
+const mabolistaLogoFooter = new URL('@/assets/img/mabolistafcFooter.png', import.meta.url).href
 </script>
 <template>
   <footer class="bg-gray-900 mt-20">
