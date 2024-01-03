@@ -1,5 +1,5 @@
 <script setup>
-const mabolistaLogoLogin = new URL('@/assets/img/mabolistafc.png', import.meta.url).href
+const mabolistaLogoLogin = new URL('@/assets/img/mabolistafcLogin.png', import.meta.url).href
 const dmSportLogin = new URL('@/assets/img/dmsport.jpg', import.meta.url).href
 </script>
 
