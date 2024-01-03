@@ -1,5 +1,5 @@
 <script setup>
-const mabolistaLogoNavbar = new URL('@/assets/img/mabolistafc.png', import.meta.url).href
+const mabolistaLogoNavbar = new URL('@/assets/img/mabolistafcNavbar.png', import.meta.url).href
 </script>
 
 <template>

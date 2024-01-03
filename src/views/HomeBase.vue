@@ -16,14 +16,14 @@ const jonas = new URL('@/assets/img/minisoccer/jonas.png', import.meta.url).href
 const triboon = new URL('@/assets/img/minisoccer/triboon.jpeg', import.meta.url).href
 const nfMinisoccer = new URL('@/assets/img/minisoccer/NFminisoccer.jpg', import.meta.url).href
 const myFutsal = new URL('@/assets/img/futsal/myfutsal.jpg', import.meta.url).href
-const v3 = new URL('@/assets/img/futsal/V3.jpg', import.meta.url).href
+const vThree = new URL('@/assets/img/futsal/V3.jpg', import.meta.url).href
 const citosFutsal = new URL('@/assets/img/futsal/citosfutsal.jpg', import.meta.url).href
 const championsFutsal = new URL('@/assets/img/futsal/championsfutsal.png', import.meta.url).href
 </script>
 
 <template>
   <NavbarSection />
-  <div class="container mx-auto text-center py-20 my-10 w-96 lg:w-homebasesecond">
+  <div class="container mx-auto text-center py-28 my-10 w-96 lg:w-homebasesecond">
     <h1 class="font-bold text-4xl mb-4">
       Our <span class="font-bold text-4xl text-yellow-600">HomeBase</span>
     </h1>
@@ -309,7 +309,7 @@ const championsFutsal = new URL('@/assets/img/futsal/championsfutsal.png', impor
           <div class="px-6" style="cursor: auto">
             <img
               alt="Vini Vidi Vici (V3)"
-              :src="v3"
+              :src="vThree"
               class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">

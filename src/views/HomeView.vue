@@ -22,14 +22,16 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
     >
       <div class="lg:container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         <div class="h-screen grid sm:grid-cols-1 md:grid-cols-2 grid-rows-1 gap-4 items-center">
-          <div class="imagehero animate__animated animate__fadeIn">
+          <div class="animate__animated animate__fadeIn mt-44">
             <img :src="headImg" alt="head-img" />
           </div>
 
           <div
             class="animate__animated animate__fadeInUp animate__delay-1s text-center mb-16 md:text-left lg:w-headwidth"
           >
-            <h1 class="font-bold text-white text-4xl mb-4">Welcome, Mabolism!</h1>
+            <h1 class="font-bold text-white text-2xl md:text-2xl lg:text-4xl mb-4">
+              Welcome, Mabolism!
+            </h1>
             <p class="text-white font-medium">
               Ini adalah website resmi Mabolista Fc, Eksplore lebih lanjut dengan klik tombol
               dibawah atau scroll
