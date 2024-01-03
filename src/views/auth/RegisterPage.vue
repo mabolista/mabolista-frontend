@@ -1,12 +1,12 @@
 <script setup>
-const mabolistaLogo = new URL('@/assets/img/mabolistafc.png', import.meta.url).href
+const mabolistaLogoRegister = new URL('@/assets/img/mabolistafc.png', import.meta.url).href
 const dmSportRegister = new URL('@/assets/img/dmsport.jpg', import.meta.url).href
 </script>
 
 <template>
   <!-- Preloader -->
   <div v-if="loading" class="preloader">
-    <img class="logo" :src="mabolistaLogo" alt="Loading Logo" />
+    <img class="logo" :src="mabolistaLogoRegister" alt="Loading Logo" />
   </div>
 
   <section class="relative flex flex-wrap lg:h-screen lg:items-center">

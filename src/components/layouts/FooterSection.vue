@@ -1,5 +1,5 @@
 <script setup>
-const mabolistaLogo = new URL('@/assets/img/mabolistafc.png', import.meta.url).href
+const mabolistaLogoFooter = new URL('@/assets/img/mabolistafc.png', import.meta.url).href
 </script>
 <template>
   <footer class="bg-gray-900 mt-20">
@@ -7,7 +7,7 @@ const mabolistaLogo = new URL('@/assets/img/mabolistafc.png', import.meta.url).h
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
           <a href="#" class="flex items-center">
-            <img :src="mabolistaLogo" class="h-11 mr-3" alt="Mabolista Logo" />
+            <img :src="mabolistaLogoFooter" class="h-11 mr-3" alt="Mabolista Logo" />
             <span
               class="self-center font-mabolistafont text-2xl font-semibold whitespace-nowrap text-white"
               >Mabolista Fc</span
