@@ -9,7 +9,7 @@ const mabolistaLogoNavbar = new URL('@/assets/img/mabolistafc.png', import.meta.
         class="navigation max-w-[90vw] flex flex-wrap justify-between items-center relative mx-auto py-8 bg-opacity-50"
       >
         <a class="flex items-center" href="/">
-          <img :src="mabolistaLogoNavbar" height="50" width="50" alt="Mabolista Fc" />
+          <img :src="mabolistaLogoNavbar" height="50" width="50" alt="Mabolista Fc Logo" />
           <h3 class="font-mabolistafont text-xl">Mabolista Fc</h3>
         </a>
         <input type="checkbox" id="check" />

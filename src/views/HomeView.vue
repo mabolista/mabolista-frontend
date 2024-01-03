@@ -38,17 +38,17 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
             <div class="flex flex-col sm:flex-row gap-4 mt-4">
               <a
                 href="https://www.instagram.com/mabolista_fc/"
-                target="blank"
+                target="_blank"
                 class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full mb-2 sm:mb-0"
               >
                 Our Instagram
               </a>
-              <a
-                href="/about"
+              <router-link
+                to="/about"
                 class="bg-transparent hover:bg-white-500 text-white font-xl hover:text-black py-2 px-4 border border-white-500 hover:bg-white rounded-full"
               >
                 Learn More
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
@@ -117,11 +117,12 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
       >
         Become part of us
       </h1>
-      <a
-        href="/events"
+      <router-link
+        to="/events"
         class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-        >Join events</a
       >
+        Join events
+      </router-link>
     </div>
   </section>
 
@@ -333,12 +334,12 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
       </div>
     </div>
     <div class="text-center">
-      <a
-        href="/homebase"
+      <router-link
+        to="/homebase"
         class="bg-transparent hover:bg-indigo-500 text-indigo-600 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded-full"
       >
         More HomeBase
-      </a>
+      </router-link>
     </div>
   </div>
 
