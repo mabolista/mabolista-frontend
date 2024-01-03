@@ -23,7 +23,7 @@ const championsFutsal = new URL('@/assets/img/futsal/championsfutsal.png', impor
 
 <template>
   <NavbarSection />
-  <div class="container mx-auto text-center py-28 my-10 w-96 lg:w-homebasesecond">
+  <div class="container mx-auto text-center mt-32 py-28 my-10 w-96 lg:w-homebasesecond">
     <h1 class="font-bold text-4xl mb-4">
       Our <span class="font-bold text-4xl text-yellow-600">HomeBase</span>
     </h1>

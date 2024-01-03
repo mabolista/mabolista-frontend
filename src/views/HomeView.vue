@@ -21,8 +21,8 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
       class="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 opacity-90"
     >
       <div class="lg:container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-        <div class="h-screen grid sm:grid-cols-1 md:grid-cols-2 grid-rows-1 gap-4 items-center">
-          <div class="animate__animated animate__fadeIn mt-44">
+        <div class="h-screen grid sm:grid-cols-1 md:grid-cols-2 grid-rows-1 items-center">
+          <div class="animate__animated animate__fadeIn mt-44 md:mt-0 lg:mt-0">
             <img :src="headImg" alt="head-img" />
           </div>
 

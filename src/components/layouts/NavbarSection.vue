@@ -4,9 +4,9 @@ const mabolistaLogoNavbar = new URL('@/assets/img/mabolistafcNavbar.png', import
 
 <template>
   <nav class="fixed w-full z-50 top-0">
-    <div class="backdrop-blur-md">
+    <div class="backdrop-blur-md h-24">
       <ul
-        class="navigation max-w-[90vw] flex flex-wrap justify-between items-center relative mx-auto py-8 bg-opacity-50"
+        class="navigation max-w-[90vw] flex flex-wrap justify-between items-center relative mx-auto py-4 bg-opacity-50"
       >
         <a class="flex items-center" href="/">
           <img :src="mabolistaLogoNavbar" height="50" width="50" alt="Mabolista Fc Logo" />
