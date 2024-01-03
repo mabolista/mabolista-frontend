@@ -1,7 +1,21 @@
+<script setup>
+const headBg = new URL('@/assets/img/head-bg.jpg', import.meta.url).href
+const headImg = new URL('@/assets/img/head-img.png', import.meta.url).href
+const chaviPutih = new URL('@/assets/img/ChaviPutih.png', import.meta.url).href
+const kratingDaeng = new URL('@/assets/img/logokratingdaeng.png', import.meta.url).href
+const kahfAbu = new URL('@/assets/img/KahfAbu.png', import.meta.url).href
+const homeVideo = new URL('@/assets/video/homevideo.mp4', import.meta.url).href
+const benefits = new URL('@/assets/img/benefits.jpg', import.meta.url).href
+const nytcSawangan = new URL('@/assets/img/NYTCsawangan.jpg', import.meta.url).href
+const dmSport = new URL('@/assets/img/dmsport.jpg', import.meta.url).href
+const bigHam = new URL('@/assets/img/bigham.jpg', import.meta.url).href
+const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.url).href
+</script>
+
 <template>
   <NavbarSection />
   <div class="relative">
-    <img src="@/assets/img/head-bg.jpg" alt="Your Image" class="bg-cover w-full h-screen" />
+    <img :src="headBg" alt="head-section image" class="bg-cover w-full h-screen" />
 
     <div
       class="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 opacity-90"
@@ -9,7 +23,7 @@
       <div class="lg:container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
         <div class="h-screen grid sm:grid-cols-1 md:grid-cols-2 grid-rows-1 gap-4 items-center">
           <div class="imagehero animate__animated animate__fadeIn">
-            <img src="@/assets/img/head-img.png" alt="" />
+            <img :src="headImg" alt="head-img" />
           </div>
 
           <div
@@ -51,28 +65,28 @@
     >
       <img
         class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-        src="@/assets/img/ChaviPutih.png"
+        :src="chaviPutih"
         alt="Transistor"
         width="158"
         height="48"
       />
       <img
         class="col-span-2 object-contain h-20 w-32 lg:col-span-1 justify-self-center"
-        src="@/assets/img/logokratingdaeng.png"
+        :src="kratingDaeng"
         alt="Logo Kratingdaeng"
         width="158"
         height="48"
       />
       <img
         class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-        src="@/assets/img/KahfAbu.png"
+        :src="kahfAbu"
         alt="Logo Kahf"
         width="158"
         height="48"
       />
       <img
         class="col-span-2 object-contain h-24 w-32 mt-4 sm:col-start-2 lg:col-span-1 justify-self-center"
-        src="@/assets/img/PanguripanPutih.png"
+        :src="panguripanPutih"
         alt="Logo Panguripan"
         width="158"
         height="48"
@@ -89,7 +103,7 @@
     <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
       <video
         class="min-w-full min-h-full absolute object-cover"
-        src="@/assets/video/homevideo.mp4"
+        :src="homeVideo"
         alt="Banner Video"
         type="video/mp4"
         autoplay
@@ -123,11 +137,7 @@
           <div
             class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-pink-500"
           >
-            <img
-              alt="..."
-              src="@/assets/img/benefits.jpg"
-              class="w-full align-middle rounded-t-lg"
-            />
+            <img alt="benefits images" :src="benefits" class="w-full align-middle rounded-t-lg" />
             <blockquote class="relative p-8 mb-4">
               <svg
                 preserveAspectRatio="none"
@@ -287,7 +297,7 @@
     <div data-aos="zoom-in-up" data-aos-offset="300" class="md:flex lg:flex mx-40 mt-16">
       <div class="mx-auto flex flex-col w-96 mb-10">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
-          <img src="@/assets/img/NYTCsawangan.jpg" alt="NYTC Sawangan" class="rounded-xl" />
+          <img :src="nytcSawangan" alt="NYTC Sawangan" class="rounded-xl" />
         </div>
         <div class="px-4">
           <div class="font-bold text-xl mb-2">NYTC Sawangan (Depok)</div>
@@ -300,7 +310,7 @@
 
       <div class="mx-auto flex flex-col w-96 mb-10">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
-          <img src="@/assets/img/dmsport.jpg" alt="DM Sport" class="rounded-xl" />
+          <img :src="dmSport" alt="DM Sport" class="rounded-xl" />
         </div>
         <div class="px-4">
           <div class="font-bold text-xl mb-2">DM Sport (Tangerang)</div>
@@ -312,7 +322,7 @@
 
       <div class="mx-auto flex flex-col w-96 mb-10">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
-          <img src="@/assets/img/bigham.jpg" alt="Big Ham Stadium" class="rounded-xl" />
+          <img :src="bigHam" alt="Big Ham Stadium" class="rounded-xl" />
         </div>
         <div class="px-4">
           <div class="font-bold text-xl mb-2">Big Ham Stadium (Depok)</div>
@@ -342,9 +352,9 @@
 </template>
 
 <script>
-import FooterSection from '../components/layouts/FooterSection.vue'
-import NavbarSection from '../components/layouts/NavbarSection.vue'
-import UpcomingEvents from '../components/UpcomingEvents.vue'
+import FooterSection from '@/components/layouts/FooterSection.vue'
+import NavbarSection from '@/components/layouts/NavbarSection.vue'
+import UpcomingEvents from '@/components/UpcomingEvents.vue'
 
 export default {
   name: 'HomePage',

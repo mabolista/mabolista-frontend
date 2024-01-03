@@ -1,3 +1,9 @@
+<script setup>
+const nytcHead = new URL('@/assets/img/events/nytchead1.jpg', import.meta.url).href
+const nytcHeadTwo = new URL('@/assets/img/events/nytchead2.jpg', import.meta.url).href
+const nytcHeadThree = new URL('@/assets/img/events/nytchead3.jpg', import.meta.url).href
+</script>
+
 <template>
   <div v-if="isAuthenticated">
     <NavbarSection />
@@ -15,7 +21,7 @@
         />
         <div class="carousel-item absolute opacity-0" style="height: 50vh">
           <div class="h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right">
-            <img src="@/assets/img/events/nytchead1.jpg" alt="" />
+            <img :src="nytcHead" alt="nytcHead" />
           </div>
         </div>
         <label
@@ -40,7 +46,7 @@
         />
         <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height: 50vh">
           <div class="h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right">
-            <img src="@/assets/img/events/nytchead2.jpg" alt="" />
+            <img :src="nytcHeadTwo" alt="nytcHeadTwo" />
           </div>
         </div>
         <label
@@ -65,7 +71,7 @@
         />
         <div class="carousel-item absolute opacity-0" style="height: 50vh">
           <div class="h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-bottom">
-            <img src="@/assets/img/events/nytchead3.jpg" alt="" />
+            <img :src="nytcHeadThree" alt="nytcHeadThree" />
           </div>
         </div>
         <label
@@ -200,8 +206,8 @@
 </template>
 
 <script>
-import NavbarSection from '../components/layouts/NavbarSection.vue'
-import JointEventsModal from '../components/JointEventsModal.vue'
+import NavbarSection from '@/components/layouts/NavbarSection.vue'
+import JointEventsModal from '@/components/JointEventsModal.vue'
 import axios from 'axios'
 
 export default {

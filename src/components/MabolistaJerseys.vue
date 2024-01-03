@@ -1,8 +1,19 @@
+<script setup>
+const jersey1st = new URL('@/assets/img/jersey1st.webp', import.meta.url).href
+const jersey3rd = new URL('@/assets/img/jersey3rd.webp', import.meta.url).href
+const jersey2nd = new URL('@/assets/img/jersey2nd.webp', import.meta.url).href
+const jersey4th = new URL('@/assets/img/jersey4th.webp', import.meta.url).href
+const jerseykiper1st = new URL('@/assets/img/jerseykiper1st.webp', import.meta.url).href
+const jerseykiper2nd = new URL('@/assets/img/jerseykiper2nd.webp', import.meta.url).href
+const jerseykiper3rd = new URL('@/assets/img/jerseykiper3rd.webp', import.meta.url).href
+const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.webp', import.meta.url).href
+</script>
+
 <template>
   <h1 class="title-shop text-4xl font-mabolistafont">Our Jerseys -></h1>
   <article class="banner">
     <div class="card__img">
-      <img src="@/assets/img/jersey1st.webp" alt="" />
+      <img :src="jersey1st" alt="jersey1st" />
     </div>
     <div class="card__name">
       <p>Jersey Mabolista 1st</p>
@@ -25,7 +36,7 @@
       <slide v-for="slide in 1" :key="slide">
         <article class="card">
           <div class="card__img">
-            <img src="@/assets/img/jersey3rd.webp" alt="" />
+            <img :src="jersey3rd" alt="jersey3rd" />
           </div>
           <div class="card__name">
             <p>Jersey Mabolista 3rd</p>
@@ -54,7 +65,7 @@
       <slide v-for="slide in 1" :key="slide">
         <article class="card">
           <div class="card__img">
-            <img src="@/assets/img/jersey2nd.webp" alt="" />
+            <img :src="jersey2nd" alt="jersey2nd" />
           </div>
           <div class="card__name">
             <p>Jersey Mabolista 2nd</p>
@@ -83,7 +94,7 @@
       <slide v-for="slide in 1" :key="slide">
         <article class="card">
           <div class="card__img">
-            <img src="@/assets/img/jersey4th.webp" alt="" />
+            <img :src="jersey4th" alt="jersey4th" />
           </div>
           <div class="card__name">
             <p>Jersey Mabolista 4th</p>
@@ -112,7 +123,7 @@
       <slide v-for="slide in 1" :key="slide">
         <article class="card">
           <div class="card__img">
-            <img src="@/assets/img/jerseykiper1st.webp" alt="" />
+            <img :src="jerseykiper1st" alt="jerseykiper1st" />
           </div>
           <div class="card__name">
             <p>Jersey Kiper Mabolista 1st</p>
@@ -141,7 +152,7 @@
       <slide v-for="slide in 1" :key="slide">
         <article class="card">
           <div class="card__img">
-            <img src="@/assets/img/jerseykiper2nd.webp" alt="" />
+            <img :src="jerseykiper2nd" alt="jerseykiper2nd" />
           </div>
           <div class="card__name">
             <p>Jersey Kiper Mabolista 2nd</p>
@@ -170,7 +181,7 @@
       <slide v-for="slide in 1" :key="slide">
         <article class="card">
           <div class="card__img">
-            <img src="@/assets/img/jerseykiper3rd.webp" alt="" />
+            <img :src="jerseykiper3rd" alt="jerseykiper3rd" />
           </div>
           <div class="card__name">
             <p>Jersey Kiper Kiper Mabolista 3rd</p>
@@ -199,7 +210,7 @@
       <slide v-for="slide in 1" :key="slide">
         <article class="card">
           <div class="card__img">
-            <img src="@/assets/img/jerseykiper4th.webp" alt="" />
+            <img :src="jerseykiper4th" alt="jerseykiper4th" />
           </div>
           <div class="card__name">
             <p>Jersey Kiper Kiper Mabolista 4th</p>

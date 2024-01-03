@@ -1,3 +1,26 @@
+<script setup>
+const headEvents = new URL('@/assets/img/headevents.png', import.meta.url).href
+const galleryOne = new URL('@/assets/img/gallery/Gallery.jpg', import.meta.url).href
+const galleryTwo = new URL('@/assets/img/gallery/Gallery14.jpg', import.meta.url).href
+const galleryThree = new URL('@/assets/img/gallery/Gallery17.jpg', import.meta.url).href
+const galleryFour = new URL('@/assets/img/gallery/Gallery18.jpg', import.meta.url).href
+const galleryFive = new URL('@/assets/img/gallery/Gallery8.jpg', import.meta.url).href
+const gallerySix = new URL('@/assets/img/gallery/Gallery2.jpg', import.meta.url).href
+const gallerySeven = new URL('@/assets/img/gallery/Gallery3.jpg', import.meta.url).href
+const galleryEight = new URL('@/assets/img/gallery/Gallery4.jpg', import.meta.url).href
+const galleryNine = new URL('@/assets/img/gallery/Gallery5.jpg', import.meta.url).href
+const galleryTen = new URL('@/assets/img/gallery/Gallery6.jpg', import.meta.url).href
+const galleryEleven = new URL('@/assets/img/gallery/Gallery7.jpg', import.meta.url).href
+const galleryTwelve = new URL('@/assets/img/gallery/Gallery9.jpg', import.meta.url).href
+const galleryThirdteen = new URL('@/assets/img/gallery/Gallery10.jpg', import.meta.url).href
+const galleryFourteen = new URL('@/assets/img/gallery/Gallery11.jpg', import.meta.url).href
+const galleryFiveteen = new URL('@/assets/img/gallery/Gallery12.jpg', import.meta.url).href
+const gallerySixteen = new URL('@/assets/img/gallery/Gallery13.jpg', import.meta.url).href
+const gallerySeventeen = new URL('@/assets/img/gallery/Gallery15.jpg', import.meta.url).href
+const galleryEighteen = new URL('@/assets/img/gallery/Gallery16.jpg', import.meta.url).href
+const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.meta.url).href
+</script>
+
 <template>
   <NavbarSection />
 
@@ -42,7 +65,7 @@
         </a>
       </div>
       <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-        <img src="@/assets/img/headevents.png" alt="events mabolista" />
+        <img :src="headEvents" alt="events mabolista" />
       </div>
     </div>
   </section>
@@ -787,17 +810,17 @@
           <div>
             <img
               class="h-full w-full bg-cover rounded shadow-md"
-              src="@/assets/img/gallery/Gallery.jpg"
-              alt=""
+              :src="galleryOne"
+              alt="galleryOne"
             />
           </div>
         </div>
         <div class="md:w-1/2 h-auto px-4">
           <div class="mb-8">
-            <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery14.jpg" alt="" />
+            <img class="rounded shadow-md" :src="galleryTwo" alt="galleryTwo" />
           </div>
           <div>
-            <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery17.jpg" alt="" />
+            <img class="rounded shadow-md" :src="galleryThree" alt="galleryThree" />
           </div>
         </div>
       </div>
@@ -806,10 +829,10 @@
     <section class="py-8 px-4">
       <div class="flex flex-wrap -mx-4">
         <div class="md:w-1/2 px-4 mb-8 md:mb-0">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery18.jpg" alt="" />
+          <img class="rounded shadow-md" :src="galleryFour" alt="galleryFour" />
         </div>
         <div class="md:w-1/2 px-4 mb-8 md:mb-0">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery8.jpg" alt="" />
+          <img class="rounded shadow-md" :src="galleryFive" alt="galleryFive" />
         </div>
       </div>
     </section>
@@ -817,22 +840,22 @@
     <section class="pt-8 px-4">
       <div class="flex flex-wrap -mx-4">
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery2.jpg" alt="" />
+          <img class="rounded shadow-md" :src="gallerySix" alt="gallerySix" />
         </div>
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery3.jpg" alt="" />
+          <img class="rounded shadow-md" :src="gallerySeven" alt="gallerySeven" />
         </div>
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery4.jpg" alt="" />
+          <img class="rounded shadow-md" :src="galleryEight" alt="galleryEight" />
         </div>
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery5.jpg" alt="" />
+          <img class="rounded shadow-md" :src="galleryNine" alt="galleryNine" />
         </div>
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery6.jpg" alt="" />
+          <img class="rounded shadow-md" :src="galleryTen" alt="galleryTen" />
         </div>
         <div class="md:w-1/3 px-4 mb-8">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery7.jpg" alt="" />
+          <img class="rounded shadow-md" :src="galleryEleven" alt="galleryEleven" />
         </div>
       </div>
     </section>
@@ -840,28 +863,28 @@
     <section class="py-8 px-4">
       <div class="flex flex-wrap -mx-4 -mb-8">
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery9.jpg" alt="" />
+          <img class="rounded shadow-md" :src="galleryTwelve" alt="galleryTwelve" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery10.jpg" alt="" />
+          <img class="rounded shadow-md" :src="galleryThirdteen" alt="galleryThirdteen" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery11.jpg" alt="" />
+          <img class="rounded shadow-md" :src="galleryFourteen" alt="galleryFourteen" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery12.jpg" alt="" />
+          <img class="rounded shadow-md" :src="galleryFiveteen" alt="galleryFiveteen" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery13.jpg" alt="" />
+          <img class="rounded shadow-md" :src="gallerySixteen" alt="gallerySixteen" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery15.jpg" alt="" />
+          <img class="rounded shadow-md" :src="gallerySeventeen" alt="gallerySeventeen" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery16.jpg" alt="" />
+          <img class="rounded shadow-md" :src="galleryEighteen" alt="galleryEighteen" />
         </div>
         <div class="md:w-1/4 px-4 mb-8">
-          <img class="rounded shadow-md" src="@/assets/img/gallery/Gallery20.jpg" alt="" />
+          <img class="rounded shadow-md" :src="galleryNineteen" alt="galleryNineteen" />
         </div>
       </div>
     </section>
@@ -878,9 +901,9 @@
 </template>
 
 <script>
-import FooterSection from '../components/layouts/FooterSection.vue'
-import NavbarSection from '../components/layouts/NavbarSection.vue'
-import MabolistaJerseys from '../components/MabolistaJerseys.vue'
+import FooterSection from '@/components/layouts/FooterSection.vue'
+import NavbarSection from '@/components/layouts/NavbarSection.vue'
+import MabolistaJerseys from '@/components/MabolistaJerseys.vue'
 
 export default {
   name: 'EventsView',
