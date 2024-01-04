@@ -184,7 +184,7 @@ const dmSportRegister = new URL('@/assets/img/dmsport.jpg', import.meta.url).hre
         <div class="flex items-center justify-between">
           <p class="text-sm text-gray-500">
             Have account?
-            <a class="underline" href="/login">Login</a>
+            <router-link class="underline" to="/login">Login</router-link>
           </p>
 
           <button
