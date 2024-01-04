@@ -18,10 +18,26 @@ const mabolistaLogoNavbar = new URL('@/assets/img/mabolistafcNavbar.png', import
           class="menu flex items-center [&>li>a]:text-center [&>li>a]:relative [&>li>a]:transition [&>li>a]:duration-200 [&>li>a]:ease-in-out"
         >
           <div class="md:flex lg:flex mb-8 mt-8 font-mabolistafont text-lg [&>li]:pl-8">
-            <li><a class="hover:text-yellow-300" href="/">Home</a></li>
-            <li><a class="hover:text-yellow-300" href="/about">About</a></li>
-            <li><a class="hover:text-yellow-300" href="/events">Events</a></li>
-            <li><a class="hover:text-yellow-300" href="/contact">Contact</a></li>
+            <li>
+              <a class="hover:text-yellow-300" :href="$router.resolve({ name: 'HomePage' }).href"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-yellow-300" :href="$router.resolve({ name: 'about' }).href"
+                >About</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-yellow-300" :href="$router.resolve({ name: 'events' }).href"
+                >Events</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-yellow-300" :href="$router.resolve({ name: 'contact' }).href"
+                >Contact</a
+              >
+            </li>
           </div>
           <div v-if="isAuthenticated" class="py-2 lg:px-4">
             <img
