@@ -12,11 +12,25 @@
     <div>
       <swiper
         :modules="modules"
-        :slides-per-view="3"
+        :slides-per-view="1"
         :space-between="50"
         :pagination="{ clickable: true }"
         @swiper="onSwiper"
         @slideChange="onSlideChange"
+        :breakpoints="{
+          '640': {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          '768': {
+            slidesPerView: 3,
+            spaceBetween: 40
+          },
+          '1024': {
+            slidesPerView: 3,
+            spaceBetween: 50
+          }
+        }"
       >
         <swiper-slide v-for="event in events" :key="event.id">
           <div
@@ -114,27 +128,7 @@ export default {
         '.center'.slick({
           centerMode: true,
           centerPadding: '60px',
-          slidesToShow: 3,
-          responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 3
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                arrows: false,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 1
-              }
-            }
-          ]
+          slidesToShow: 3
         })
       })
     }

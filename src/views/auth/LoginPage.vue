@@ -103,7 +103,7 @@ const dmSportLogin = new URL('@/assets/img/dmsport.jpg', import.meta.url).href
         <div class="flex items-center justify-between">
           <p class="text-sm text-gray-500">
             No account?
-            <a class="underline" href="/signup">Sign up</a>
+            <router-link class="underline" to="/signup">Sign up</router-link>
           </p>
 
           <button

@@ -41,13 +41,13 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
               <a
                 href="https://www.instagram.com/mabolista_fc/"
                 target="_blank"
-                class="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full mb-2 sm:mb-0"
+                class="bg-pink-600 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded-full mb-2 sm:mb-0"
               >
                 Our Instagram
               </a>
               <router-link
                 to="/about"
-                class="bg-transparent hover:bg-white-500 text-white font-xl hover:text-black py-2 px-4 border border-white-500 hover:bg-white rounded-full"
+                class="bg-transparent hover:bg-white-500 text-white font-medium hover:text-black py-2 px-4 border border-white-500 hover:bg-white rounded-full"
               >
                 Learn More
               </router-link>

@@ -28,7 +28,7 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
       <div class="mr-auto place-self-center lg:col-span-7">
         <h1
-          class="max-w-2xl mb-4 text-4xl font-mabolistafont tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
+          class="animate__animated animate__fadeInLeft animate__delay-1s max-w-2xl mb-4 text-4xl font-mabolistafont tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
         >
           More Events More Refreshments
         </h1>
@@ -38,31 +38,40 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
           Ayoo gabung main fun football bersama Mabolista Fc dalam events internal fun match maupun
           sparing
         </p>
-        <a
-          href="#"
-          class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-bold text-center text-black rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
-        >
-          Connect with us
-          <svg
-            class="w-5 h-5 ml-2 -mr-1"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+        <div class="connect">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center py-3 mr-3 text-base font-bold text-center text-black rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
           >
-            <path
-              fill-rule="evenodd"
-              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-        </a>
-        <a
-          href="https://www.instagram.com/mabolista_fc/"
-          target="blank"
-          class="inline-flex px-5 py-3 text-white font-medium text-center bg-gradient-to-r from-pink-500 to-violet-700 border-0 focus:outline-none rounded text-lg"
-        >
-          Instagram
-        </a>
+            Connect with us
+            <svg
+              class="w-5 h-5 ml-2 -mr-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/mabolista_fc/"
+            target="blank"
+            class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+            ><i class="fa-brands fa-instagram mr-1" style="color: #ffffff"></i>
+            Instagram
+          </a>
+          <a
+            href="https://www.tiktok.com/@mabolistafc"
+            target="blank"
+            class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+            ><i class="fa-brands fa-tiktok mr-1" style="color: #ffffff"></i>
+            Tiktok
+          </a>
+        </div>
       </div>
       <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
         <img :src="headEvents" alt="events mabolista" />
@@ -788,6 +797,57 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
                   <path d="M20 6L9 17l-5-5"></path>
                 </svg> </span
               ><a href="" class="underline">NYTC Sawangan 07 Oktober 2023</a>
+            </p>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-500 text-white rounded-full flex-shrink-0"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  class="w-3 h-3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg> </span
+              ><a href="" class="underline">NYTC Sawangan 12 November 2023</a>
+            </p>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-500 text-white rounded-full flex-shrink-0"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  class="w-3 h-3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg> </span
+              ><a href="" class="underline">NYTC Sawangan 02 Desember 2023</a>
+            </p>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-green-500 text-white rounded-full flex-shrink-0"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2.5"
+                  class="w-3 h-3"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg> </span
+              ><a href="" class="underline">BIG HAM 30 Desember 2023</a>
             </p>
           </div>
         </div>

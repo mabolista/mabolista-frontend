@@ -18,10 +18,10 @@ const mabolistaLogoNavbar = new URL('@/assets/img/mabolistafcNavbar.png', import
           class="menu flex items-center [&>li>a]:text-center [&>li>a]:relative [&>li>a]:transition [&>li>a]:duration-200 [&>li>a]:ease-in-out"
         >
           <div class="md:flex lg:flex mb-8 mt-8 font-mabolistafont text-lg [&>li]:pl-8">
-            <li><router-link class="hover:text-yellow-300" to="/">Home</router-link></li>
-            <li><router-link class="hover:text-yellow-300" to="/about">About</router-link></li>
-            <li><router-link class="hover:text-yellow-300" to="/events">Events</router-link></li>
-            <li><router-link class="hover:text-yellow-300" to="/contact">Contact</router-link></li>
+            <li><a class="hover:text-yellow-300" href="/">Home</a></li>
+            <li><a class="hover:text-yellow-300" href="/about">About</a></li>
+            <li><a class="hover:text-yellow-300" href="/events">Events</a></li>
+            <li><a class="hover:text-yellow-300" href="/contact">Contact</a></li>
           </div>
           <div v-if="isAuthenticated" class="py-2 lg:px-4">
             <img
@@ -60,7 +60,7 @@ const mabolistaLogoNavbar = new URL('@/assets/img/mabolistafcNavbar.png', import
           <div v-else>
             <router-link
               to="/login"
-              class="bg-transparent hover:bg-white-500 text-slate-600 font-1xl ml-7 font-medium hover:text-black py-2 px-8 border border-white-500 hover:bg-white rounded-full"
+              class="bg-white text-slate-600 ml-7 font-medium hover:text-black py-2 px-8 border border-white-500 rounded-full"
               >Login</router-link
             >
           </div>

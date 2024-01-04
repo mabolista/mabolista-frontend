@@ -1,16 +1,16 @@
 <script setup>
-const jersey1st = new URL('@/assets/img/jersey1st.webp', import.meta.url).href
-const jersey3rd = new URL('@/assets/img/jersey3rd.webp', import.meta.url).href
-const jersey2nd = new URL('@/assets/img/jersey2nd.webp', import.meta.url).href
-const jersey4th = new URL('@/assets/img/jersey4th.webp', import.meta.url).href
-const jerseykiper1st = new URL('@/assets/img/jerseykiper1st.webp', import.meta.url).href
-const jerseykiper2nd = new URL('@/assets/img/jerseykiper2nd.webp', import.meta.url).href
-const jerseykiper3rd = new URL('@/assets/img/jerseykiper3rd.webp', import.meta.url).href
-const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.webp', import.meta.url).href
+const jersey1st = new URL('@/assets/img/jersey1st.jpg', import.meta.url).href
+const jersey3rd = new URL('@/assets/img/jersey3rd.jpg', import.meta.url).href
+const jersey2nd = new URL('@/assets/img/jersey2nd.jpg', import.meta.url).href
+const jersey4th = new URL('@/assets/img/jersey4th.jpg', import.meta.url).href
+const jerseykiper1st = new URL('@/assets/img/jerseykiper1st.jpg', import.meta.url).href
+const jerseykiper2nd = new URL('@/assets/img/jerseykiper2nd.jpg', import.meta.url).href
+const jerseykiper3rd = new URL('@/assets/img/jerseykiper3rd.jpg', import.meta.url).href
+const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.url).href
 </script>
 
 <template>
-  <h1 class="title-shop text-4xl font-mabolistafont">Our Jerseys -></h1>
+  <h1 class="title-shop text-4xl font-mabolistafont px-8 py-5">Our Jerseys -></h1>
   <article class="banner">
     <div class="card__img">
       <img :src="jersey1st" alt="jersey1st" />

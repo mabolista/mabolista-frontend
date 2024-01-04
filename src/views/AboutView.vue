@@ -54,7 +54,7 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
         </h2>
       </div>
       <div class="flex flex-wrap -m-4">
-        <div class="p-4 md:w-1/3">
+        <div data-aos="fade-up" class="p-4 md:w-1/3">
           <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
             <div class="flex items-center mb-3">
               <div
@@ -89,7 +89,7 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
             </div>
           </div>
         </div>
-        <div class="p-4 md:w-1/3">
+        <div data-aos="fade-up" class="p-4 md:w-1/3">
           <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
             <div class="flex items-center mb-3">
               <div
@@ -124,7 +124,7 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
             </div>
           </div>
         </div>
-        <div class="p-4 md:w-1/3">
+        <div data-aos="fade-up" class="p-4 md:w-1/3">
           <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
             <div class="flex items-center mb-3">
               <div
@@ -164,14 +164,14 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
   </section>
   <section id="aboutmabolista" class="text-gray-700 body-font border-t border-gray-200">
     <div class="container px-5 py-24 mx-auto flex flex-wrap">
-      <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+      <div data-aos="fade-right" class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
         <img alt="feature" class="object-cover object-center h-full w-full" :src="aboutUs" />
       </div>
       <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left">
         <div class="flex flex-col mb-10">
-          <div class="flex-grow">
+          <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
             <h2 class="text-3xl font-mabolistafont leading-8 text-gray-900">About Us</h2>
-            <p class="leading-relaxed text-base">
+            <p class="leading-relaxed">
               Nama Mabolista sendiri diambil dari kata mabol yang sering digunakan orang-orang dalam
               mengajak “main bola”,sedangkan Ista adalah diambil dari istilah liga sepak bola di
               spanyol yang artinya pecinta sepak bola. Jadi Mabolista jika diartikan keseluruhan
@@ -211,10 +211,20 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
         </p>
       </div>
       <div class="grid grid-cols-2 gap-4 mt-8">
-        <img class="w-full rounded-lg" :src="visiMisi" alt="visiMisi" />
-        <img class="mt-4 w-full lg:mt-10 rounded-lg" :src="visiMisi2" alt="visiMisi2" />
-        <img class="w-full rounded-lg" :src="visiMisi3" alt="visiMisi3" />
-        <img class="mt-4 w-full lg:mt-10 rounded-lg" :src="visiMisi4" alt="office content 2" />
+        <img data-aos="flip-left" class="w-full rounded-lg" :src="visiMisi" alt="visiMisi" />
+        <img
+          data-aos="flip-left"
+          class="mt-4 w-full lg:mt-10 rounded-lg"
+          :src="visiMisi2"
+          alt="visiMisi2"
+        />
+        <img data-aos="flip-right" class="w-full rounded-lg" :src="visiMisi3" alt="visiMisi3" />
+        <img
+          data-aos="flip-right"
+          class="mt-4 w-full lg:mt-10 rounded-lg"
+          :src="visiMisi4"
+          alt="office content 2"
+        />
       </div>
     </div>
   </section>
@@ -229,7 +239,10 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
       </div>
       <div class="flex flex-wrap -m-2">
         <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-          <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+          <div
+            data-aos="flip-up"
+            class="h-full flex items-center border-gray-200 border p-4 rounded-lg"
+          >
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
@@ -242,7 +255,10 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
           </div>
         </div>
         <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-          <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+          <div
+            data-aos="flip-up"
+            class="h-full flex items-center border-gray-200 border p-4 rounded-lg"
+          >
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
@@ -255,7 +271,10 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
           </div>
         </div>
         <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-          <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+          <div
+            data-aos="flip-up"
+            class="h-full flex items-center border-gray-200 border p-4 rounded-lg"
+          >
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
@@ -268,7 +287,10 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
           </div>
         </div>
         <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-          <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+          <div
+            data-aos="flip-up"
+            class="h-full flex items-center border-gray-200 border p-4 rounded-lg"
+          >
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
@@ -281,7 +303,10 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
           </div>
         </div>
         <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-          <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+          <div
+            data-aos="flip-up"
+            class="h-full flex items-center border-gray-200 border p-4 rounded-lg"
+          >
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
