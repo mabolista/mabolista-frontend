@@ -19,23 +19,21 @@ const mabolistaLogoNavbar = new URL('@/assets/img/mabolistafcNavbar.png', import
         >
           <div class="md:flex lg:flex mb-8 mt-8 font-mabolistafont text-lg [&>li]:pl-8">
             <li>
-              <a class="hover:text-yellow-300" :href="$router.resolve({ name: 'HomePage' }).href"
-                >Home</a
+              <router-link class="hover:text-yellow-300" :to="{ path: '/' }">Home</router-link>
+            </li>
+            <li>
+              <router-link class="hover:text-yellow-300" :to="{ path: '/about' }"
+                >About</router-link
               >
             </li>
             <li>
-              <a class="hover:text-yellow-300" :href="$router.resolve({ name: 'about' }).href"
-                >About</a
+              <router-link class="hover:text-yellow-300" :to="{ path: '/events' }"
+                >Events</router-link
               >
             </li>
             <li>
-              <a class="hover:text-yellow-300" :href="$router.resolve({ name: 'events' }).href"
-                >Events</a
-              >
-            </li>
-            <li>
-              <a class="hover:text-yellow-300" :href="$router.resolve({ name: 'contact' }).href"
-                >Contact</a
+              <router-link class="hover:text-yellow-300" :to="{ path: '/contact' }"
+                >Contact</router-link
               >
             </li>
           </div>
