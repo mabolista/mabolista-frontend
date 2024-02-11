@@ -49,7 +49,7 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
   <section class="text-gray-700 body-font border-t border-gray-200">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
-        <h2 class="text-center text-3xl font-mabolistafont leading-8 text-gray-900">
+        <h2 class="text-center text-3xl font-mabolistafont leading-8 text-gray-900 dark:text-white">
           Our Partnership
         </h2>
       </div>
@@ -169,7 +169,7 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
       </div>
       <div class="flex flex-col flex-wrap lg:py-6 -mb-10 lg:w-1/2 lg:pl-12 lg:text-left">
         <div class="flex flex-col mb-10">
-          <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+          <div class="font-light text-gray-500 sm:text-lg dark:text-white">
             <h2 class="text-3xl font-mabolistafont leading-8 text-gray-900">About Us</h2>
             <p class="leading-relaxed">
               Nama Mabolista sendiri diambil dari kata mabol yang sering digunakan orang-orang dalam
@@ -202,7 +202,7 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
     <div
       class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
     >
-      <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+      <div class="font-light text-gray-500 sm:text-lg dark:text-white">
         <h2 class="text-3xl font-mabolistafont leading-8 text-gray-900">Visi & Mission</h2>
         <p class="mb-4">
           "Menjadi pusat pertemuan yang menginspirasi, menyatukan, dan mempromosikan gaya hidup
@@ -231,7 +231,7 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
 
   <section class="text-gray-700 body-font border-t border-gray-200">
     <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-col text-center w-full mb-20">
+      <div class="flex flex-col text-center w-full mb-20 dark:text-white">
         <h2 class="text-center text-3xl font-mabolistafont leading-8 text-gray-900">Our Teams</h2>
         <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
           Pengelola dan Struktural Komunitas Mabolista Fc

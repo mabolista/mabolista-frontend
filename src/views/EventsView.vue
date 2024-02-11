@@ -26,14 +26,14 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
 
   <section class="bg-white dark:bg-gray-900 pt-20 px-8">
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-      <div class="mr-auto place-self-center lg:col-span-7">
+      <div class="mr-auto place-self-center lg:col-span-7 dark:text-white">
         <h1
           class="animate__animated animate__fadeInLeft animate__delay-1s max-w-2xl mb-4 text-4xl font-mabolistafont tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white"
         >
           More Events More Refreshments
         </h1>
         <p
-          class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400"
+          class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-white"
         >
           Ayoo gabung main fun football bersama Mabolista Fc dalam events internal fun match maupun
           sparing
@@ -83,7 +83,7 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
 
   <section class="bg-white dark:bg-gray-900 antialiased">
     <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
-      <div class="max-w-3xl mx-auto text-center">
+      <div class="max-w-3xl mx-auto text-center dark:text-white">
         <h2
           class="text-4xl font-mabolistafont leading-tight tracking-tight text-gray-900 dark:text-white"
         >
@@ -99,7 +99,7 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
         <div class="-my-4 divide-y divide-gray-200 dark:divide-gray-700">
           <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
             <p
-              class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0"
+              class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-white shrink-0"
             >
               15.30 - 18.00
             </p>
@@ -130,7 +130,7 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
 
           <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
             <p
-              class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0"
+              class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-white shrink-0"
             >
               00:00 - 00:00
             </p>
@@ -163,7 +163,7 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
 
           <div class="flex flex-col gap-2 py-4 sm:gap-6 sm:flex-row sm:items-center">
             <p
-              class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-gray-400 shrink-0"
+              class="w-32 text-lg font-normal text-gray-500 sm:text-right dark:text-white shrink-0"
             >
               00:00 - 00:00
             </p>

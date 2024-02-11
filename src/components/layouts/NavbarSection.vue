@@ -19,18 +19,19 @@ const mabolistaLogoNavbar = new URL('@/assets/img/mabolistafcNavbar.png', import
         >
           <div class="md:flex lg:flex mb-8 mt-8 font-mabolistafont text-lg [&>li]:pl-8">
             <li>
-              <a class="hover:text-yellow-300" href="/">Home</a>
+              <a class="hover:text-yellow-300 dark:text-white" href="/">Home</a>
             </li>
             <li>
-              <a class="hover:text-yellow-300" href="/about">About</a>
+              <a class="hover:text-yellow-300 dark:text-white" href="/about">About</a>
             </li>
             <li>
-              <a class="hover:text-yellow-300" href="/events">Events</a>
+              <a class="hover:text-yellow-300 dark:text-white" href="/events">Events</a>
             </li>
             <li>
-              <a class="hover:text-yellow-300" href="/contact">Contact</a>
+              <a class="hover:text-yellow-300 dark:text-white" href="/contact">Contact</a>
             </li>
           </div>
+
           <div v-if="isAuthenticated" class="py-2 lg:px-4">
             <img
               id="avatarButton"

@@ -3,9 +3,10 @@
     <div
       class="animate__animated animate__fadeIn animate__delay-1s mb-6 sm:mb-8 lg:mb-20 flex flex-col sm:flex-row items-center justify-between"
     >
-      <h1 class="font-sans font-bold text-xl sm:text-2xl lg:text-4xl mb-2 sm:mb-0">
+      <h1 class="font-sans font-bold text-xl sm:text-2xl lg:text-4xl mb-2 sm:mb-0 text-white">
         Upcoming Events
       </h1>
+
       <a href="#" class="text-base sm:text-xl text-yellow-400 hover:underline">Selengkapnya...</a>
     </div>
 

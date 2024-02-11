@@ -12,10 +12,10 @@ const dmSportLogin = new URL('@/assets/img/dmsport.jpg', import.meta.url).href
 
   <section class="relative flex flex-wrap lg:h-screen lg:items-center">
     <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
-      <div class="mx-auto max-w-lg text-center">
+      <div class="mx-auto max-w-lg text-center dark:text-white dark:bg-gray-800">
         <h1 class="text-2xl font-bold sm:text-3xl">Ayoo jadi bagian dari kita!</h1>
 
-        <p class="mt-4 text-gray-500">
+        <p class="mt-4 text-gray-500 dark:text-gray-400">
           Mabolista Fc merupakan komunitas sepak bola yang terbuka untuk umum dan memiliki banyak
           benefits unik
         </p>
