@@ -23,7 +23,9 @@ const championsFutsal = new URL('@/assets/img/futsal/championsfutsal.png', impor
 
 <template>
   <NavbarSection />
-  <div class="container mx-auto text-center mt-32 py-8 my-10 w-96 lg:w-homebasesecond">
+  <div
+    class="container mx-auto text-center mt-32 py-8 my-10 w-96 lg:w-homebasesecond dark:text-white"
+  >
     <h1 class="font-bold text-4xl mb-4">
       Our <span class="font-bold text-4xl text-yellow-600">HomeBase</span>
     </h1>
@@ -33,7 +35,7 @@ const championsFutsal = new URL('@/assets/img/futsal/championsfutsal.png', impor
     </p>
   </div>
 
-  <div style="background-color: rgba(0, 0, 0, 0)">
+  <div class="dark:bg-gray-800">
     <div class="container max-w-7xl mx-auto px-4" style="cursor: auto">
       <div class="flex justify-between mb-4 px-8">
         <p class="font-bold text-xl">
