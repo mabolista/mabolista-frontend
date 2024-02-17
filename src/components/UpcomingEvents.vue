@@ -3,7 +3,9 @@
     <div
       class="animate__animated animate__fadeIn animate__delay-1s mb-6 sm:mb-8 lg:mb-20 flex flex-col sm:flex-row items-center justify-between"
     >
-      <h1 class="font-sans font-bold text-xl sm:text-2xl lg:text-4xl mb-2 sm:mb-0 text-white">
+      <h1
+        class="font-sans font-bold text-xl sm:text-2xl lg:text-4xl mb-2 sm:mb-0 text-black dark:text-white"
+      >
         Upcoming Events
       </h1>
 

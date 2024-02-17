@@ -195,7 +195,11 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
                   </p>
                 </div>
               </div>
-              <div data-aos="zoom-in" data-aos-offset="200" class="relative flex flex-col min-w-0">
+              <div
+                data-aos="zoom-in"
+                data-aos-offset="200"
+                class="relative flex flex-col min-w-0 mt-4"
+              >
                 <div class="px-4 py-5 flex-auto bg-gray-700 rounded-lg shadow-lg">
                   <div
                     class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-gray-900"
@@ -252,7 +256,11 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
                   </p>
                 </div>
               </div>
-              <div data-aos="zoom-in" data-aos-offset="300" class="relative flex flex-col min-w-0">
+              <div
+                data-aos="zoom-in"
+                data-aos-offset="300"
+                class="relative flex flex-col min-w-0 mt-4"
+              >
                 <div class="px-4 py-5 flex-auto bg-gray-700 rounded-lg shadow-lg">
                   <div
                     class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-gray-900"
@@ -297,8 +305,10 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
   </div>
 
   <div class="items-center flex flex-col">
-    <div data-aos="zoom-in-up" data-aos-offset="300" class="md:flex lg:flex mx-40 mt-16">
-      <div class="mx-auto flex flex-col w-96 mb-10 bg-white dark:bg-gray-800 shadow-md rounded-xl">
+    <div data-aos="fade-up" data-aos-offset="300" class="md:flex lg:flex mx-40 mt-16 gap-8">
+      <div
+        class="mx-auto flex flex-col h-72 w-96 mb-10 bg-white dark:bg-gray-800 shadow-md rounded-xl"
+      >
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
           <img :src="nytcSawangan" alt="NYTC Sawangan" class="rounded-xl" />
         </div>
@@ -307,8 +317,7 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
             NYTC Sawangan (Depok)
           </div>
           <p class="text-gray-700 dark:text-gray-300 text-base">
-            Jl. Gg. Rotan Pelita Jaya Blok Masjid Nurul Iman No.61, RT.3/RW.6, Bojongsari Baru, Kec.
-            Bojongsari, Kota Depok, Jawa Barat 16516
+            Jl. Gg. Rotan Pelita Jaya Bojongsari Baru, Kec. Bojongsari, Kota Depok, Jawa Barat 16516
           </p>
         </div>
       </div>
