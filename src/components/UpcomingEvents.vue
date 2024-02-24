@@ -37,7 +37,7 @@
       >
         <swiper-slide v-for="event in events" :key="event.id">
           <div
-            class="text-left max-w-sm sm:max-w-md lg:max-w-lg bg-white border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+            class="text-left max-w-sm sm:max-w-md lg:max-w-lg bg-white border-gray-200 rounded-lg shadow dark:bg-gray-500 dark:border-gray-700"
           >
             <router-link :to="{ name: 'EventsDetails', params: { id: event.id } }">
               <img class="rounded-t-lg w-full" :src="event.imageUrl" alt="" />

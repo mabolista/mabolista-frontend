@@ -165,7 +165,7 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
           <div class="flex flex-wrap">
             <div class="w-full md:w-6/12 px-4">
               <div data-aos="zoom-in" data-aos-offset="200" class="relative flex flex-col mt-4">
-                <div class="px-4 py-5 flex-auto bg-gray-700 rounded-lg shadow-lg">
+                <div class="px-4 py-5 flex-auto bg-gray-200 rounded-lg shadow-lg">
                   <div
                     class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-gray-900"
                   >
@@ -189,8 +189,8 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
                       />
                     </svg>
                   </div>
-                  <h6 class="text-xl mb-1 font-semibold text-white">Fotographer</h6>
-                  <p class="mb-4 text-gray-300">
+                  <h6 class="text-xl mb-1 font-semibold text-black dark:text-white">Fotographer</h6>
+                  <p class="mb-4 text-black dark:text-white">
                     Moment moment keren kamu pas main bola bakal diabadikan langsung.
                   </p>
                 </div>
@@ -200,7 +200,7 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
                 data-aos-offset="200"
                 class="relative flex flex-col min-w-0 mt-4"
               >
-                <div class="px-4 py-5 flex-auto bg-gray-700 rounded-lg shadow-lg">
+                <div class="px-4 py-5 flex-auto bg-gray-200 rounded-lg shadow-lg">
                   <div
                     class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-gray-900"
                   >
@@ -218,8 +218,10 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
                       />
                     </svg>
                   </div>
-                  <h6 class="text-xl mb-1 font-semibold text-white">Videographer</h6>
-                  <p class="mb-4 text-gray-300">
+                  <h6 class="text-xl mb-1 font-semibold text-black dark:text-white">
+                    Videographer
+                  </h6>
+                  <p class="mb-4 text-black dark:text-white">
                     Bukan cuma difoto, Moment kamu juga bakal direkam langsung.
                   </p>
                 </div>
@@ -231,7 +233,7 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
                 data-aos-offset="300"
                 class="relative flex flex-col min-w-0 mt-4"
               >
-                <div class="px-4 py-5 flex-auto bg-gray-700 rounded-lg shadow-lg">
+                <div class="px-4 py-5 flex-auto bg-gray-200 rounded-lg shadow-lg">
                   <div
                     class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-gray-900"
                   >
@@ -250,8 +252,10 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
                       />
                     </svg>
                   </div>
-                  <h6 class="text-xl mb-1 font-semibold text-white">Jersey Inventaris</h6>
-                  <p class="mb-4 text-gray-300">
+                  <h6 class="text-xl mb-1 font-semibold text-black dark:text-white">
+                    Jersey Inventaris
+                  </h6>
+                  <p class="mb-4 text-black dark:text-white">
                     Main bola tinggal bawa sepatu aja, Baju nya udah disediain pokoknyaa
                   </p>
                 </div>
@@ -261,7 +265,7 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
                 data-aos-offset="300"
                 class="relative flex flex-col min-w-0 mt-4"
               >
-                <div class="px-4 py-5 flex-auto bg-gray-700 rounded-lg shadow-lg">
+                <div class="px-4 py-5 flex-auto bg-gray-200 rounded-lg shadow-lg">
                   <div
                     class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-gray-900"
                   >
@@ -280,8 +284,10 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
                       />
                     </svg>
                   </div>
-                  <h6 class="text-xl mb-1 font-semibold text-white">Mineral Water</h6>
-                  <p class="mb-4 text-gray-300">
+                  <h6 class="text-xl mb-1 font-semibold text-black dark:text-white">
+                    Mineral Water
+                  </h6>
+                  <p class="mb-4 text-black dark:text-white">
                     Kalo haus gaperlu cari warung buat beli air, Disini udah ada tinggal minum aja
                   </p>
                 </div>
@@ -296,7 +302,7 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
   <!-- ---------- Home Base ----------  -->
   <div
     data-aos="fade-up"
-    class="flex flex-wrap w-full mb-5 mt-20 flex-col items-center text-center text-white"
+    class="flex flex-wrap w-full mb-5 mt-20 flex-col items-center text-center text-black dark:text-white"
   >
     <h1 class="font-sans font-bold text-2xl text-center sm:text-4xl mb-2 sm:mb-0">HomeBase</h1>
     <p class="lg:w-1/2 w-full leading-relaxed text-base">
@@ -306,9 +312,7 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
 
   <div class="items-center flex flex-col">
     <div data-aos="fade-up" data-aos-offset="300" class="md:flex lg:flex mx-40 mt-16 gap-8">
-      <div
-        class="mx-auto flex flex-col h-72 w-96 mb-10 bg-white dark:bg-gray-800 shadow-md rounded-xl"
-      >
+      <div class="mx-auto flex flex-col w-96 mb-10 bg-white dark:bg-gray-900 shadow-md rounded-xl">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
           <img :src="nytcSawangan" alt="NYTC Sawangan" class="rounded-xl" />
         </div>
@@ -316,7 +320,7 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
           <div class="font-bold text-xl mb-2 text-gray-800 dark:text-white">
             NYTC Sawangan (Depok)
           </div>
-          <p class="text-gray-700 dark:text-gray-300 text-base">
+          <p class="mb-6 text-gray-700 dark:text-gray-300 text-base">
             Jl. Gg. Rotan Pelita Jaya Bojongsari Baru, Kec. Bojongsari, Kota Depok, Jawa Barat 16516
           </p>
         </div>
@@ -324,7 +328,7 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
 
       <!-- Similar adjustments for other cards -->
 
-      <div class="mx-auto flex flex-col w-96 mb-10 bg-white dark:bg-gray-800 shadow-md rounded-xl">
+      <div class="mx-auto flex flex-col w-96 mb-10 bg-white dark:bg-gray-900 shadow-md rounded-xl">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
           <img :src="dmSport" alt="DM Sport" class="rounded-xl" />
         </div>
@@ -332,7 +336,7 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
           <div class="font-bold text-xl mb-2 text-gray-800 dark:text-white">
             DM Sport (Tangerang)
           </div>
-          <p class="text-gray-700 dark:text-gray-300 text-base">
+          <p class="mb-6 text-gray-700 dark:text-gray-300 text-base">
             Jl. Raden Patah No.88A, Parung Serab, Kec. Ciledug, Kota Tangerang, Banten 15153
           </p>
         </div>
@@ -340,7 +344,7 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
 
       <!-- Similar adjustments for other cards -->
 
-      <div class="mx-auto flex flex-col w-96 mb-10 bg-white dark:bg-gray-800 shadow-md rounded-xl">
+      <div class="mx-auto flex flex-col w-96 mb-10 bg-white dark:bg-gray-900 shadow-md rounded-xl">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
           <img :src="bigHam" alt="Big Ham Stadium" class="rounded-xl" />
         </div>
@@ -348,19 +352,19 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
           <div class="font-bold text-xl mb-2 text-gray-800 dark:text-white">
             Big Ham Stadium (Depok)
           </div>
-          <p class="text-gray-700 dark:text-gray-300 text-base">
+          <p class="mb-6 text-gray-700 dark:text-gray-300 text-base">
             Jl. Yayasan No.RT.006/01, Grogol, Kec. Limo, Kota Depok, Jawa Barat 16512
           </p>
         </div>
       </div>
     </div>
     <div class="text-center">
-      <router-link
-        to="/homebase"
+      <a
+        href="/homebase"
         class="bg-transparent hover:bg-indigo-500 text-indigo-600 font-semibold hover:text-white dark:text-gray-300 dark:hover:text-gray-800 py-2 px-4 border border-blue-500 hover:border-transparent rounded-full"
       >
         More HomeBase
-      </router-link>
+      </a>
     </div>
   </div>
 

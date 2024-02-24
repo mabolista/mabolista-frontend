@@ -13,7 +13,7 @@ import 'aos/dist/aos.css'
 import 'sweetalert2/dist/sweetalert2.min.css'
 
 const token = localStorage.getItem('token')
-axios.defaults.baseURL = 'http://localhost:8080/'
+axios.defaults.baseURL = 'https://staging-mabolista.vercel.app/api/'
 axios.defaults.headers.common = { Authorization: `bearer ${token}` }
 
 AOS.init()
