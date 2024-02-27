@@ -6,7 +6,7 @@ import NavbarSection from '@/components/layouts/NavbarSection.vue'
 <template>
   <NavbarSection />
 
-  <section class="bg-white dark:bg-gray-900 pt-24">
+  <section class="pt-24">
     <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
       <h2
         class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white"
@@ -63,7 +63,7 @@ import NavbarSection from '@/components/layouts/NavbarSection.vue'
         <button
           type="submit"
           value="send"
-          class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-slate-700 sm:w-fit hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 dark:bg-slate-600 dark:hover:bg-slate-700 dark:focus:ring-slate-800"
+          class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-slate-700 sm:w-fit hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-slate-300 dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800"
         >
           Send message
         </button>

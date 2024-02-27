@@ -21,7 +21,7 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
     <div class="card__precis">
       <div class="card__price gap-4">
         <div>
-          <span class="card__preci card__preci--now mb-4">Rp.175.000</span>
+          <span class="card__preci card__preci--now mb-4 text-black">Rp.175.000</span>
           <a
             href="#"
             class="text-white bg-black hover:bg-slate-700 focus:ring-4 focus:ring-slate-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-slate-600 dark:hover:bg-slate-700 focus:outline-none dark:focus:ring-slate-800"
@@ -34,7 +34,7 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
   <main class="main bd-grid">
     <carousel v-bind="settings" :breakpoints="breakpoints" :items-to-show="1" :wrap-around="true">
       <slide v-for="slide in 1" :key="slide">
-        <article class="card">
+        <article class="card bg-white">
           <div class="card__img">
             <img :src="jersey3rd" alt="jersey3rd" />
           </div>
@@ -49,8 +49,8 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
                 /></svg
             ></a>
             <div>
-              <span class="card__preci card__preci--before"><s>Rp.205.000</s></span>
-              <span class="card__preci card__preci--now">Rp.175.000</span>
+              <span class="card__preci card__preci--before text-black"><s>Rp.205.000</s></span>
+              <span class="card__preci card__preci--now text-black">Rp.175.000</span>
             </div>
             <a href="" class="card__icon"
               ><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
@@ -63,7 +63,7 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
       </slide>
 
       <slide v-for="slide in 1" :key="slide">
-        <article class="card">
+        <article class="card bg-white">
           <div class="card__img">
             <img :src="jersey2nd" alt="jersey2nd" />
           </div>
@@ -78,8 +78,8 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
                 /></svg
             ></a>
             <div>
-              <span class="card__preci card__preci--before"><s>Rp.205.000</s></span>
-              <span class="card__preci card__preci--now">Rp.175.000</span>
+              <span class="card__preci card__preci--before text-black"><s>Rp.205.000</s></span>
+              <span class="card__preci card__preci--now text-black">Rp.175.000</span>
             </div>
             <a href="" class="card__icon"
               ><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
@@ -92,7 +92,7 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
       </slide>
 
       <slide v-for="slide in 1" :key="slide">
-        <article class="card">
+        <article class="card bg-white">
           <div class="card__img">
             <img :src="jersey4th" alt="jersey4th" />
           </div>
@@ -107,8 +107,8 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
                 /></svg
             ></a>
             <div>
-              <span class="card__preci card__preci--before"><s>Rp.205.000</s></span>
-              <span class="card__preci card__preci--now">Rp.175.000</span>
+              <span class="card__preci card__preci--before text-black"><s>Rp.205.000</s></span>
+              <span class="card__preci card__preci--now text-black">Rp.175.000</span>
             </div>
             <a href="" class="card__icon"
               ><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
@@ -121,7 +121,7 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
       </slide>
 
       <slide v-for="slide in 1" :key="slide">
-        <article class="card">
+        <article class="card bg-white">
           <div class="card__img">
             <img :src="jerseykiper1st" alt="jerseykiper1st" />
           </div>
@@ -136,8 +136,8 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
                 /></svg
             ></a>
             <div>
-              <span class="card__preci card__preci--before"><s>Rp.205.000</s></span>
-              <span class="card__preci card__preci--now">Rp.175.000</span>
+              <span class="card__preci card__preci--before text-black"><s>Rp.205.000</s></span>
+              <span class="card__preci card__preci--now text-black">Rp.175.000</span>
             </div>
             <a href="" class="card__icon"
               ><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
@@ -150,7 +150,7 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
       </slide>
 
       <slide v-for="slide in 1" :key="slide">
-        <article class="card">
+        <article class="card bg-white">
           <div class="card__img">
             <img :src="jerseykiper2nd" alt="jerseykiper2nd" />
           </div>
@@ -165,8 +165,8 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
                 /></svg
             ></a>
             <div>
-              <span class="card__preci card__preci--before"><s>Rp.205.000</s></span>
-              <span class="card__preci card__preci--now">Rp.175.000</span>
+              <span class="card__preci card__preci--before text-black"><s>Rp.205.000</s></span>
+              <span class="card__preci card__preci--now text-black">Rp.175.000</span>
             </div>
             <a href="" class="card__icon"
               ><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
@@ -179,7 +179,7 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
       </slide>
 
       <slide v-for="slide in 1" :key="slide">
-        <article class="card">
+        <article class="card bg-white">
           <div class="card__img">
             <img :src="jerseykiper3rd" alt="jerseykiper3rd" />
           </div>
@@ -194,8 +194,8 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
                 /></svg
             ></a>
             <div>
-              <span class="card__preci card__preci--before"><s>Rp.205.000</s></span>
-              <span class="card__preci card__preci--now">Rp.175.000</span>
+              <span class="card__preci card__preci--before text-black"><s>Rp.205.000</s></span>
+              <span class="card__preci card__preci--now text-black">Rp.175.000</span>
             </div>
             <a href="" class="card__icon"
               ><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
@@ -208,7 +208,7 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
       </slide>
 
       <slide v-for="slide in 1" :key="slide">
-        <article class="card">
+        <article class="card bg-white">
           <div class="card__img">
             <img :src="jerseykiper4th" alt="jerseykiper4th" />
           </div>
@@ -223,8 +223,8 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
                 /></svg
             ></a>
             <div>
-              <span class="card__preci card__preci--before"><s>Rp.205.000</s></span>
-              <span class="card__preci card__preci--now">Rp.175.000</span>
+              <span class="card__preci card__preci--before text-black"><s>Rp.205.000</s></span>
+              <span class="card__preci card__preci--now text-black">Rp.175.000</span>
             </div>
             <a href="" class="card__icon"
               ><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
@@ -406,7 +406,6 @@ a {
   border-radius: 1rem;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 0rem 2rem #e5e9ef;
 }
 
 .card__img {

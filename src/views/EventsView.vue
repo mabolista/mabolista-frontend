@@ -24,7 +24,7 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
 <template>
   <NavbarSection />
 
-  <section class="bg-white dark:bg-gray-900 pt-20 px-8">
+  <section class="pt-20 px-8">
     <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
       <div class="mr-auto place-self-center lg:col-span-7 dark:text-white">
         <h1
@@ -41,7 +41,7 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
         <div class="connect">
           <a
             href="#"
-            class="inline-flex items-center justify-center py-3 mr-3 text-base font-bold text-center text-black rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+            class="inline-flex items-center justify-center py-3 mr-3 text-base font-bold text-center text-black dark:text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
           >
             Connect with us
             <svg
@@ -81,7 +81,7 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
 
   <MabolistaJerseys />
 
-  <section class="bg-white dark:bg-gray-900 antialiased">
+  <section class="antialiased">
     <div class="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16 lg:py-24">
       <div class="max-w-3xl mx-auto text-center dark:text-white">
         <h2
@@ -201,7 +201,9 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
   <section class="text-gray-600 body-font overflow-hidden">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
-        <h1 class="sm:text-4xl text-3xl font-mabolistafont title-font mb-2 text-gray-900">
+        <h1
+          class="sm:text-4xl text-3xl font-mabolistafont title-font mb-2 text-black dark:text-white"
+        >
           Resources
         </h1>
         <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">
@@ -214,7 +216,9 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
             class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden"
           >
             <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Foto Moments</h2>
-            <h1 class="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none">
+            <h1
+              class="text-5xl text-black dark:text-white pb-4 mb-4 border-b border-gray-200 leading-none"
+            >
               2022
             </h1>
             <p class="flex items-center text-gray-600 mb-2">
@@ -394,7 +398,9 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
             class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden"
           >
             <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Foto Moments</h2>
-            <h1 class="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none">
+            <h1
+              class="text-5xl text-black dark:text-white pb-4 mb-4 border-b border-gray-200 leading-none"
+            >
               2023
             </h1>
             <p class="flex items-center text-gray-600 mb-2">
@@ -676,7 +682,9 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
             class="h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden"
           >
             <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Video Moments</h2>
-            <h1 class="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none">
+            <h1
+              class="text-5xl text-black dark:text-white pb-4 mb-4 border-b border-gray-200 leading-none"
+            >
               2023
             </h1>
             <p class="flex items-center text-gray-600 mb-2">
@@ -858,7 +866,11 @@ const galleryNineteen = new URL('@/assets/img/gallery/Gallery20.jpg', import.met
   <!-- Section: Gallery -->
   <div class="container mx-auto px-4">
     <div class="flex flex-col text-center w-full mb-15">
-      <h1 class="sm:text-4xl text-3xl font-mabolistafont title-font mb-2 text-gray-900">Gallery</h1>
+      <h1
+        class="sm:text-4xl text-3xl font-mabolistafont title-font mb-2 text-black dark:text-white"
+      >
+        Gallery
+      </h1>
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">
         Foto Events Internal Fun Match Mabolista Fc
       </p>

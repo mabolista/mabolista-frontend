@@ -119,12 +119,12 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
       >
         Become part of us
       </h1>
-      <router-link
-        to="/events"
+      <a
+        href="/events"
         class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
       >
         Join events
-      </router-link>
+      </a>
     </div>
   </section>
 
@@ -189,8 +189,8 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
                       />
                     </svg>
                   </div>
-                  <h6 class="text-xl mb-1 font-semibold text-black dark:text-white">Fotographer</h6>
-                  <p class="mb-4 text-black dark:text-white">
+                  <h6 class="text-xl mb-1 font-semibold text-black dark:text-black">Fotographer</h6>
+                  <p class="mb-4 text-black dark:text-black">
                     Moment moment keren kamu pas main bola bakal diabadikan langsung.
                   </p>
                 </div>
@@ -218,10 +218,10 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
                       />
                     </svg>
                   </div>
-                  <h6 class="text-xl mb-1 font-semibold text-black dark:text-white">
+                  <h6 class="text-xl mb-1 font-semibold text-black dark:text-black">
                     Videographer
                   </h6>
-                  <p class="mb-4 text-black dark:text-white">
+                  <p class="mb-4 text-black dark:text-black">
                     Bukan cuma difoto, Moment kamu juga bakal direkam langsung.
                   </p>
                 </div>
@@ -252,10 +252,10 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
                       />
                     </svg>
                   </div>
-                  <h6 class="text-xl mb-1 font-semibold text-black dark:text-white">
+                  <h6 class="text-xl mb-1 font-semibold text-black dark:text-black">
                     Jersey Inventaris
                   </h6>
-                  <p class="mb-4 text-black dark:text-white">
+                  <p class="mb-4 text-black dark:text-black">
                     Main bola tinggal bawa sepatu aja, Baju nya udah disediain pokoknyaa
                   </p>
                 </div>
@@ -284,10 +284,10 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
                       />
                     </svg>
                   </div>
-                  <h6 class="text-xl mb-1 font-semibold text-black dark:text-white">
+                  <h6 class="text-xl mb-1 font-semibold text-black dark:text-black">
                     Mineral Water
                   </h6>
-                  <p class="mb-4 text-black dark:text-white">
+                  <p class="mb-4 text-black dark:text-black">
                     Kalo haus gaperlu cari warung buat beli air, Disini udah ada tinggal minum aja
                   </p>
                 </div>
@@ -312,15 +312,15 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
 
   <div class="items-center flex flex-col">
     <div data-aos="fade-up" data-aos-offset="300" class="md:flex lg:flex mx-40 mt-16 gap-8">
-      <div class="mx-auto flex flex-col w-96 mb-10 bg-white dark:bg-gray-900 shadow-md rounded-xl">
+      <div class="mx-auto flex flex-col w-96 mb-10 bg-white dark:bg-white shadow-md rounded-xl">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
           <img :src="nytcSawangan" alt="NYTC Sawangan" class="rounded-xl" />
         </div>
         <div class="px-4">
-          <div class="font-bold text-xl mb-2 text-gray-800 dark:text-white">
+          <div class="font-bold text-xl mb-2 text-gray-800 dark:text-black">
             NYTC Sawangan (Depok)
           </div>
-          <p class="mb-6 text-gray-700 dark:text-gray-300 text-base">
+          <p class="mb-6 text-gray-700 dark:text-black text-base">
             Jl. Gg. Rotan Pelita Jaya Bojongsari Baru, Kec. Bojongsari, Kota Depok, Jawa Barat 16516
           </p>
         </div>
@@ -328,15 +328,15 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
 
       <!-- Similar adjustments for other cards -->
 
-      <div class="mx-auto flex flex-col w-96 mb-10 bg-white dark:bg-gray-900 shadow-md rounded-xl">
+      <div class="mx-auto flex flex-col w-96 mb-10 bg-white dark:bg-white shadow-md rounded-xl">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
           <img :src="dmSport" alt="DM Sport" class="rounded-xl" />
         </div>
         <div class="px-4">
-          <div class="font-bold text-xl mb-2 text-gray-800 dark:text-white">
+          <div class="font-bold text-xl mb-2 text-gray-800 dark:text-black">
             DM Sport (Tangerang)
           </div>
-          <p class="mb-6 text-gray-700 dark:text-gray-300 text-base">
+          <p class="mb-6 text-gray-700 dark:text-black text-base">
             Jl. Raden Patah No.88A, Parung Serab, Kec. Ciledug, Kota Tangerang, Banten 15153
           </p>
         </div>
@@ -344,15 +344,15 @@ const panguripanPutih = new URL('@/assets/img/PanguripanPutih.png', import.meta.
 
       <!-- Similar adjustments for other cards -->
 
-      <div class="mx-auto flex flex-col w-96 mb-10 bg-white dark:bg-gray-900 shadow-md rounded-xl">
+      <div class="mx-auto flex flex-col w-96 mb-10 bg-white dark:bg-white shadow-md rounded-xl">
         <div class="h-56 mx-4 -mt-6 overflow-hidden">
           <img :src="bigHam" alt="Big Ham Stadium" class="rounded-xl" />
         </div>
         <div class="px-4">
-          <div class="font-bold text-xl mb-2 text-gray-800 dark:text-white">
+          <div class="font-bold text-xl mb-2 text-gray-800 dark:text-black">
             Big Ham Stadium (Depok)
           </div>
-          <p class="mb-6 text-gray-700 dark:text-gray-300 text-base">
+          <p class="mb-6 text-gray-700 dark:text-black text-base">
             Jl. Yayasan No.RT.006/01, Grogol, Kec. Limo, Kota Depok, Jawa Barat 16512
           </p>
         </div>
