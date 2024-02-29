@@ -35,7 +35,7 @@ const championsFutsal = new URL('@/assets/img/futsal/championsfutsal.png', impor
     </p>
   </div>
 
-  <div class="dark:bg-gray-800">
+  <div>
     <div class="container max-w-7xl mx-auto px-4" style="cursor: auto">
       <div class="flex justify-between mb-4 px-8">
         <p class="font-bold text-xl">
@@ -247,11 +247,11 @@ const championsFutsal = new URL('@/assets/img/futsal/championsfutsal.png', impor
     <div class="container max-w-7xl mx-auto px-4" style="cursor: auto">
       <div class="flex flex-wrap">
         <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-          <div class="px-6">
+          <div class="px-6 w-full">
             <img
               alt="Triboon Mini Soccer"
               :src="triboon"
-              class="rounded-xl shadow-lg max-w-full h-56 align-middle border-none undefined"
+              class="rounded-xl shadow-lg w-full h-56 align-middle border-none undefined"
             />
             <div class="pt-6 text-center">
               <h1 class="text-xl font-bold leading-normal mt-0 mb-2">Triboon Mini Soccer</h1>
