@@ -12,7 +12,7 @@ const dmSportLogin = new URL('@/assets/img/dmsport.jpg', import.meta.url).href
 
   <section class="relative flex flex-wrap lg:h-screen lg:items-center">
     <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
-      <div class="mx-auto max-w-lg text-center dark:text-white dark:bg-gray-800">
+      <div class="mx-auto max-w-lg text-center dark:text-white">
         <h1 class="text-2xl font-bold sm:text-3xl">Ayoo jadi bagian dari kita!</h1>
 
         <p class="mt-4 text-gray-500 dark:text-gray-400">
@@ -34,7 +34,9 @@ const dmSportLogin = new URL('@/assets/img/dmsport.jpg', import.meta.url).href
               type="email"
               id="email"
               v-model="email"
-              class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm focus:ring-black"
+              :class="{ 'border-red-500': emailError }"
+              @input="validateEmail"
+              class="w-full text-black rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm focus:ring-black"
               placeholder="Enter email"
               required
             />
@@ -42,7 +44,7 @@ const dmSportLogin = new URL('@/assets/img/dmsport.jpg', import.meta.url).href
             <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 text-gray-400"
+                class="h-4 w-4 text-black"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -56,6 +58,9 @@ const dmSportLogin = new URL('@/assets/img/dmsport.jpg', import.meta.url).href
               </svg>
             </span>
           </div>
+          <p v-if="emailError" class="text-red-500 text-xs italic">
+            Please enter a valid email address.
+          </p>
         </div>
 
         <div>
@@ -66,7 +71,9 @@ const dmSportLogin = new URL('@/assets/img/dmsport.jpg', import.meta.url).href
               type="password"
               id="password"
               v-model="password"
-              class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm focus:ring-black"
+              :class="{ 'border-red-500': passwordError }"
+              @input="validatePassword"
+              class="w-full text-black rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm focus:ring-black"
               placeholder="Enter password"
               required
             />
@@ -78,7 +85,7 @@ const dmSportLogin = new URL('@/assets/img/dmsport.jpg', import.meta.url).href
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-4 w-4 text-gray-400"
+                class="h-4 w-4 text-black"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -98,6 +105,10 @@ const dmSportLogin = new URL('@/assets/img/dmsport.jpg', import.meta.url).href
               </svg>
             </span>
           </div>
+          <p v-if="passwordError" class="text-red-500 text-xs italic">
+            Password must be at least 6 characters.
+          </p>
+          <div v-if="errorMessage" class="text-red-500">{{ errorMessage }}</div>
         </div>
 
         <div class="flex items-center justify-between">
@@ -109,6 +120,7 @@ const dmSportLogin = new URL('@/assets/img/dmsport.jpg', import.meta.url).href
           <button
             @click="loginpreloader"
             type="submit"
+            :disabled="emailError || passwordError"
             class="inline-block rounded-lg bg-yellow-500 px-5 py-3 text-sm font-medium text-white"
           >
             Login
@@ -131,6 +143,8 @@ export default {
     return {
       email: '',
       password: '',
+      emailError: false,
+      passwordError: false,
       loading: false,
       authenticated: false
     }
@@ -163,8 +177,24 @@ export default {
         this.authenticated = true
       }
     },
+    validateEmail() {
+      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email)) {
+        this.msg['email'] = 'Please enter a valid email address'
+      } else {
+        this.msg['email'] = ''
+      }
+    },
+    validatePassword() {
+      // Password validation logic
+      this.passwordError = this.password.length < 6
+    },
     loginpreloader() {
-      this.loading = true
+      // Check if both email and password fields have values
+      if (this.email && this.password) {
+        this.loading = true // Set loading to true if both fields are filled
+      } else {
+        this.errorMessage = 'Please fill in both email and password fields.'
+      }
     },
     showPassword() {
       var x = document.getElementById('password')
