@@ -181,7 +181,7 @@ export default {
         })
         .catch((error) => {
           alert('Gagal Daftar, Periksa Kembali', error)
-          window.location.reload()
+          // window.location.reload()
         })
     },
     onFileChange(e) {

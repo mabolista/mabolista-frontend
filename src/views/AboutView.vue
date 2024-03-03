@@ -10,9 +10,9 @@ const visiMisi = new URL('@/assets/img/visimisi.jpg', import.meta.url).href
 const visiMisi2 = new URL('@/assets/img/visimisi2.jpg', import.meta.url).href
 const visiMisi3 = new URL('@/assets/img/visimisi3.jpg', import.meta.url).href
 const visiMisi4 = new URL('@/assets/img/visimisi4.jpg', import.meta.url).href
-const rezaKetua = new URL('@/assets/img/rezateams.jpg', import.meta.url).href
-const azraWakil = new URL('@/assets/img/azrateams.jpg', import.meta.url).href
-const dendyContent = new URL('@/assets/img/dendyteams.jpg', import.meta.url).href
+const rezaTeams = new URL('@/assets/img/rezateams.jpg', import.meta.url).href
+const azraTeams = new URL('@/assets/img/azrateams.jpg', import.meta.url).href
+const dendyTeams = new URL('@/assets/img/dendyteams.jpg', import.meta.url).href
 const hilalTeams = new URL('@/assets/img/hilalteams.jpg', import.meta.url).href
 const ilhamTeams = new URL('@/assets/img/ilhamteams.jpg', import.meta.url).href
 const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
@@ -252,7 +252,7 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-              :src="rezaKetua"
+              :src="rezaTeams"
             />
             <div class="flex-grow">
               <h2 class="text-gray-900 dark:text-white title-font font-medium">Reza (Captain)</h2>
@@ -268,7 +268,7 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-              :src="azraWakil"
+              :src="azraTeams"
             />
             <div class="flex-grow">
               <h2 class="text-gray-900 dark:text-white title-font font-medium">Azra</h2>
@@ -284,7 +284,7 @@ const nytcAbout = new URL('@/assets/img/NYTC-about.jpg', import.meta.url).href
             <img
               alt="team"
               class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-              :src="dendyContent"
+              :src="dendyTeams"
             />
             <div class="flex-grow">
               <h2 class="text-gray-900 dark:text-white title-font font-medium">Dendy</h2>
