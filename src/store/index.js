@@ -1,60 +1,65 @@
-import { createStore } from 'vuex';
-import axios from 'axios';
+import { createStore } from 'vuex'
+import axios from 'axios'
 import router from '/src/router'
 
 export default createStore({
   state: {
     token: null,
-    user: null,
+    user: null
   },
   mutations: {
     setToken(state, token) {
-      state.token = token;
+      state.token = token
     },
     setUser(state, user) {
-      state.user = user;
-    },
+      state.user = user
+    }
   },
   actions: {
     async login({ commit }, credentials) {
-        try {
-          const response = await axios.post('http://localhost:8080/login', credentials);
-          const { token, user } = response.data;
-    
-          commit('setToken', token);
-          commit('setUser', user);
-    
-          localStorage.setItem('token', token);
-          this.$router.push({ name: 'homeauth' });
+      try {
+        const response = await axios.post(
+          'https://staging-mabolista.vercel.app/api/login',
+          credentials
+        )
+        const { token, user } = response.data
 
-        } catch (error) {
-          console.error('Login failed:', error);
-        }
-      },
+        commit('setToken', token)
+        commit('setUser', user)
 
-      logout({ commit }) {
-        commit('setToken', null);
-        commit('setUser', null);
+        localStorage.setItem('token', token)
+        this.$router.push({ name: 'homeauth' })
+      } catch (error) {
+        console.error('Login failed:', error)
+      }
+    },
 
-        localStorage.removeItem('token');
+    logout({ commit }) {
+      commit('setToken', null)
+      commit('setUser', null)
 
-        router.push('/login');
-      },
+      localStorage.removeItem('token')
 
-      async register({ commit }, userData) {
-        try {
-          const response = await axios.post('http://localhost:8080/register', userData);
-          const { token, user } = response.data;
-    
-          commit('setToken', token);
-          commit('setUser', user);
-    
-          localStorage.setItem('token', token);
-    
-          router.push('/login');
-        } catch (error) {
-          console.error('Registration failed:', error);
-        }
-      },
-  },
-});
+      router.push('/login')
+    },
+
+    async register({ commit }, userData) {
+      try {
+        const response = await axios.post(
+          'https://staging-mabolista.vercel.app/api/register',
+          userData
+        )
+        const { token, user } = response.data
+
+        commit('setToken', token)
+        commit('setUser', user)
+
+        localStorage.setItem('token', token)
+
+        router.push('/login')
+      } catch (error) {
+        console.error('Registration failed:', error)
+      }
+    }
+  }
+})

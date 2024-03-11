@@ -52,8 +52,8 @@ const mabolistaLogoNavbar = new URL('@/assets/img/mabolistafcNavbar.png', import
                 <div class="font-medium truncate">{{ users.email }}</div>
               </div>
               <router-link
-                :to="{ name: 'profile', params: { id: id } }"
-                class="block px-4 py-2 text-sm text-black font-serif hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                :to="{ name: 'profile' }"
+                class="block px-4 py-2 text-sm text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                 >View Profile</router-link
               >
               <div class="py-1">
@@ -103,7 +103,7 @@ export default {
         image: ''
       },
       authenticated: false,
-      id: JSON.parse(localStorage.getItem('token'))?.user.id
+      token: null
     }
   },
   computed: {
@@ -112,12 +112,20 @@ export default {
     }
   },
   beforeMount() {
-    this.getUsers()
+    const token = localStorage.getItem('token')
+    if (token) {
+      this.token = JSON.parse(token).token
+      this.getUsers()
+    }
   },
   methods: {
     getUsers() {
       axios
-        .get(`users/${this.id}`)
+        .get(`users/detail`, {
+          headers: {
+            Authorization: `bearer ${this.token}`
+          }
+        })
         .then((response) => {
           this.users = response.data.data
         })
@@ -127,6 +135,7 @@ export default {
     },
     signOut() {
       localStorage.removeItem('token')
+      this.token = null
       this.authenticated = false
       this.users = {}
       window.location.reload('/')

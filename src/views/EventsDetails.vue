@@ -126,8 +126,10 @@ const nytcHeadThree = new URL('@/assets/img/events/nytchead3.jpg', import.meta.u
         >
           <div class="flex flex-col mb-10">
             <div class="flex-grow">
-              <h2 class="text-3xl mb-4 font-mabolistafont leading-8 text-gray-900">Keterangan</h2>
-              <p class="leading-relaxed text-left text-xl">
+              <h2 class="text-3xl mb-4 font-mabolistafont leading-8 text-gray-900 dark:text-white">
+                Keterangan
+              </h2>
+              <p class="leading-relaxed text-left text-gray-900 dark:text-white text-xl">
                 📆 : {{ events.eventDate }}<br />
                 ⏰ : {{ events.startTime }} - {{ events.endTime }}<br />
                 🏟 : {{ events.location }}<br />
@@ -195,7 +197,7 @@ const nytcHeadThree = new URL('@/assets/img/events/nytchead3.jpg', import.meta.u
         >
           Note
         </a>
-        <p class="mt-2 mb-8">
+        <p class="mt-2 mb-8 text-gray-600">
           JIKA ADA YG MERASA KURANG SEHAT MENJELANG MAIN ATAU ADA HALANGAN LAIN MAU CANCEL TOLONG
           KABARIN DI GRUP H-3 BUAT CANCEL SUPAYA GAMPANG CARI ORANG PENGGANTINYA, JIKA SUDAH LIST
           DAN TIDAK DATANG, WAJIB TF JIKA ENGGAK ADA PENGGANTINYA..DAN TETAP JAGA PROKES
@@ -226,7 +228,8 @@ export default {
         image: null
       },
       isModalVisible: false,
-      id: this.$route.params.id
+      // id: this.$route.params.id
+      token: JSON.parse(localStorage.getItem('token')).token
     }
   },
   computed: {
@@ -238,13 +241,19 @@ export default {
     this.getEvents()
   },
   methods: {
-    async getEvents() {
-      try {
-        const response = await axios.get(`events/${this.id}`)
-        this.events = response.data.data.events
-      } catch (error) {
-        console.error('Error fetching events:', error)
-      }
+    getEvents() {
+      axios
+        .get(`events`, {
+          headers: {
+            Authorization: `bearer ${this.token}`
+          }
+        })
+        .then((response) => {
+          this.events = response.data.data.events
+        })
+        .catch((error) => {
+          console.error(error)
+        })
     },
     leftEvents() {
       axios

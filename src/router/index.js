@@ -50,7 +50,7 @@ const router = createRouter({
       component: RegisterPage
     },
     {
-      path: '/profile/:id',
+      path: '/profile',
       name: 'profile',
       component: ProfilePage,
       beforeEnter: (to, from, next) => {
@@ -63,7 +63,7 @@ const router = createRouter({
       }
     },
     {
-      path: '/events/eventsdetails/:id',
+      path: '/events/eventsdetails',
       name: 'EventsDetails',
       component: EventsDetails,
       beforeEnter: (to, from, next) => {

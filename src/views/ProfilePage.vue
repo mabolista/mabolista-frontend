@@ -7,7 +7,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
   <div class="mt-32">
     <div v-if="users" class="max-w-lg mx-auto my-10 bg-white rounded-lg shadow-md p-5">
       <img class="w-32 h-32 rounded-full mx-auto" :src="users.imageUrl" alt="Profile picture" />
-      <h2 class="text-center text-2xl font-semibold mt-3">Hi, {{ users.name }}</h2>
+      <h2 class="text-center text-black text-2xl font-semibold mt-3">Hi, {{ users.name }}</h2>
       <p class="text-center text-gray-600 mt-1">Mabolism</p>
       <div class="flex justify-center mt-5">
         <a
@@ -19,7 +19,7 @@ import NavbarSection from '../components/layouts/NavbarSection.vue'
         >
       </div>
       <div class="mt-5">
-        <h3 class="text-xl font-semibold">Bio</h3>
+        <h3 class="text-xl text-black font-semibold">Bio</h3>
         <p class="text-gray-600 mt-2">My name {{ users.name }} im mabolista member</p>
       </div>
       <div>
@@ -256,15 +256,20 @@ export default {
         phoneNumber: '',
         password: '',
         confirmPassword: '',
-        image: null
+        image: ''
       },
-      id: this.$route.params.id
+      // id: this.$route.params.id
+      token: JSON.parse(localStorage.getItem('token')).token
     }
   },
   methods: {
     getUser() {
       axios
-        .get(`users/${this.id}`)
+        .get(`users/detail`, {
+          headers: {
+            Authorization: `bearer ${this.token}`
+          }
+        })
         .then((response) => {
           this.users = response.data.data
         })

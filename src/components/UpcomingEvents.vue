@@ -44,9 +44,7 @@
             </router-link>
             <div class="p-4 sm:p-5">
               <router-link :to="{ name: 'EventsDetails', params: { id: event.id } }">
-                <h5
-                  class="mb-1 text-lg sm:text-xl font-bold tracking-tight text-gray-900 dark:text-white"
-                >
+                <h5 class="mb-1 text-lg sm:text-xl font-bold tracking-tight text-black">
                   {{ event.title }}
                 </h5>
               </router-link>
