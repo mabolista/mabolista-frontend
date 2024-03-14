@@ -185,13 +185,11 @@ export default {
       }
     },
     validatePassword() {
-      // Password validation logic
       this.passwordError = this.password.length < 6
     },
     loginpreloader() {
-      // Check if both email and password fields have values
       if (this.email && this.password) {
-        this.loading = true // Set loading to true if both fields are filled
+        this.loading = true
       } else {
         this.errorMessage = 'Please fill in both email and password fields.'
       }

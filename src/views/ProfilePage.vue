@@ -258,7 +258,6 @@ export default {
         confirmPassword: '',
         image: ''
       },
-      // id: this.$route.params.id
       token: JSON.parse(localStorage.getItem('token')).token
     }
   },

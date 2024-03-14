@@ -159,7 +159,8 @@ export default {
       phoneNumberError: false,
       passwordError: false,
       confirmPasswordError: false,
-      loading: false
+      loading: false,
+      authenticated: false
     }
   },
   methods: {
@@ -176,13 +177,23 @@ export default {
         .post('register', formData)
         .then((response) => {
           console.log(response.data)
-          this.$swal('Berhasil Daftar, Silahkan Login!')
-          this.$router.push({ name: 'login' })
+          this.$swal('Daftar Berhasil!')
+          const token = response.data.data
+          localStorage.setItem('token', JSON.stringify(token))
+          this.authenticated = true
+          this.$router.push({ name: 'HomePage' })
         })
         .catch((error) => {
           alert('Gagal Daftar, Periksa Kembali', error)
-          // window.location.reload()
+          window.location.reload()
         })
+    },
+    created() {
+      const token = JSON.parse(localStorage.getItem('token'))
+
+      if (token) {
+        this.authenticated = true
+      }
     },
     onFileChange(e) {
       this.image = e.target.files[0]

@@ -225,7 +225,7 @@ export default {
         startTime: '',
         endTime: '',
         location: '',
-        image: null
+        image: ''
       },
       isModalVisible: false,
       // id: this.$route.params.id
