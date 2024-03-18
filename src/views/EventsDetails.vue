@@ -227,9 +227,9 @@ export default {
         location: '',
         image: ''
       },
-      isModalVisible: false,
+      isModalVisible: false
       // id: this.$route.params.id
-      token: JSON.parse(localStorage.getItem('token')).token
+      // token: JSON.parse(localStorage.getItem('token')).token
     }
   },
   computed: {
@@ -243,17 +243,19 @@ export default {
   methods: {
     getEvents() {
       axios
-        .get(`events`, {
-          headers: {
-            Authorization: `bearer ${this.token}`
-          }
-        })
+        .get(`events/${this.$route.params.id}`)
         .then((response) => {
-          this.events = response.data.data.events
+          this.events = response.data.data
         })
         .catch((error) => {
           console.error(error)
         })
+    },
+    mounted() {
+      this.getEvents()
+    },
+    handleFileChange(event) {
+      this.events.image = event.target.files[0]
     },
     leftEvents() {
       axios

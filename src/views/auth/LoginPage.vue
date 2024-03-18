@@ -7,7 +7,7 @@ const dmSportLogin = new URL('@/assets/img/dmsport.jpg', import.meta.url).href
   <!-- Preloader -->
   <div v-if="loading" class="preloader">
     <img class="logo" :src="mabolistaLogoLogin" alt="Loading Logo" />
-    <p>Loading...</p>
+    <p class="text-black">Loading...</p>
   </div>
 
   <section class="relative flex flex-wrap lg:h-screen lg:items-center">
@@ -178,7 +178,8 @@ export default {
       }
     },
     validateEmail() {
-      if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email)) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+      if (!emailRegex.test(this.email)) {
         this.msg['email'] = 'Please enter a valid email address'
       } else {
         this.msg['email'] = ''

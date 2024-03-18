@@ -63,7 +63,7 @@ const router = createRouter({
       }
     },
     {
-      path: '/events/eventsdetails',
+      path: '/events/eventsdetails/:id',
       name: 'EventsDetails',
       component: EventsDetails,
       beforeEnter: (to, from, next) => {
