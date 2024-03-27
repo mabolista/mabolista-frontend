@@ -126,10 +126,11 @@ const nytcHeadThree = new URL('@/assets/img/events/nytchead3.jpg', import.meta.u
         >
           <div class="flex flex-col mb-10">
             <div class="flex-grow">
-              <h2 class="text-3xl mb-4 font-mabolistafont leading-8 text-gray-900 dark:text-white">
+              <h2 class="text-3xl mb-2 font-mabolistafont leading-8 text-gray-900 dark:text-white">
                 Keterangan
               </h2>
-              <p class="leading-relaxed text-left text-gray-900 dark:text-white text-xl">
+              <h2 class="text-black dark:text-white text-xl">{{ events.title }}</h2>
+              <p class="leading-relaxed text-left text-gray-900 dark:text-white text-lg">
                 📆 : {{ events.eventDate }}<br />
                 ⏰ : {{ events.startTime }} - {{ events.endTime }}<br />
                 🏟 : {{ events.location }}<br />
@@ -139,11 +140,14 @@ const nytcHeadThree = new URL('@/assets/img/events/nytchead3.jpg', import.meta.u
                 💧 : Mineral Water<br />
                 👕 : Jersey Inventaris<br />
               </p>
+              <h2 class="text-white text-lg">
+                HTM: Pemain : {{ events.playerPrice }} | Kiper : {{ events.keeperPrice }}
+              </h2>
             </div>
             <div class="flex mt-4 gap-3">
               <button
                 type="button"
-                class="text-slate-700 hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-yellow-300 dark:text-yellow-300 dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900"
+                class="text-slate-700 hover:text-white border border-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-yellow-300 dark:text-white dark:hover:text-white dark:hover:bg-yellow-400 dark:focus:ring-yellow-900"
                 @click="showModal"
               >
                 Joint Events
@@ -153,8 +157,8 @@ const nytcHeadThree = new URL('@/assets/img/events/nytchead3.jpg', import.meta.u
 
               <button
                 @click="leftEvents()"
-                class="block mt-2 ml-1 bg-transparent hover:bg-red-500 text-black font-semibold hover:text-white py-2 px-4 border border-red-500 rounded"
-                type="submit"
+                class="text-slate-700 hover:text-white border border-red-400 hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-red-300 dark:text-white dark:hover:text-white dark:hover:bg-red-400 dark:focus:ring-red-900"
+                type="button"
               >
                 Cancel List
               </button>
@@ -165,9 +169,7 @@ const nytcHeadThree = new URL('@/assets/img/events/nytchead3.jpg', import.meta.u
                   <li class="font-bold">
                     List Pemain
                     <ol class="pl-5 mt-2 space-y-1 list-decimal list-inside">
-                      <li>Reza</li>
-                      <li>Azra</li>
-                      <li>test</li>
+                      <li v-for="user in filteredPemain" :key="user.id">{{ user.name }}</li>
                     </ol>
                   </li>
                 </ul>
@@ -175,9 +177,7 @@ const nytcHeadThree = new URL('@/assets/img/events/nytchead3.jpg', import.meta.u
                   <li class="font-bold">
                     List Kiper
                     <ol class="pl-5 mt-2 space-y-1 list-decimal list-inside">
-                      <li>Reza</li>
-                      <li>Azra</li>
-                      <li>test</li>
+                      <li v-for="user in filteredKiper" :key="user.id">{{ user.name }}</li>
                     </ol>
                   </li>
                 </ul>
@@ -211,6 +211,7 @@ const nytcHeadThree = new URL('@/assets/img/events/nytchead3.jpg', import.meta.u
 import NavbarSection from '@/components/layouts/NavbarSection.vue'
 import JointEventsModal from '@/components/JointEventsModal.vue'
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 export default {
   name: 'UpcomingEvents',
@@ -221,20 +222,31 @@ export default {
   data() {
     return {
       events: {
+        eventId: '',
         eventDate: '',
         startTime: '',
         endTime: '',
         location: '',
         image: ''
       },
-      isModalVisible: false
-      // id: this.$route.params.id
-      // token: JSON.parse(localStorage.getItem('token')).token
+      isModalVisible: false,
+      token: JSON.parse(localStorage.getItem('token'))?.token,
+      id: this.$route.params.id
     }
   },
   computed: {
     isAuthenticated() {
       return !!localStorage.getItem('token')
+    },
+    filteredPemain() {
+      return this.events.users
+        ? this.events.users.filter((user) => user.playerPosition === 'P')
+        : []
+    },
+    filteredKiper() {
+      return this.events.users
+        ? this.events.users.filter((user) => user.playerPosition === 'GK')
+        : []
     }
   },
   mounted() {
@@ -243,7 +255,7 @@ export default {
   methods: {
     getEvents() {
       axios
-        .get(`events/${this.$route.params.id}`)
+        .get(`events/${this.id}`)
         .then((response) => {
           this.events = response.data.data
         })
@@ -251,24 +263,34 @@ export default {
           console.error(error)
         })
     },
-    mounted() {
-      this.getEvents()
+    leftEvents() {
+      axios
+        .delete('events/left-event', {
+          data: { eventId: this.id },
+          headers: {
+            Authorization: `Bearer ${this.token}`
+          }
+        })
+        .then((response) => {
+          console.log(response)
+          this.events = response.data.data
+          this.showNotification('success', response.data.message)
+        })
+        .catch((error) => {
+          console.error('Left Event List Failed:', error)
+          this.showNotification('error', error.response.data.message)
+        })
     },
     handleFileChange(event) {
       this.events.image = event.target.files[0]
     },
-    leftEvents() {
-      axios
-        .post('events/left-event', {
-          eventId: this.eventId,
-          userId: this.userId
-        })
-        .then((response) => {
-          this.leftEvents = response.data.data.events
-        })
-        .catch((error) => {
-          console.error('Out List Failed:', error)
-        })
+    showNotification(type, message) {
+      Swal.fire({
+        icon: type,
+        title: message,
+        showConfirmButton: true,
+        timer: 2500
+      })
     },
     showModal() {
       this.isModalVisible = true

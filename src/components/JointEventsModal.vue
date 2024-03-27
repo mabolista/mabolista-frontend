@@ -4,7 +4,7 @@
       <header
         class="modal-header flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600"
       >
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Choice your position</h3>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-black">Pilih Posisi</h3>
         <button
           @click="close"
           type="button"
@@ -32,16 +32,14 @@
 
       <section class="modal-body p-4 md:p-5 space-y-4">
         <div class="col-span-2 sm:col-span-1">
-          <label for="position" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Choice Position</label
-          >
           <select
-            id="position"
+            id="playerPosition"
+            v-model="playerPosition"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
           >
-            <option selected="">Select Position</option>
-            <option value="Player">Player</option>
-            <option value="Keeper">Keeper</option>
+            <option value="" selected>Pilih Posisi</option>
+            <option value="P">Pemain</option>
+            <option value="GK">Kiper</option>
           </select>
         </div>
       </section>
@@ -51,7 +49,7 @@
           class="flex items-center justify-center p-4 gap-3 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600"
         >
           <button
-            @click="close"
+            @click="getJoinEvents()"
             type="button"
             class="text-white bg-yellow-500 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
@@ -72,23 +70,53 @@
 
 <script>
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 export default {
   name: 'JointEventsModal',
+  data() {
+    return {
+      joinEvents: {
+        eventId: '',
+        playerPosition: ''
+      },
+      isModalVisible: false,
+      token: JSON.parse(localStorage.getItem('token')).token,
+      id: this.$route.params.id
+    }
+  },
   methods: {
-    joinEvents() {
+    getJoinEvents() {
       axios
-        .post('events/join-event', {
-          eventId: this.eventId,
-          userId: this.userId,
-          playerPosition: this.playerPosition
-        })
+        .post(
+          'events/join-event',
+          {
+            eventId: this.id,
+            playerPosition: this.playerPosition
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${this.token}`
+            }
+          }
+        )
         .then((response) => {
-          this.leftEvents = response.data.data.events
+          console.log(response)
+          this.getJoinEvents = response.data.data
+          this.showNotification('success', response.data.message)
         })
         .catch((error) => {
-          console.error('Out List Failed:', error)
+          console.error('Join List Failed:', error)
+          this.showNotification('error', error.response.data.message)
         })
+    },
+    showNotification(type, message) {
+      Swal.fire({
+        icon: type,
+        title: message,
+        showConfirmButton: true,
+        timer: 2500
+      })
     },
     close() {
       this.$emit('close')
