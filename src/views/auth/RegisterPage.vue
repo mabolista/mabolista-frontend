@@ -10,7 +10,7 @@ const dmSportRegister = new URL('@/assets/img/dmsport.jpg', import.meta.url).hre
         <div class="mx-auto max-w-lg text-center dark:text-white">
           <h1 class="text-2xl font-bold sm:text-3xl">Ayoo jadi bagian dari kita!</h1>
 
-          <p class="mt-4 text-gray-500">
+          <p class="mt-4 text-gray-300">
             Mabolista Fc merupakan komunitas sepak bola yang terbuka untuk umum dan memiliki banyak
             benefits unik
           </p>
@@ -109,7 +109,7 @@ const dmSportRegister = new URL('@/assets/img/dmsport.jpg', import.meta.url).hre
           </div>
 
           <div class="flex items-center justify-between">
-            <p class="text-sm text-gray-500">
+            <p class="text-sm text-gray-300">
               Have account?
               <router-link class="underline" to="/login">Login</router-link>
             </p>
@@ -139,11 +139,13 @@ const dmSportRegister = new URL('@/assets/img/dmsport.jpg', import.meta.url).hre
   <!-- Preloader -->
   <div v-if="loading" class="preloader">
     <img class="logo" :src="mabolistaLogoRegister" alt="Loading Logo" />
+    <p class="text-black">Loading...</p>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 export default {
   data() {
@@ -176,15 +178,14 @@ export default {
       axios
         .post('register', formData)
         .then((response) => {
-          console.log(response.data)
-          this.$swal('Daftar Berhasil!')
+          this.showNotification('success', response.data.message)
           const token = response.data.data
           localStorage.setItem('token', JSON.stringify(token))
           this.authenticated = true
           this.$router.push({ name: 'HomePage' })
         })
         .catch((error) => {
-          alert('Gagal Daftar, Periksa Kembali', error)
+          this.showNotification('error', error.response.data.message)
           window.location.reload()
         })
     },
@@ -197,6 +198,18 @@ export default {
     },
     onFileChange(e) {
       this.image = e.target.files[0]
+    },
+    showNotification(type, message) {
+      return new Promise((resolve) => {
+        Swal.fire({
+          icon: type,
+          title: message,
+          showConfirmButton: true,
+          timer: 2500
+        }).then(() => {
+          resolve()
+        })
+      })
     },
     registerpreloader() {
       if (this.name && this.email && this.phoneNumber && this.password && this.confirmPassword) {

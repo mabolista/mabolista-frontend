@@ -137,6 +137,7 @@ const dmSportLogin = new URL('@/assets/img/dmsport.jpg', import.meta.url).href
 
 <script>
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 export default {
   data() {
@@ -157,22 +158,20 @@ export default {
           password: this.password
         })
         .then((response) => {
+          this.showNotification('success', response.data.message)
           const token = response.data.data
-
           localStorage.setItem('token', JSON.stringify(token))
-
           this.authenticated = true
           this.$router.push({ name: 'HomePage' })
         })
         .catch((error) => {
-          alert('Login Gagal! Periksa Kembali Email atau Password')
-          window.location.reload('/login')
-          console.error('Login failed:', error)
+          this.showNotification('error', error.response.data.message).then(() => {
+            window.location.reload()
+          })
         })
     },
     created() {
       const token = JSON.parse(localStorage.getItem('token'))
-
       if (token) {
         this.authenticated = true
       }
@@ -202,6 +201,18 @@ export default {
       } else {
         x.type = 'password'
       }
+    },
+    showNotification(type, message) {
+      return new Promise((resolve) => {
+        Swal.fire({
+          icon: type,
+          title: message,
+          showConfirmButton: true,
+          timer: 2500
+        }).then(() => {
+          resolve()
+        })
+      })
     }
   }
 }

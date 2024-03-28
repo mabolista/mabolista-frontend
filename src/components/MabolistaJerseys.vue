@@ -21,6 +21,7 @@ const jerseykiper4th = new URL('@/assets/img/jerseykiper4th.jpg', import.meta.ur
     <div class="card__precis">
       <div class="card__price gap-4">
         <div>
+          <span class="card__preci card__preci--before text-black"><s>Rp.205.000</s></span>
           <span class="card__preci card__preci--now mb-4 text-black">Rp.175.000</span>
           <a
             href="#"
@@ -375,7 +376,7 @@ a {
   font-size: 1.5rem !important;
   border: none;
   background-color: #161616;
-  color: #fff;
+  color: #161616;
   padding: 0.9rem 3rem;
   width: 100%;
   cursor: pointer;
@@ -393,7 +394,7 @@ a {
   transform: rotate(180deg);
   text-align: center;
   background-color: #000000;
-  color: #fff;
+  color: #161616;
   font-weight: bold;
   transition: 0.5s;
 }
@@ -427,7 +428,7 @@ a {
   transform: rotate(180deg);
   text-align: center;
   background-color: #000000;
-  color: #fff;
+  color: #161616;
   transition: 0.5s;
   font-family: 'Open Sans', sans-serif;
 }

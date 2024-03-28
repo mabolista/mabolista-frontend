@@ -274,22 +274,30 @@ export default {
         .then((response) => {
           console.log(response)
           this.events = response.data.data
-          this.showNotification('success', response.data.message)
+          this.showNotification('success', response.data.message).then(() => {
+            window.location.reload()
+          })
         })
         .catch((error) => {
           console.error('Left Event List Failed:', error)
-          this.showNotification('error', error.response.data.message)
+          this.showNotification('error', error.response.data.message).then(() => {
+            // You can handle the error case here if needed
+          })
         })
     },
     handleFileChange(event) {
       this.events.image = event.target.files[0]
     },
     showNotification(type, message) {
-      Swal.fire({
-        icon: type,
-        title: message,
-        showConfirmButton: true,
-        timer: 2500
+      return new Promise((resolve) => {
+        Swal.fire({
+          icon: type,
+          title: message,
+          showConfirmButton: true,
+          timer: 2500
+        }).then(() => {
+          resolve()
+        })
       })
     },
     showModal() {
